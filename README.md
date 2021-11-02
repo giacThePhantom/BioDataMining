@@ -2,9 +2,9 @@
 Project of the course biological datamining
 
 
-##Notes
+## Notes
 
-##Resources
+## Resources
 
 
 ## TODO
