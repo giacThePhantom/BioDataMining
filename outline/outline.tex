@@ -85,7 +85,7 @@
 \Abstract{Colorectal cancer (CRC) is one of the most common malignant carcinomas worldwide with a poor prognosis, imposing an increasingly heavy burden on patients. Different studies have shown that vitamin D and vitamin D-related genes play a key role in CRC.
 In this study we aimed to identify and validate vitamin D related prognostic signature in colorectal cancer.
 In the first part of our work we will focus on the normalization and the preprocessing of our datasets: a colorectal cancer gene expression data datasets and a vitamin D level gene expression data datasets. Regarding the first dataset we will split the data in “stage I and II gene expression data” and “stage III and IV” gene expression data; while for the second dataset we will split the data in “low vitamin D level gene expression data” and “high vitamin D gene expression data”.
-Then by the means of a statistical analysis will obtain a dataset of differential expressed genes in different stages of colorectal cancer and a dataset of vitamin D gene signature.
+Then by the means of a statistical analysis we will obtain a dataset of differential expressed genes in different stages of colorectal cancer and a dataset of vitamin D gene signature.
 After that, we will intersect these two datasets in order to obtain our genes of interest. With this list of genes we will be able to perform a pathway enrichment analysis in order to extend our list of genes of interest. At this point, we will be able to compare the level of expression of genes of interest with patient data and fit a regression model for patient data prediction.
 This regression analysis, once validated will allow us to obtain a list of genes significative for the stratification and prognosis of patients suffering from colorectal cancer.
 }
@@ -107,11 +107,11 @@ This regression analysis, once validated will allow us to obtain a list of genes
 
 \addcontentsline{toc}{section}{Introduction} % Adds this section to the table of contents
 
-Colorectal cancer (CRC) is the third most common malignant tumor worldwide and is the second one in cancer-related deaths [1]. In spite of improvements in the management and treatments of patients with CRC in the last two decades, no satisfactory therapy exists when the surgery is not curative. The poor prognosis and the increasing incidence of CRC have provided strong motivation to construct a predictive model in CRC patients, which will benefit personalized treatment in clinical management [2].
-There are lot of epidemiological and preclinical studies that indicate a beneficial effect of vitamin D on CRC incidence and mortality [3] [4].
-Vitamin D is a fat-soluble vitamin and many genes are related to its metabolism and action [5]. It can be obtained from diet or the endogenous synthesis in the epidermis under sunlight exposure [6]. It has been demonstrated that vitamin D benefits clinical outcome and improves the long-term survival of CRC patients [7]. Moreover, circulating vitamin D may be a CRC biomarker and is deficiency is related to the high incidence of CRC [8].
-A better survival outcome in CRC is associated with higher prediagnostic or postdiagnostic serum 25-hydroxyvitamin D concentrations [9]. The most active vitamin D metabolite (1$\alpha$,25-dihydroxyvitamin D3) inhibits the proliferation and promotes the differentiation of cultured colon carcinoma cells by mechanisms that include cell cycle arrest at G0/G1 phase, blockade of the Wnt/$\beta$-catenin pathway and induction of E-cadherin and other epithelial proteins [3] [10] [11].
-Lots of genes are related to vitamin D metabolism and action, play an essential role in tumors. For example, CYP24A1 an important vitamin D-related gene, is up-regulated in CRC patient and nominated as a promising biomarker [12]. Vitamin D and its related genes are correlated with the homeostasis of the intestinal epithelium, regulate immune cells [13]
+Colorectal cancer (CRC) is the third most common malignant tumor worldwide and is the second one in cancer-related deaths \cite{Ferlay2018-pg}. In spite of improvements in the management and treatments of patients with CRC in the last two decades, no satisfactory therapy exists when the surgery is not curative. The poor prognosis and the increasing incidence of CRC have provided strong motivation to construct a predictive model in CRC patients, which will benefit personalized treatment in clinical management \cite{Bu2021-xn}.
+There are lot of epidemiological and preclinical studies that indicate a beneficial effect of vitamin D on CRC incidence and mortality \cite{Pereira2012-pf} \cite{Giovannucci2013-ss}.
+Vitamin D is a fat-soluble vitamin and many genes are related to its metabolism and action \cite{Fedirko2019-ai}. It can be obtained from diet or the endogenous synthesis in the epidermis under sunlight exposure \cite{Saraff2016-dr}. It has been demonstrated that vitamin D benefits clinical outcome and improves the long-term survival of CRC patients \cite{Xu2021-vb}. Moreover, circulating vitamin D may be a CRC biomarker and is deficiency is related to the high incidence of CRC \cite{Meeker2016-tr}.
+A better survival outcome in CRC is associated with higher prediagnostic or postdiagnostic serum 25-hydroxyvitamin D concentrations \cite{Zgaga2014-dd}. The most active vitamin D metabolite (1$\alpha$,25-dihydroxyvitamin $D_3$) inhibits the proliferation and promotes the differentiation of cultured colon carcinoma cells by mechanisms that include cell cycle arrest at G0/G1 phase, blockade of the Wnt/$\beta$-catenin pathway and induction of E-cadherin and other epithelial proteins \cite{Pereira2012-pf} \cite{Feldman2014-mh} \cite{Palmer2001-bh}.
+Lots of genes related to vitamin D metabolism and action play an essential role in tumors. For example, CYP24A1 an important vitamin D-related gene, is up-regulated in CRC patient and nominated as a promising biomarker \cite{Sadeghi2020-ci}. Vitamin D and its related genes are correlated with the homeostasis of the intestinal epithelium and regulate immune cells [13].
 
 %------------------------------------------------
 
@@ -124,8 +124,8 @@ Moreover we are hoping to identify in this process some colorectal cancer surviv
 
 
 \section{Data}
-Where we are looking for data, what data we have chosen and why, how it is going to be splitted.
-Information about each dataset as in table \ref{tab:datasets}
+In order to improve the statistical significance of the results, we plan to use multiple datasets each with a specific purpose. To limit batch effects, the idea is to jointly analyze them only when strictly necessary, after an appropriate pre-processing procedure, as described in the pipeline section. We plan to identify the gene signature of vitamin D in CRC using a dataset created for this specific purpose (GSE157982), whereas for the gene signature of CRC (w.r.t. control) we will use a separate, independent dataset (E-MTAB-6698). 
+For the purpose of training and validating the regression model, we will use datasets that include relevant clinical information used for prognosis such as survival time and tumor stage. The specific allocation of the datasets for model training and validation will be decided later on. For more detailed information about the datasets used, please refer to table \ref{tab:datasets}.
 
 \begin{table*}[ht]
 	\centering
@@ -154,6 +154,15 @@ Information about each dataset as in table \ref{tab:datasets}
 
 \section{Pipeline}
 The project pipeline is described in figure \ref{fig:pipeline}.
+This pipeline is been determine following the work done in \cite{Nartinez-Romero2018-gp} and can be separated in four major steps:
+
+\begin{enumerate}
+	\item Data preprocessing
+	\item Identification of a list of gene of interest.
+	\item Fitting to a model.
+	\item Obtaining the survival markers.
+\end{enumerate}
+
 \begin{figure}[ht]\centering % Using \begin{figure*} makes the figure take up the entire width of the page
 	\includegraphics[width=\linewidth]{pipeline}
 	\caption{Project pipeline}
@@ -163,11 +172,12 @@ The project pipeline is described in figure \ref{fig:pipeline}.
 	\subsection{Data preprocessing}
 
 		\subsubsection{Normalization}
-		Normalization is done to eliminate the batch effect because we are working with different datasets.
-		We will try different algorithms and evaluate them to discover the better one.
+		This pipeline requires lots of samples, so we are retrieving them from different datasets.
+		Because of this a normalization step is necessary: the batch effect could affect the accuracy of our predictions introducing noise in the data.
+		We will try to normalize the data using different algorithms and evaluate them so to use the one that will leave the least noise.
 
 		\subsubsection{Data filtering}
-		Filter out samples without survival data or withouc comparable data distribution after normalization.
+		After normalization we will filter out samples without survival data or with non-comparable data distribution.
 
 		\subsubsection{Evaluation of pre-processed data}
 		The evaluation can be done using PCA, linear regression or hierarchical cluster analysis.
@@ -175,25 +185,27 @@ The project pipeline is described in figure \ref{fig:pipeline}.
 	\subsection{Obtaining the list of gene of interest}
 
 		\subsubsection{Differential expressed genes between different stages of CRC}
-		Split data in stage I and II gene expression data and in stage III and IV gene expression data, in order to obtain differential expressed genes in different stages of colorectal cancer.
+		Input data will be divided data in stage I and II gene expression data and in stage III and IV gene expression data, in order to obtain differential expressed genes or DEGs in different stages of colorectal cancer.
 
 
 		\subsubsection{Vitamin D gene signature in CRC}
-		Split data in low vitamin D level gene expression data and in high vitamin D level gene expression data, in order to obtain vitamin D gene signature.
+		Input data will be divided data in low vitamin D level gene expression data and in high vitamin D level gene expression data, in order to obtain vitamin D gene signature.
 
 
 		\subsubsection{Intersection and enrichment}
-		Intersection of the obtained datasets in order to obtain a subset of genes of interest. Pathway enrichment analysis for the identification of the classes of genes over-represented in our subset of genes.
+		Obtained lists of DEGs and vitamine D gene signature will be intersected in order to obtain a subset of genes of interest. 
+		This list will be then expanded through pathway enrichment analysis for the identification of the classes of genes over-represented in our subset of genes.
 
 	\subsection{Fitting to a regression model}
-	Fitting a single variable or multivariate regression model for patient data in order to asses for each gene of interest its correlation with the stratification of the patient.
+	The extended list will be used to obtain gene expression level in each sample.
+	After that these data will be used to fit a regression model in order to asses for each gene of interest its correlation with the stratification of the patient.
 
 	\subsection{Obtaining of the survival markers}
-	Retrieving from the fitted model those gene that presents a significative impact on patient stratification.
+	After model fitting the list of genes will be reduced so that it contains only genes with a significative impact on patient stratification.
 
 \section{Expected results}
-A list of gene usable as survival marker in CRC.
-According to (cite studies) possible candidates are:
+With this project we expect to identify a list of genes usable as survival markers for colorectal cancer.
+A list of putative genes is:
 
 \begin{table}[ht]
 	\centering
@@ -214,19 +226,18 @@ According to (cite studies) possible candidates are:
 		\hline
 	\end{tabular}
 	\label{tab:suvmark}
-	\caption{Possible survival marker as found in literature}
+	\caption{Putative Vitamin-D -related CRC prognostic marker genes}
 \end{table}
 \section{Project management}
 The project will be developed in a dynamic and teamwork driven manner.
 This is done in order to be able to leverage the particular skills and knowledge of each member.
 Each task will be divided into the members in subtasks tailored according to his or hers background.
 There will be frequent meetings with at least bi-daily cadence to asses progress and resolve problems.
-Times estimates for each part are outlined in the chart \ref{chart:gantt}
-
+Times estimates for each part are outlined in the chart \ref{gantt}.
 \begin{figure}[ht]
-	\label{chart:gantt}
+	\label{gantt}
 
-	\begin{ganttchart}[hgrid,
+	\begin{ganttchart}[
 		vgrid,
 		title label font = \tiny,
 		inline,
@@ -245,22 +256,13 @@ Times estimates for each part are outlined in the chart \ref{chart:gantt}
 	\ganttbar{\makecell{Model selection \\ and fitting}}{2021-11-29}{2021-12-05}\\
 	\ganttbar{\makecell{Model \\validation}}{2021-12-06}{2021-12-10}\\
 	\ganttbar{\makecell{Survival\\ markers\\ analysis}}{2021-12-11}{2021-12-12}\\
-	\ganttbar{\makecell{Report\\writing}}{2021-11-11}{2021-12-12}
-\end{ganttchart}
+	\end{ganttchart}
 \end{figure}
 %------------------------------------------------
-
-
-\phantomsection
-\section*{Acknowledgments} % The \section*{} command stops section numbering
-
-\addcontentsline{toc}{section}{Acknowledgments} % Adds this section to the table of contents
-
 
 %----------------------------------------------------------------------------------------
 %	REFERENCE LIST
 %----------------------------------------------------------------------------------------
-
 \phantomsection
 \bibliographystyle{unsrt}
 \bibliography{sample.bib}

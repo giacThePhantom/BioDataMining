@@ -10,10 +10,10 @@
 \contentsline {subsection}{\numberline {3.2}Obtaining the list of gene of interest}{2}{subsection.3.2}%
 \contentsline {subsubsection}{\numberline {3.2.1}Differential expressed genes between different stages of CRC}{2}{subsubsection.3.2.1}%
 \contentsline {subsubsection}{\numberline {3.2.2}Vitamin D gene signature in CRC}{2}{subsubsection.3.2.2}%
-\contentsline {subsubsection}{\numberline {3.2.3}Intersection and enrichment}{2}{subsubsection.3.2.3}%
-\contentsline {subsection}{\numberline {3.3}Fitting to a regression model}{2}{subsection.3.3}%
-\contentsline {subsection}{\numberline {3.4}Obtaining of the survival markers}{2}{subsection.3.4}%
-\contentsline {section}{\numberline {4}Expected results}{2}{section.4}%
-\contentsline {section}{\numberline {5}Project management}{2}{section.5}%
-\contentsline {section}{Acknowledgments}{3}{section*.5}%
+\contentsline {subsubsection}{\numberline {3.2.3}Intersection and enrichment}{3}{subsubsection.3.2.3}%
+\contentsline {subsection}{\numberline {3.3}Fitting to a regression model}{3}{subsection.3.3}%
+\contentsline {subsection}{\numberline {3.4}Obtaining of the survival markers}{3}{subsection.3.4}%
+\contentsline {section}{\numberline {4}Expected results}{3}{section.4}%
+\contentsline {section}{\numberline {5}Project management}{3}{section.5}%
+\contentsline {section}{References}{3}{section*.5}%
 \contentsfinish 
