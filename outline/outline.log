@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021/Arch Linux) (preloaded format=pdflatex 2021.5.30)  5 NOV 2021 17:32
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021/Arch Linux) (preloaded format=pdflatex 2021.5.30)  5 NOV 2021 17:51
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1048,11 +1048,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 ]
-
-LaTeX Warning: Citation `Nartinez-Romero2018-gp' on page 2 undefined on input l
-ine 157.
-
-<Figures//pipeline.png, id=145, 2581.645pt x 3581.38pt>
+<Figures//pipeline.png, id=147, 2581.645pt x 3581.38pt>
 File: Figures//pipeline.png Graphic file (type png)
 <use Figures//pipeline.png>
 Package pdftex.def Info: Figures//pipeline.png  used on input line 167.
@@ -1063,15 +1059,7 @@ Overfull \hbox (5.11023pt too wide) in paragraph at lines 187--187
 es
  []
 
-[2 <./Figures//pipeline.png>]
-
-Package caption Warning: \label without proper reference on input line 236.
-See the caption package documentation for explanation.
-
-
-LaTeX Warning: Reference `gantt' on page 3 undefined on input line 236.
-
-(./outline.bbl
+[2 <./Figures//pipeline.png>] (./outline.bbl
 Underfull \hbox (badness 1043) in paragraph at lines 4--9
 []\OT1/ptm/m/n/10 (+20) J Fer-lay, M Colom-bet, I So-er-jo-mataram, T Dyba,
  []
@@ -1079,33 +1067,27 @@ Underfull \hbox (badness 1043) in paragraph at lines 4--9
 [3]) 
 AED: lastpage setting LastPage
 [4] (./outline.aux)
-
-LaTeX Warning: There were undefined references.
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
 Package rerunfilecheck Info: File `outline.out' has not changed.
 (rerunfilecheck)             Checksum: 3FAC9C65A7BA644919896C039C3D8907;2958.
  ) 
 Here is how much of TeX's memory you used:
- 27788 strings out of 478994
- 509157 string characters out of 5864751
- 998956 words of memory out of 5000000
- 44399 multiletter control sequences out of 15000+600000
- 467166 words of font info for 306 fonts, out of 8000000 for 9000
+ 27798 strings out of 478994
+ 509296 string characters out of 5864751
+ 1014923 words of memory out of 5000000
+ 44402 multiletter control sequences out of 15000+600000
+ 466372 words of font info for 309 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 102i,12n,102p,592b,936s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 102i,15n,102p,592b,938s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texmf-dist/fon
 ts/type1/urw/helvetic/uhvb8a.pfb></usr/share/texmf-dist/fonts/type1/urw/helveti
 c/uhvr8a.pfb></usr/share/texmf-dist/fonts/type1/urw/helvetic/uhvro8a.pfb></usr/
 share/texmf-dist/fonts/type1/urw/symbol/usyr.pfb></usr/share/texmf-dist/fonts/t
 ype1/urw/times/utmb8a.pfb></usr/share/texmf-dist/fonts/type1/urw/times/utmr8a.p
 fb></usr/share/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on outline.pdf (4 pages, 501964 bytes).
+Output written on outline.pdf (4 pages, 503261 bytes).
 PDF statistics:
- 212 PDF objects out of 1000 (max. 8388607)
- 178 compressed objects within 2 object streams
- 42 named destinations out of 1000 (max. 500000)
- 100506 words of extra memory for PDF output out of 106986 (max. 10000000)
+ 221 PDF objects out of 1000 (max. 8388607)
+ 187 compressed objects within 2 object streams
+ 45 named destinations out of 1000 (max. 500000)
+ 98458 words of extra memory for PDF output out of 106986 (max. 10000000)
 
