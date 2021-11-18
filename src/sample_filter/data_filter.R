@@ -76,11 +76,34 @@ print(nrow(data))
 stage_samples <- data[!(is.na(data$stage) | data$stage == ""),]
 
 print(nrow(stage_samples))
+print(unique(stage_samples$stage))
+low_stage <- data[(stage_samples$stage == "0" |
+									 stage_samples$stage == "1" |
+									 stage_samples$stage == "1A" |
+									 stage_samples$stage == "2" |
+									 stage_samples$stage == "2A" |
+									 stage_samples$stage == "2B" |
+									 stage_samples$stage == "2C"
+									 ), ]
 
-low_stage <- data[stage_samples$stage %in% "[12]", ]
-high_stage <- data[grepl(stage_samples$stage, "3"), ]
+high_stage <- data[(stage_samples$stage == "3" |
+									 stage_samples$stage == "3A" |
+									 stage_samples$stage == "3B" |
+									 stage_samples$stage == "3C" |
+									 stage_samples$stage == "4" |
+									 stage_samples$stage == "4A" |
+									 stage_samples$stage == "4B"
+									 ), ]
 
 print("Samples with low stage")
 print(nrow(low_stage))
 print("Samples with high stage")
 print(nrow(high_stage))
+
+os_data <- data[complete.cases(data$overall_surv_months),]
+
+print("Sample with overall survival")
+print(nrow(os_data))
+
+print("Intersection between overall survival and stage dataset")
+print(nrow(os_data[!(os_data$sample_name %in% stage_samples$sample_name), ]))
