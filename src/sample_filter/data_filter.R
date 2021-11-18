@@ -1,4 +1,7 @@
 #!/usr/bin/Rscript
+
+library(dplyr)
+
 args <- commandArgs(trailingOnly=TRUE)
 
 metadata <- args[1]
@@ -56,24 +59,30 @@ vitamin_d_low <- vitamin_d_samples[FALSE, ]
 vitamin_d_high <- vitamin_d_samples[FALSE, ]
 
 
+
 for(i in sample_index){
-	individual <- vitamin_d_samples[grepl(vitamin_d_samples$sample_name, i), ]
-	vitamin_d_low <- rbind(vitamin_d_low, individual[min(individual$vit_d_level), ])
-	vitamin_d_high <- rbind(vitamin_d_high, individual[max(individual$vit_d_level), ])
+	individual <- dplyr::filter(vitamin_d_samples, grepl(i, sample_name))
+	vitamin_d_low <- rbind(vitamin_d_low, individual[which.min(individual$vit_d_level), ])
+	vitamin_d_high <- rbind(vitamin_d_high, individual[which.max(individual$vit_d_level), ])
 }
 
 
 print("Samples with low vitamin D level")
 print(nrow(vitamin_d_low))
+
+write.csv(vitamin_d_low, '../../data/splitted_samples/vitamin_d_low.csv')
+
 print("Samples with high vitamin D level")
 print(nrow(vitamin_d_high))
 
+write.csv(vitamin_d_high, '../../data/splitted_samples/vitamin_d_high.csv')
 
 
 data <- data[!data$sample_name %in% vitamin_d_samples$sample_name,]
 print(nrow(data))
+print(head(data))
 
-stage_samples <- data[!(is.na(data$stage) | data$stage == ""),]
+stage_samples <- data[complete.cases(data$stage),]
 
 print(nrow(stage_samples))
 print(unique(stage_samples$stage))
@@ -97,13 +106,20 @@ high_stage <- data[(stage_samples$stage == "3" |
 
 print("Samples with low stage")
 print(nrow(low_stage))
+write.csv(low_stage, '../../data/splitted_samples/stage_low.csv')
 print("Samples with high stage")
 print(nrow(high_stage))
+write.csv(high_stage, '../../data/splitted_samples/stage_high.csv')
 
-os_data <- data[complete.cases(data$overall_surv_months),]
+os_data <- data[(complete.cases(data$overall_surv_months) & data$overall_surv_months != ""),]
+print(os_data$overall_surv_months)
 
 print("Sample with overall survival")
 print(nrow(os_data))
+write.csv(os_data, '../../data/splitted_samples/os_data.csv')
+
 
 print("Intersection between overall survival and stage dataset")
 print(nrow(os_data[!(os_data$sample_name %in% stage_samples$sample_name), ]))
+
+print(nrow(stage_samples[sample(nrow(stage_samples), size=2),]))
