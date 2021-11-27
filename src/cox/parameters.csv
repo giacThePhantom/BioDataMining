@@ -1,0 +1,10 @@
+clin_data,exp_data,dataset,clin_data_col_filter,genes of interest
+../../data/splitted_samples/os_data.csv,../../data/rma/rma/rma/os/temp.txt,GSE17536,sex,DDR1
+../../data/splitted_samples/os_data.csv,../../data/rma/rma/rma/os/temp.txt,GSE17537,stage,RFC2 
+,,,overall_surv,HSPA6
+,,,dis_free_surv,PAX8
+,,,dis_specific_surv,GUCA1A
+,,,geo_accession,
+,,,overall_surv_months,
+,,,dis_free_surv_months,
+,,,dis_specific_surv_months,
