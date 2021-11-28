@@ -108,4 +108,3 @@ genesig.export <- rbind(colnames(genesig.export), genesig.export)
 colnames(genesig.export) <- NULL
 
 write.table(x = genesig.export,file = 'vitdgenes.deseq2.tsv', col.names = F, row.names = F)
-
