@@ -1,0 +1,197 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Stylish Article
+% LaTeX Template
+% Version 2.2 (2020-10-22)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original author:
+% Mathias Legrand (legrand.mathias@gmail.com)
+% With extensive modifications by:
+% Vel (vel@latextemplates.com)
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[fleqn,10pt]{SelfArx} % Document font size and equations flushed left
+
+\usepackage[english]{babel} % Specify a different language here - english by default
+\usepackage{pgfgantt}
+
+\usepackage{lipsum} % Required to insert dummy text. To be removed otherwise
+
+%----------------------------------------------------------------------------------------
+%	COLUMNS
+%----------------------------------------------------------------------------------------
+
+\setlength{\columnsep}{0.55cm} % Distance between the two columns of text
+\setlength{\fboxrule}{0.75pt} % Width of the border around the abstract
+
+%----------------------------------------------------------------------------------------
+%	COLORS
+%----------------------------------------------------------------------------------------
+
+\definecolor{color1}{RGB}{0,0,90} % Color of the article title and sections
+\definecolor{color2}{RGB}{0,20,20} % Color of the boxes behind the abstract and headings
+
+%----------------------------------------------------------------------------------------
+%	HYPERLINKS
+%----------------------------------------------------------------------------------------
+
+\usepackage{hyperref} % Required for hyperlinks
+
+\usepackage{float}
+\usepackage{makecell}
+\hypersetup{
+	hidelinks,
+	colorlinks,
+	breaklinks=true,
+	urlcolor=color2,
+	citecolor=color1,
+	linkcolor=color1,
+	bookmarksopen=false,
+	pdftitle={Title},
+	pdfauthor={Author},
+}
+
+%----------------------------------------------------------------------------------------
+%	ARTICLE INFORMATION
+%----------------------------------------------------------------------------------------
+
+\JournalInfo{Laboratory of biological data mining} % Journal information
+\Archive{Project report} % Additional notes (e.g. copyright, DOI, review/research article)
+
+\PaperTitle{Identification and validation of a vitamin D-related prognostic signature in colorectal cancer} % Article title
+
+\Authors{Diego Barquero Morera\textsuperscript{1}, Giacomo Fantoni\textsuperscript{2}, Gaia Faggin\textsuperscript{3}, Leonardo Golinelli\textsuperscript{4}} % Authors
+\affiliation{\textsuperscript{1}\textit{diego.barqueromorera@studenti.unitn.it}} % Author affiliation
+\affiliation{\textsuperscript{2}\textit{giacomo.fantoni@studenti.unitn.it}} % Author affiliation
+\affiliation{\textsuperscript{3}\textit{gaia.faggin@studenti.unitn.it}} % Author affiliation
+\affiliation{\textsuperscript{4}\textit{leonardo.golinelli@studenti.unitn.it}} % Author affiliation
+
+\Keywords{} % Keywords - if you don't want any simply remove all the text between the curly brackets
+\newcommand{\keywordname}{Keywords} % Defines the keywords heading name
+
+%----------------------------------------------------------------------------------------
+%	ABSTRACT
+%----------------------------------------------------------------------------------------
+
+\Abstract{}
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+
+\maketitle % Output the title and abstract box
+
+\tableofcontents % Output the contents section
+
+\thispagestyle{empty} % Removes page numbering from the first page
+
+%----------------------------------------------------------------------------------------
+%	ARTICLE CONTENTS
+%----------------------------------------------------------------------------------------
+
+\section{Introduction}
+
+\section{Material and methods}
+
+	\subsection{Data preprocessing}
+	This project requires a lot of data to achieve high level of statistica significance, so we decided to start with an high number of samples, taken from different dataset.
+	A brief description of each dataset considered for the pipeline can be found in table \ref{tab:datasets}.
+
+	\begin{table*}[ht]
+		\centering
+		\begin{tabular}{cccc}
+			\hline
+			Dataset name & Sample description & Number of samples\\
+			\hline
+			E-MTAB-6698	& healthy and tumor colorectal samples	&1566\\
+			GSE157982	&baseline and vit. D-treated CRC rectal samples	&98\\
+			GSE38832	&tumor colorectal samples	&122\\
+			TCGA-COAD	&tumor colorectal samples	&438\\
+			GSE14333	&tumor colorectal samples	&290\\
+			GSE17536	&tumor colorectal samples	&177\\
+			GSE31595	&tumor colorectal samples	&37	\\
+			GSE33113	&tumor colorectal samples	&96	\\
+			GSE38832	&tumor colorectal samples	&122\\
+			GSE39084	&tumor colorectal samples	&70	\\
+			GSE39582	&tumor colorectal samples	&585\\
+			GSE103479	&tumor colorectal samples	&156\\
+			GSE17537	&tumor colorectal samples	&55	\\
+			\hline
+		\end{tabular}
+		\caption{Starting datasets}
+		\label{tab:datasets}
+	\end{table*}
+
+		\subsubsection{Sample splitting and filtering}
+		The first step of the project's pipeline is to filter the datasets in order to obtain a list of the samples having all the data necessary for the downstream analyses.
+		So, analysing all of the datasets' metadata we split all the samples in $6$ sets according to which clinical data was available.
+		After this operation we retained $2676$ samples out of the starting $3812$ ($70\%$) divided as in table \ref{tab:samples_split}.
+
+		\begin{table}[H]
+			\centering
+			\begin{tabular}{cc}
+				\hline
+				Set usage & $n^\circ$ of samples\\
+				COX fitting & $388$\\
+				KM curve & $157$\\
+				Vitamine D low & $49$\\
+				Vitamine D high & $49$\\
+				Stage low & $1120$\\
+				Stage high & $908$\\
+				\hline
+			\end{tabular}
+			\caption{Split samples}
+			\label{tab:samples_split}
+		\end{table}
+
+		\subsubsection{Dataset normalization}
+
+	\subsection{Differentially expressed genes}
+
+		\subsubsection{DEG between stage of cancer}
+
+		\subsubsection{Vitamin D gene signature}
+
+		\subsubsection{Pathway enrichment}
+
+	\subsection{Survival analysis}
+
+\section{Results}
+
+	\subsection{Data preprocessing}
+
+		\subsubsection{Sample splitting and filtering}
+
+		\subsubsection{Dataset normalization}
+
+	\subsection{Differentially expressed genes}
+
+		\subsubsection{DEG between stage of cancer}
+
+		\subsubsection{Vitamin D gene signature}
+
+		\subsubsection{Pathway enrichment}
+
+	\subsection{Survival analysis}
+
+
+\section{Discussion}
+
+%----------------------------------------------------------------------------------------
+%	REFERENCE LIST
+%----------------------------------------------------------------------------------------
+\phantomsection
+\bibliographystyle{unsrt}
+\bibliography{references}
+
+
+\end{document}
