@@ -17,3 +17,12 @@ for(i = 1, i <= j, j++ in 1:number of file){ // set number of file in the folder
 
 rma = exprs(data.rma.norm)
 write.table(rma, file="rma.txt", quote=FALSE, sep="\t")
+
+//Annotation
+
+probes=row.names(frma)
+ls("package:hgu133a.db")
+Symbols = unlist(mget(probes, hgu133aSYMBOL, ifnotfound=NA))
+Entrez_IDs = unlist(mget(probes, hgu133aENTREZID, ifnotfound = NA))
+frma = cbind(probes, Symbols, Entrez_IDs, frma)
+write.table(frma, file = "annotation_frma.txt", sep ="\t", row.names = FALSE, col.names = TRUE)
