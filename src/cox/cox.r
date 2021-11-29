@@ -20,12 +20,27 @@ get_exp_data <- function(filename){
 	res <- NULL
 	for(i in filename){
 		rma_data <- read.csv(i, header = FALSE)
-		rma_data <- rma_data[complete.cases(rma_data[2]), ]
+		print(tibble(rma_data))
+		rma_data <- rma_data[complete.cases(rma_data[3]), ]
+		print(tibble(rma_data))
 		rma_data <- as.data.frame(t(rma_data))
-		rma_data[2,1] <- "sample"
-		colnames(rma_data) <- rma_data[2,]
-		rma_data <- rma_data[-c(1,2,3),]
 		rma_data <- type.convert(rma_data, as.is = TRUE)
+		print(tibble(rma_data))
+		rma_data[3,1] <- "sample"
+		print(tibble(rma_data))
+		print(length(colnames(rma_data)))
+		print(object.size(colnames(rma_data)))
+		colnames(rma_data) <- as.vector(rma_data[3,])
+		print(length(rma_data[3,]))
+		for(i in colnames(rma_data)){
+			if(object.size(i) > 9999){
+						print(object.size(i))
+						print(i)
+			}
+		}
+		print(length(colnames(rma_data)))
+		print(tibble(rma_data))
+		rma_data <- rma_data[-c(1,2,3),]
 		if(is.null(res)){
 			res <- rma_data
 		}
@@ -92,15 +107,15 @@ args <- commandArgs(trailingOnly=TRUE)
 
 parameters <- get_parameters(args[1])
 
+exp_data <- get_exp_data(parameters$exp_data)
 clin_data <- get_clin_data(parameters$clin_data, parameters$dataset, parameters$clin_data_col_filter)
 
-exp_data <- get_exp_data(parameters$exp_data)
 
 cox_data <- merge_exp_clin(exp_data, clin_data)
 
-print(tibble(clin_data))
-print(tibble(exp_data))
-print(tibble(cox_data))
+#print(tibble(clin_data))
+#print(tibble(exp_data))
+#print(tibble(cox_data))
 
 cox_values <- univariate_cox(cox_data, parameters$genes)
 multi_cox <- multivariate_cox(cox_data, parameters$genes)
