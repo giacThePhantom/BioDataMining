@@ -65,7 +65,8 @@ univariate_cox <- function(cox_data, covariates){
                          	})
 	res <- t(as.data.frame(univ_results, check.names = FALSE))
 	res <- as.data.frame(res)
-	res$genes <- covariates
+	rownames(res) <- rep(1:nrow(res))
+	res$genes <- lapply(covariates, function(x) str_remove_all(x, "`"))
 	return(res)
 }
 
@@ -85,20 +86,22 @@ get_parameters <- function(filename){
 	parameters <- read.csv(filename, header = TRUE)
 	res <- as.list(parameters)
 	res <- lapply(res, function(x){x[nzchar(x)]})
+	res <- lapply(res, function(x){na.omit(x)})
+
 	return(res)
 }
 
 args <- commandArgs(trailingOnly=TRUE)
 
 parameters <- get_parameters(args[1])
-
 exp_data <- get_exp_data(parameters$exp_data)
 clin_data <- get_clin_data(parameters$clin_data, parameters$dataset, parameters$clin_data_col_filter)
 
 
 cox_data <- merge_exp_clin(exp_data, clin_data)
 
-parameters$ genes <- intersect(colnames(cox_data), parameters$genes)
+parameters$genes <- intersect(colnames(cox_data), parameters$genes)
+parameters$genes <- lapply(parameters$genes, function(x) paste0("`", x, "`"))
 
 cox_values <- univariate_cox(cox_data, parameters$genes)
 multi_cox <- multivariate_cox(cox_data, parameters$genes)
