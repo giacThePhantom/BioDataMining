@@ -2,9 +2,15 @@
 
 library(survival)
 library(survminer)
-library(tidyverse)
+library(survMisc)
 library(plyr)
+library(tidyverse)
 library(readr)
+library(sos)
+library(scales)
+library(shiny)
+library(`ggplot2`)
+library(plotly)
 
 get_clin_data <- function(filename, dataset, col_filter){
 	res <- ldply(filename, read_csv)
@@ -49,6 +55,13 @@ univariate_cox <- function(cox_data, covariates){
 	univ_models <- lapply( univ_formulas, function(x){coxph(x, data = cox_data)})
 	univ_results <- lapply(univ_models,
                        	function(x){
+														for(i in x){
+															names(i) <- paste0('`', names(i), '`')
+															print(i)
+														}
+														result.frame <- data.frame(cutp(x))
+														colnames(result.frame) <- lapply(colnames(result.frame), function(x) paste0("`", x, "`"))
+														cutpoint <- signif( result.frame[[ 1, 1 ]], digits = 4 )
                           	x <- summary(x)
                           	p.value<-signif(x$wald["pvalue"], digits=2)
                           	wald.test<-signif(x$wald["test"], digits=2)
@@ -58,9 +71,9 @@ univariate_cox <- function(cox_data, covariates){
                           	HR.confint.upper <- signif(x$conf.int[,"upper .95"],2)
                           	HR <- paste0(HR, " (",
                                        	HR.confint.lower, "-", HR.confint.upper, ")")
-                          	res<-c(beta, HR, wald.test, p.value)
+                          	res<-c(beta, HR, wald.test, p.value, cutpoint)
                           	names(res)<-c("beta", "HR (95% CI for HR)", "wald.test",
-                                        	"p.value")
+                                        	"p.value", "cutpoint")
                           	return(res)
                          	})
 	res <- t(as.data.frame(univ_results, check.names = FALSE))
