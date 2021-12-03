@@ -24,16 +24,14 @@ get_surv_data <- function(filename, cols){
 
 split_high_low <- function(df, gene_cutoff){
 	for(i in 1:nrow(gene_cutoff)){
-		print(gene_cutoff[i,])
-		df[df[gene_cutoff[i,"genes"]] > gene_cutoff[i, "cutpoint"],] <- "high"
-		df[df[gene_cutoff[i,"genes"]] <= gene_cutoff[i, "cutpoint"],] <- "low"
+		df[,gene_cutoff[i,"genes"]][df[,gene_cutoff[i,"genes"]] > gene_cutoff[i, "cutpoint"]] <- "high"
+		df[,gene_cutoff[i,"genes"]][df[,gene_cutoff[i,"genes"]] <= gene_cutoff[i, "cutpoint"]] <- "low"
 	}
-	print(df)
-
+	return(df)
 }
 
 create_plot <- function(formula, data){
-	fit <- survfit(Surv(time, status) ~ sex, data = df)
+	fit <- surv_fit(formula, data = df)
 	res <- ggsurvplot(fit, 
 		   	pval = TRUE, 
 		   	conf.int = TRUE,
@@ -45,21 +43,33 @@ create_plot <- function(formula, data){
 	return(res)
 }
 
+save_plot <- function(plot, name){
+	name <- paste0(name, ".png")
+	png(name)
+	print(plot, newpage = FALSE)
+	dev.off()
+
+
+}
+
+
 args <- commandArgs(trailingOnly = TRUE)
 
 gene_cutoff <- get_gene_cutoff(args[1])
 
-
-print(tibble(gene_cutoff))
-
 temp <- data.frame(cutpoint = c(0), genes = c("sex"))
 
 #
-df = read.csv("test.csv")
+df <- get_surv_data(args[2], c(gene_cutoff$genes))
 
-split_high_low(df, temp)
+df <- split_high_low(df, gene_cutoff)
 
+
+for(i in temp$genes){
+	form <- as.formula(paste("Surv(time, status) ~", i))
+	plot <- create_plot(form, df)
+	save_plot(plot, paste0(args[3], "/", i))
+}
 #
 #
 #name <- "temp"
-#ggsave(device = "pdf", print(plot, newpage = FALSE))
