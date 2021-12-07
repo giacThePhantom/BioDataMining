@@ -1,7 +1,8 @@
 library(GEOquery)
 library(affy)
 library(frma)
-library("hgu133afrmavecs")
+library(hgu133a.db)
+library(hgu133acdf)
 
 setwd("//percorso//file//CEL")
 
