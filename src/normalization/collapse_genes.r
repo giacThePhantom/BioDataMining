@@ -19,12 +19,10 @@ get_gene_list <- function(df){
 
 collapse_gene <- function(df, gene_list){
   res <- df
-  print(length(gene_list))
   j = 0
   for(i in gene_list){
     gene_row <- res[res$Symbols == i,]
     if(nrow(gene_row) > 1){
-      print(j/length(gene_list))
       new_row <- mapply(mean, gene_row[,-c(1,2,3)])  ## To be changed to statistic used
       new_row <- as.list(c(gene_row[1,c(1,2,3)], new_row))
       res <- setdiff(res, gene_row)

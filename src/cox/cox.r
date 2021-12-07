@@ -29,9 +29,9 @@ get_exp_data <- function(filename){
 		rma_data <- rma_data[complete.cases(rma_data[3]), ]
 		rma_data <- as.data.frame(t(rma_data))
 		rma_data <- type.convert(rma_data, as.is = TRUE)
-		rma_data[3,1] <- "sample"
-		colnames(rma_data) <- as.vector(rma_data[3,])
-		rma_data <- rma_data[-c(1,2,3),]
+		rma_data[4,1] <- "sample"
+		colnames(rma_data) <- as.vector(rma_data[4,])
+		rma_data <- rma_data[-c(1,2,3,4),]
 		if(is.null(res)){
 			res <- rma_data
 		}
@@ -39,7 +39,6 @@ get_exp_data <- function(filename){
 			res <- rbind(res, rma_data)
 		}
 	}
-	#Collapse genes
 	return(res)
 }
 
@@ -110,6 +109,7 @@ clin_data <- get_clin_data(parameters$clin_data, parameters$dataset, parameters$
 
 
 cox_data <- merge_exp_clin(exp_data, clin_data)
+
 
 parameters$genes <- intersect(colnames(cox_data), parameters$genes)
 parameters$genes <- lapply(parameters$genes, function(x) gsub("-", ".",  x))
