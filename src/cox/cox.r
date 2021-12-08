@@ -75,7 +75,7 @@ univariate_cox <- function(cox_data, covariates){
 	res <- as.data.frame(res)
 	rownames(res) <- rep(1:nrow(res))
 	res$genes <- lapply(covariates, function(x) str_remove_all(x, "`"))
-	res$genes <- lapply(res$genes, function(x) gsub("-", "\\.", x))
+	res$genes <- lapply(res$genes, function(x) gsub("\\.", "-", x))
 	res$genes <- unlist(res$genes)
 	return(res)
 }
@@ -112,10 +112,11 @@ cox_data <- merge_exp_clin(exp_data, clin_data)
 
 
 parameters$genes <- intersect(colnames(cox_data), parameters$genes)
-parameters$genes <- lapply(parameters$genes, function(x) gsub("-", ".",  x))
-colnames(cox_data) <- lapply(colnames(cox_data), function(x) gsub("-", ".",  x))
+parameters$genes <- lapply(parameters$genes, function(x) gsub("-", "\\.",  x))
+colnames(cox_data) <- lapply(colnames(cox_data), function(x) gsub("-", "\\.",  x))
 
 cox_values <- univariate_cox(cox_data, parameters$genes)
-multi_cox <- multivariate_cox(cox_data, parameters$genes)
+cox_values <- cox_values[order(cox_values$p.value),]
+#multi_cox <- multivariate_cox(cox_data, parameters$genes)
 print(cox_values)
 write.csv(cox_values, args[2])
