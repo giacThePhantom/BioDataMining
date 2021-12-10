@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/W32TeX) (preloaded format=pdflatex 2021.2.15)  10 DEC 2021 20:25
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/W32TeX) (preloaded format=pdflatex 2021.2.15)  10 DEC 2021 20:32
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1190,18 +1190,12 @@ Package pdftex.def Info: figures/AMPD3.png  used on input line 251.
 LaTeX Warning: Float too large for page by 41.83205pt on input line 256.
 
 
-Overfull \hbox (6.16832pt too wide) in paragraph at lines 317--318
-\OT1/ptm/m/n/10 (-20) re-lated to the en-rich-ment of vi-ta-min D in CRC, namel
-y RPS27A,
- []
-
-[3]
 Overfull \hbox (14.11299pt too wide) in paragraph at lines 319--320
 []\OT1/ptm/m/n/10 (-20) Only for the most rel-e-vant vi-ta-min D re-lated DEG (
 SLC22A8),
  []
 
-(./report.bbl
+[3] (./report.bbl
 Underfull \hbox (badness 1043) in paragraph at lines 4--9
 []\OT1/ptm/m/n/10 (+20) J Fer-lay, M Colom-bet, I So-er-jo-mataram, T Dyba,
  []
@@ -1218,11 +1212,11 @@ Package rerunfilecheck Info: File `report.out' has not changed.
 (rerunfilecheck)             Checksum: 4558BB74FA50B8513D6C62E83FA81227;4125.
  ) 
 Here is how much of TeX's memory you used:
- 27543 strings out of 479302
- 504266 string characters out of 5871198
- 951954 words of memory out of 5000000
+ 27546 strings out of 479302
+ 504290 string characters out of 5871198
+ 954045 words of memory out of 5000000
  43847 multiletter control sequences out of 15000+600000
- 466446 words of font info for 301 fonts, out of 8000000 for 9000
+ 466565 words of font info for 303 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  102i,16n,102p,2210b,504s stack positions out of 5000i,500n,10000p,200000b,80000s
 {f:/texlive/2020/texmf-dist/fonts/enc/dvips/base/8r.enc}<f:/texlive/2020/texm
@@ -1234,7 +1228,7 @@ texlive/2020/texmf-dist/fonts/type1/urw/symbol/usyr.pfb><f:/texlive/2020/texmf-
 dist/fonts/type1/urw/times/utmb8a.pfb><f:/texlive/2020/texmf-dist/fonts/type1/u
 rw/times/utmr8a.pfb><f:/texlive/2020/texmf-dist/fonts/type1/urw/times/utmri8a.p
 fb>
-Output written on report.pdf (6 pages, 367294 bytes).
+Output written on report.pdf (6 pages, 367331 bytes).
 PDF statistics:
  287 PDF objects out of 1000 (max. 8388607)
  235 compressed objects within 3 object streams

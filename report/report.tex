@@ -109,30 +109,30 @@
 %%%%%%%%%%%%%%%%%%% PART II: Methodology
 \section{Material and methods}
 	\subsection{Data preprocessing}
-			To achieve a better statistical significance, a high number of samples was originally collected from different available public datasets on gene expression in CRC. These were downloaded from the databases Gene Expression Omnibus (GEO) \cite{GEO} and The Cancer Genome Atlas (TCGA) \cite{TCGA}. In total, 21 datasets from GEO and 1 from TCGA were obtained, and their metadata manually curated and standardized (table 1). It is worth noting that only the dataset GSE157982 had the gene signature of Vitamin D in CRC, necessary for its further analysis.
+		To achieve a better statistical significance, a high number of samples was originally collected from different available public datasets on gene expression in CRC. These were downloaded from the databases Gene Expression Omnibus (GEO) \cite{GEO} and The Cancer Genome Atlas (TCGA) \cite{TCGA}. In total, 21 datasets from GEO and 1 from TCGA were obtained, and their metadata manually curated and standardized (table \ref{tab:datasets}). It is worth noting that only the dataset GSE157982 had the gene signature of Vitamin D in CRC, necessary for its further analysis.
 
-			\begin{table*}[ht]
-				\centering
-				\begin{tabular}{cccc}
-					\hline
-					Dataset name & Sample description & Number of samples\\
-					\hline
-					GSE157982	&baseline and vit. D-treated CRC rectal samples	&98\\
-					GSE38832	&tumor colorectal samples	&122\\
-					GSE14333	&tumor colorectal samples	&290\\
-					GSE17536	&tumor colorectal samples	&177\\
-					GSE31595	&tumor colorectal samples	&37	\\
-					GSE33113	&tumor colorectal samples	&96	\\
-					GSE38832	&tumor colorectal samples	&122\\
-					GSE39084	&tumor colorectal samples	&70	\\
-					GSE39582	&tumor colorectal samples	&585\\
-					GSE103479	&tumor colorectal samples	&156\\
-					GSE17537	&tumor colorectal samples	&55	\\
-					\hline
-				\end{tabular}
-				\caption{Starting datasets}
-				\label{tab:datasets}
-			\end{table*}
+		\begin{table*}[ht]
+		    \centering
+		    \begin{tabular}{cccc}
+		        \hline
+		        Dataset name & Number of samples & Dataset name & Number of samples\\
+		        \hline
+		        GSE39582 & 585 & GSE33113 & 96 \\
+		        TGCA-COAD & 438 & GSE9348 & 82 \\
+		        GSE14333 & 290 & GSE13067 & 74 \\
+		        GSE17536 & 177 & GSE39084 & 70 \\
+		        GSE26682 & 176 & GSE23878 & 59 \\
+		        GSE103479 & 156 & GSE17537 & 55 \\
+		        GSE13294 & 155 & GSE18088 & 53 \\
+		        GSE20916 & 145 & GSE4183 & 53 \\
+		        GSE38832 & 122 & GSE31595 & 37 \\
+		        GSE18105 & 111 & GSE4107 & 22 \\
+		        GSE157982 & 98 & GSE15960 & 18 \\
+		        \hline
+		    \end{tabular}
+		    \caption{Distribution of the samples in the starting datasets. In total, 3072 samples from 22 datasets were obtained.}
+		    \label{tab:datasets}
+		\end{table*}
 
 		\subsubsection{Sample splitting and filtering}
 			All these starting samples will be filtered so that they have all the data necessary for our analysis.
@@ -193,7 +193,7 @@
 
 %%%%%%%%%%%%%%%%%%% PART III: Results
 \section{Results and Discussion}
-	\subsection{Data preprocessing}
+	\subsection{Data preprocessing} %%%%%%% [WIP] CONSIDER MOVING DATA PREPROCESSING TO METHODOLOGY COMPLETELY, IT'S NOT REALLY A RESULT
 		\subsubsection{Sample splitting and filtering}
 			The sets used to find the vitamin-D gene signature and the DEGs between stages of cancer needed only the expression level of each gene, while the other ones needed information about the time of survival and the status of the sample.
 			We retained data that had all the information we needed, so we filtered out $temp$ samples from the starting $temp$.
@@ -206,7 +206,7 @@
 					Set & $n^\circ$ of samples\\
 					COX fitting & $232$\\
 					KM curve & $1000$\\
-					Vitamine D gene signature & $90$\\
+					Vitamin D gene signature & $90$\\
 					Stage DEGs & $1000$\\
 					\hline
 				\end{tabular}
@@ -214,7 +214,7 @@
 				\label{tab:samples_split}
 			\end{table}
 
-		\subsubsection{Dataset normalization}
+		% \subsubsection{Dataset normalization}
 
 	\subsection{Differentially expressed genes}
 		\subsubsection{DEG between stage of cancer}
@@ -276,7 +276,7 @@
 			\end{table}
 
 
-\section{Discussion}
+\section{Discussion} %%%%% [WIP] THIS IS TOO SMALL TO BE A STANDALONE SECTION, MERGE WITH RESULTS
 	After having compiled the Kaplan-Meier curves the four genes derived from the consensus stage-based DEGs and the four gene found from the expanded vitamin D gene signature found statistically significant, we compiled a literature-based characterization for each of those (tables \ref{tab:vit_char} and \ref{tab:deg_char}.
 	\begin{table}[ht]
 		\centering
@@ -314,7 +314,7 @@
 
 %%%%%%%%%%%%%%%%%%% PART IV: Conclusions
 \section{Conclusions}
-	Cox proportional-hazards model allowed to identify 4 DEGs related to the enrichment of vitamin D in CRC, namely RPS27A, TMCO3, CHUK, KLHL20 (in descending order of relevance, according to their HR). The HR values of these 4 genes were compared to the HR of the top 4 DEGs related to CRC’s stage; also in descending order: SLC22A8, CDK17, DHRS12, AMPD3. The HR value is higher for the vitamin D counterpart of the analyzed DEGs, which implies that different concentrations of this vitamin influences gene expression such that a larger impact on prognosis of CRC patients is present (compared to the different expression of genes according to the stage of the disease).
+	Four DEGs were found to be related to the enrichment of vitamin D in CRC, namely RPS27A, TMCO3, CHUK, KLHL20 (in descending order of relevance, according to their HR). The HR values of these 4 genes were compared to the HR of the top 4 DEGs related to CRC’s stage; also in descending order: SLC22A8, CDK17, DHRS12, AMPD3. The HR value is higher for the vitamin D counterpart of the analyzed DEGs, which implies that different concentrations of this vitamin influences gene expression such that a larger impact on prognosis of CRC patients is present (compared to the different expression of genes according to the stage of the disease).
 
 	Only for the most relevant vitamin D related DEG (SLC22A8), 3 drugs were found to target it according to the literature, namely ATALUREN, ELX-02, MT-3724. Similarly, for the two most relevant stage related DEGs (SLC22A8, CDK17), several drugs were found in the literature: PROBENECID (for SLC22A8); AZD-5438, PHA-793887, RONICICLIB, AT-7519 (for CDK17). Further analysis on these DEGs is of interest, to verify their role in CRC evolution and prognosis, and potentially improve the treatment of CRC patients in the future.
 
@@ -328,6 +328,5 @@
 \phantomsection
 \bibliographystyle{unsrt}
 \bibliography{references}
-
 
 \end{document}
