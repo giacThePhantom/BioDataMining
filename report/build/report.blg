@@ -1,137 +1,68 @@
-This is BibTeX, Version 0.99d (TeX Live 2020/W32TeX)
+This is BibTeX, Version 0.99d (TeX Live 2021/Arch Linux)
 Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
-The top-level auxiliary file: report.aux
+The top-level auxiliary file: ./build/report.aux
 The style file: unsrt.bst
+Illegal, another \bibstyle command---line 108 of file ./build/report.aux
+ : \bibstyle
+ :          {unsrt}
+I'm skipping whatever remains of this command
+Illegal, another \bibdata command---line 109 of file ./build/report.aux
+ : \bibdata
+ :         {references}
+I'm skipping whatever remains of this command
 Database file #1: references.bib
-<<<<<<< HEAD
-You've used 4 entries,
+Warning--I didn't find a database entry for "Ferlay2018-pg"
+Warning--I didn't find a database entry for "Bu2021-xn"
+Warning--I didn't find a database entry for "Pereira2012-pf"
+Warning--I didn't find a database entry for "Giovannucci2013-ss"
+Warning--I didn't find a database entry for "Fedirko2019-ai"
+Warning--I didn't find a database entry for "Saraff2016-dr"
+Warning--I didn't find a database entry for "Xu2021-vb"
+Warning--I didn't find a database entry for "Meeker2016-tr"
+Warning--I didn't find a database entry for "Zgaga2014-dd"
+Warning--I didn't find a database entry for "Feldman2014-mh"
+Warning--I didn't find a database entry for "Palmer2001-bh"
+Warning--I didn't find a database entry for "Sadeghi2020-ci"
+Warning--I didn't find a database entry for "Martinez-Romero2018-gp"
+You've used 6 entries,
             1791 wiz_defined-function locations,
-            458 strings with 3835 characters,
-and the built_in function-call counts, 456 in all, are:
-= -- 40
-> -- 4
+            490 strings with 4231 characters,
+and the built_in function-call counts, 634 in all, are:
+= -- 50
+> -- 6
 < -- 0
-+ -- 4
++ -- 6
 - -- 0
 * -- 2
-:= -- 53
-add.period$ -- 12
-call.type$ -- 4
-change.case$ -- 4
+:= -- 65
+add.period$ -- 14
+call.type$ -- 6
+change.case$ -- 6
 chr.to.int$ -- 0
-cite$ -- 4
-duplicate$ -- 20
-empty$ -- 73
+cite$ -- 6
+duplicate$ -- 30
+empty$ -- 109
 format.name$ -- 0
-if$ -- 117
+if$ -- 165
 int.to.chr$ -- 0
-int.to.str$ -- 4
+int.to.str$ -- 6
 missing$ -- 0
-newline$ -- 23
+newline$ -- 29
 num.names$ -- 0
-pop$ -- 32
+pop$ -- 44
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 12
+skip$ -- 28
 stack$ -- 0
 substring$ -- 0
-swap$ -- 4
-=======
-Repeated entry---line 838 of file references.bib
- : @article{Ferlay2018-pg
- :                       ,
-I'm skipping whatever remains of this entry
-Repeated entry---line 886 of file references.bib
- : @article{Bu2021-xn
- :                   ,
-I'm skipping whatever remains of this entry
-Repeated entry---line 935 of file references.bib
- : @article{Pereira2012-pf
- :                        ,
-I'm skipping whatever remains of this entry
-Repeated entry---line 968 of file references.bib
- : @article{Giovannucci2013-ss
- :                            ,
-I'm skipping whatever remains of this entry
-Repeated entry---line 1005 of file references.bib
- : @article{Fedirko2019-ai
- :                        ,
-I'm skipping whatever remains of this entry
-Repeated entry---line 1065 of file references.bib
- : @article{Saraff2016-dr
- :                       ,
-I'm skipping whatever remains of this entry
-Repeated entry---line 1088 of file references.bib
- : @article{Xu2021-vb
- :                   ,
-I'm skipping whatever remains of this entry
-Repeated entry---line 1118 of file references.bib
- : @article{Meeker2016-tr
- :                       ,
-I'm skipping whatever remains of this entry
-Repeated entry---line 1163 of file references.bib
- : @article{Zgaga2014-dd
- :                      ,
-I'm skipping whatever remains of this entry
-Repeated entry---line 1212 of file references.bib
- : @article{Feldman2014-mh
- :                        ,
-I'm skipping whatever remains of this entry
-Repeated entry---line 1239 of file references.bib
- : @article{Palmer2001-bh
- :                       ,
-I'm skipping whatever remains of this entry
-Repeated entry---line 1279 of file references.bib
- : @article{Sadeghi2020-ci
- :                        ,
-I'm skipping whatever remains of this entry
-You've used 15 entries,
-            1791 wiz_defined-function locations,
-            562 strings with 7624 characters,
-and the built_in function-call counts, 4277 in all, are:
-= -- 294
-> -- 357
-< -- 0
-+ -- 125
-- -- 110
-* -- 435
-:= -- 741
-add.period$ -- 41
-call.type$ -- 15
-change.case$ -- 15
-chr.to.int$ -- 0
-cite$ -- 15
-duplicate$ -- 127
-empty$ -- 337
-format.name$ -- 110
-if$ -- 860
-int.to.chr$ -- 0
-int.to.str$ -- 15
-missing$ -- 13
-newline$ -- 74
-num.names$ -- 13
-pop$ -- 25
-preamble$ -- 1
-purify$ -- 0
-quote$ -- 0
-skip$ -- 56
-stack$ -- 0
-substring$ -- 276
-swap$ -- 15
->>>>>>> 40babde207bca503d4ec4453f4d8f78914dbf0a6
+swap$ -- 6
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 0
-<<<<<<< HEAD
 while$ -- 0
-width$ -- 5
-write$ -- 38
-=======
-while$ -- 35
-width$ -- 17
-write$ -- 155
-(There were 12 error messages)
->>>>>>> 40babde207bca503d4ec4453f4d8f78914dbf0a6
+width$ -- 7
+write$ -- 48
+(There were 2 error messages)
