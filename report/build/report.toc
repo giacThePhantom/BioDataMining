@@ -2,22 +2,27 @@
 \contentsline {section}{\numberline {1}Introduction}{1}{section.1}%
 \contentsline {section}{\numberline {2}Material and methods}{1}{section.2}%
 \contentsline {subsection}{\numberline {2.1}Data preprocessing}{1}{subsection.2.1}%
-\contentsline {subsubsection}{\numberline {2.1.1}Sample splitting and filtering}{1}{subsubsection.2.1.1}%
-\contentsline {subsubsection}{\numberline {2.1.2}Dataset normalization}{1}{subsubsection.2.1.2}%
-\contentsline {subsection}{\numberline {2.2}Differentially expressed genes}{1}{subsection.2.2}%
-\contentsline {subsubsection}{\numberline {2.2.1}DEG between stage of cancer}{1}{subsubsection.2.2.1}%
-\contentsline {subsubsection}{\numberline {2.2.2}Vitamin D gene signature}{1}{subsubsection.2.2.2}%
-\contentsline {subsubsection}{\numberline {2.2.3}Pathway enrichment}{1}{subsubsection.2.2.3}%
-\contentsline {subsection}{\numberline {2.3}Survival analysis}{1}{subsection.2.3}%
-\contentsline {section}{\numberline {3}Results}{1}{section.3}%
-\contentsline {subsection}{\numberline {3.1}Data preprocessing}{1}{subsection.3.1}%
-\contentsline {subsubsection}{\numberline {3.1.1}Sample splitting and filtering}{1}{subsubsection.3.1.1}%
-\contentsline {subsubsection}{\numberline {3.1.2}Dataset normalization}{1}{subsubsection.3.1.2}%
-\contentsline {subsection}{\numberline {3.2}Differentially expressed genes}{1}{subsection.3.2}%
-\contentsline {subsubsection}{\numberline {3.2.1}DEG between stage of cancer}{1}{subsubsection.3.2.1}%
-\contentsline {subsubsection}{\numberline {3.2.2}Vitamin D gene signature}{1}{subsubsection.3.2.2}%
-\contentsline {subsubsection}{\numberline {3.2.3}Pathway enrichment}{1}{subsubsection.3.2.3}%
-\contentsline {subsection}{\numberline {3.3}Survival analysis}{1}{subsection.3.3}%
-\contentsline {section}{\numberline {4}Discussion}{1}{section.4}%
-\contentsline {section}{References}{1}{section*.3}%
+\contentsline {subsubsection}{\numberline {2.1.1}Sample splitting and filtering}{2}{subsubsection.2.1.1}%
+\contentsline {subsubsection}{\numberline {2.1.2}Dataset normalization}{2}{subsubsection.2.1.2}%
+\contentsline {paragraph}{fRMA}{2}{paragraph*.3}%
+\contentsline {paragraph}{Bootstrap}{2}{paragraph*.4}%
+\contentsline {subsection}{\numberline {2.2}Differentially expressed genes}{2}{subsection.2.2}%
+\contentsline {subsubsection}{\numberline {2.2.1}DEG between stage of cancer}{2}{subsubsection.2.2.1}%
+\contentsline {subsubsection}{\numberline {2.2.2}Vitamin D gene signature}{2}{subsubsection.2.2.2}%
+\contentsline {subsection}{\numberline {2.3}Survival analysis}{2}{subsection.2.3}%
+\contentsline {subsubsection}{\numberline {2.3.1}Cox proportional-hazards model}{2}{subsubsection.2.3.1}%
+\contentsline {subsubsection}{\numberline {2.3.2}Kaplan-Meier curves}{2}{subsubsection.2.3.2}%
+\contentsline {section}{\numberline {3}Results}{2}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Data preprocessing}{2}{subsection.3.1}%
+\contentsline {subsubsection}{\numberline {3.1.1}Sample splitting and filtering}{2}{subsubsection.3.1.1}%
+\contentsline {subsubsection}{\numberline {3.1.2}Dataset normalization}{2}{subsubsection.3.1.2}%
+\contentsline {subsection}{\numberline {3.2}Differentially expressed genes}{2}{subsection.3.2}%
+\contentsline {subsubsection}{\numberline {3.2.1}DEG between stage of cancer}{2}{subsubsection.3.2.1}%
+\contentsline {subsubsection}{\numberline {3.2.2}Vitamin D gene signature}{2}{subsubsection.3.2.2}%
+\contentsline {subsubsection}{\numberline {3.2.3}Pathway enrichment}{2}{subsubsection.3.2.3}%
+\contentsline {subsection}{\numberline {3.3}Survival analysis}{2}{subsection.3.3}%
+\contentsline {subsubsection}{\numberline {3.3.1}Cox proportional-hazards model}{2}{subsubsection.3.3.1}%
+\contentsline {subsubsection}{\numberline {3.3.2}Kaplan-Meier curves}{3}{subsubsection.3.3.2}%
+\contentsline {section}{\numberline {4}Discussion}{3}{section.4}%
+\contentsline {section}{References}{3}{section*.9}%
 \contentsfinish 
