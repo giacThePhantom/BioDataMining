@@ -204,7 +204,7 @@ This regression analysis, once validated will allow us to obtain a list of genes
 
 		\subsubsection{Sample splitting and filtering}
 		The sets used to find the vitamin-D gene signature and the DEGs between stages of cancer needed only the expression level of each gene, while the other ones needed information about the time of survival and the status of the sample.
-		We retained data that had all the information we needed, so we obtaine $1117$ samples from the starting $3394$, the $33\%$.
+		We retained data that had all the information we needed, so we filtered out $temp$ samples from the starting $temp$.
 		Table \ref{tab:samples_split} contains information on how we divided all the remaining samples of each dataset in our sets.
 
 		\begin{table}[H]
@@ -266,9 +266,9 @@ This regression analysis, once validated will allow us to obtain a list of genes
 		\subsubsection{Pathway enrichment}
 		The top 100 differentially expressed transcripts for which a Gene Symbol could be found were given as input to EnrichR.
 		Some of the most interesting results of the enrichment analysis on the top 100 genes of the vitamin-D gene signature in colorectal cancer are represented by the statistically significant (q-value $<$ 0.05 ) enrichment of the PTEN signalling pathway (indipendently highlighted by 2 different databases: ‘BioPlanet 2019’ and ‘BioCarta 2016’), and pathways associated with various integrins and cell motility in cancer (‘Elselvier Pathway Collection’ database), such as the alpha-4-beta-7 integrin signalling.
-PTEN (figure \ref{fig:pten}) is a negative regulator of the Akt$\backslash$PkB pathway, which promotes cell proliferation and survival, and is often altered in cancer cells [a].
-Alpha-4-beta-7 (coded by the ITGB7 gene) is an integrin involved in the recruiting of lymphocytes in the lymphoid tissue of the gut [b].
-The content of tumor-infiltrating lymphocytes of different malignancies, including CRC, is strongly linked to better long term and short term survival [c].
+PTEN (figure \ref{fig:pten}) is a negative regulator of the Akt$\backslash$PkB pathway, which promotes cell proliferation and survival, and is often altered in cancer cells \cite{chalhoub2009pten}.
+Alpha-4-beta-7 (coded by the ITGB7 gene) is an integrin involved in the recruiting of lymphocytes in the lymphoid tissue of the gut \cite{Alpha}.
+The content of tumor-infiltrating lymphocytes of different malignancies, including CRC, is strongly linked to better long term and short term survival \cite{fuchs2020assessment}.
 
 
 		\begin{figure}[ht]
@@ -337,10 +337,10 @@ After having compiled the Kaplan-Meier curves the four genes derived from the co
 		\hline
 		Gene & Relevant function\\
 		\hline
-		RPS27A & \makecell{One of the genes encoding for ubiquitin.\\Misregulated in various cancers,\\including colorectal [n].\\Its upregulation in CRC\\may promote cancer cell proliferation\\and inhibition of apoptosis [o].}\\
-		TMCO3 & \makecell{Probable Na(+) / H(+) antiporter.\\Linked to unfavorable outcomes in cancer [p].\\A patent exists for prognosis\\and treatment methods of\\CRC based on this gene [q].}\\
-		CHUK & \makecell{Ser/Thr protein kinase involved in the\\(indirect) activation of NF-kB [f].\\Regulates cyclin D1. [g]\\Decreased activity is linked to cancer [h].}\\
-		KLHL20 & \makecell{[i] Mediates ubiquitination of DAPK1\\thereby downregulating\\interferon-mediated apoptosis. [l]\\Mediates ubiquitination of PML thereby promoting\\resistance to hypoxia and cancer\\progression through HIF1a signalling. [m].}\\
+		RPS27A & \makecell{One of the genes encoding for ubiquitin.\\Misregulated in various cancers,\\including colorectal \cite{n}.\\Its upregulation in CRC\\may promote cancer cell proliferation\\and inhibition of apoptosis \cite{o}.}\\
+		TMCO3 & \makecell{Probable Na(+) / H(+) antiporter.\\Linked to unfavorable outcomes in cancer \cite{p}.\\A patent exists for prognosis\\and treatment methods of\\CRC based on this gene \cite{q}.}\\
+		CHUK & \makecell{Ser/Thr protein kinase involved in the\\(indirect) activation of NF-kB \cite{f}.\\Regulates cyclin D1. \cite{g}\\Decreased activity is linked to cancer \cite{h}.}\\
+		KLHL20 & \makecell{\cite{i} Mediates ubiquitination of DAPK1\\thereby downregulating\\interferon-mediated apoptosis. \cite{l}\\Mediates ubiquitination of PML thereby promoting\\resistance to hypoxia and cancer\\progression through HIF1a signalling. \cite{m}.}\\
 		\hline
 	\end{tabular}
 	\caption{Statistically significant genes in the expanded vitamin-D gene signature}
@@ -354,10 +354,10 @@ After having compiled the Kaplan-Meier curves the four genes derived from the co
 		\hline
 		Gene & Relevant function\\
 		\hline
-		SLC22A8 & \makecell{Integral membrane protein involved in\\the sodium-dependent excretion of\\potentially toxic organic anions.\\Expression specific to kidney and brain [e].}\\
-		CDK17 & \makecell{Cyclin-dependent protein \\serine/threonine kinase. Involved in the regulation \\of transcription involved in G1/S\\transition of mitotic cell cycle\\(source: GO biological process).\\Expressed in many tissues (no specificity) [b].\\It is the target of\\4 CDK inhibitors.}\\
-		DHRS12 & \makecell{Oxidoreductase. Linked to poor prognosis\\in ovarian cancer [c] and\\suppression of proliferation\\and metastasis in osteosarcoma [d].}\\
-		AMPD3 & \makecell{AMP deaminase in erythrocytes. In mice,\\mutations on this gene reduce levels\\of naive CD4+ and naive CD8+ cells\\in peripheral blood but not in lymphoid tissue.\\This is most likely due to a signalling\\mechanism triggered by the mutated\\phenotype of the red blood cells. [a].}\\
+		SLC22A8 & \makecell{Integral membrane protein involved in\\the sodium-dependent excretion of\\potentially toxic organic anions.\\Expression specific to kidney and brain \cite{e}.}\\
+		CDK17 & \makecell{Cyclin-dependent protein \\serine/threonine kinase. Involved in the regulation \\of transcription involved in G1/S\\transition of mitotic cell cycle\\(source: GO biological process).\\Expressed in many tissues (no specificity) \cite{b}.\\It is the target of\\4 CDK inhibitors.}\\
+		DHRS12 & \makecell{Oxidoreductase. Linked to poor prognosis\\in ovarian cancer \cite{c} and\\suppression of proliferation\\and metastasis in osteosarcoma \cite{d}.}\\
+		AMPD3 & \makecell{AMP deaminase in erythrocytes. In mice,\\mutations on this gene reduce levels\\of naive CD4+ and naive CD8+ cells\\in peripheral blood but not in lymphoid tissue.\\This is most likely due to a signalling\\mechanism triggered by the mutated\\phenotype of the red blood cells. \cite{a}.}\\
 		\hline
 	\end{tabular}
 	\caption{4 top genes in stage DEGs}
