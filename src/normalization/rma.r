@@ -20,9 +20,9 @@ write.table(rma, file="rma.txt", quote=FALSE, sep="\t")
 
 //Annotation
 
-probes=row.names(frma)
+probes=row.names(rma)
 ls("package:hgu133a.db")
 Symbols = unlist(mget(probes, hgu133aSYMBOL, ifnotfound=NA))
 Entrez_IDs = unlist(mget(probes, hgu133aENTREZID, ifnotfound = NA))
-frma = cbind(probes, Symbols, Entrez_IDs, frma)
-write.table(frma, file = "annotation_frma.txt", sep ="\t", row.names = FALSE, col.names = TRUE)
+rma = cbind(probes, Symbols, Entrez_IDs, rma)
+write.table(rma, file = "annotation_frma.txt", sep ="\t", row.names = FALSE, col.names = TRUE)
