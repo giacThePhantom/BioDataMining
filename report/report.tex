@@ -116,10 +116,8 @@ The objective of this project was to find a way to make prognosis and stratify p
 			\hline
 			Dataset name & Sample description & Number of samples\\
 			\hline
-			E-MTAB-6698	& healthy and tumor colorectal samples	&1566\\
 			GSE157982	&baseline and vit. D-treated CRC rectal samples	&98\\
 			GSE38832	&tumor colorectal samples	&122\\
-			TCGA-COAD	&tumor colorectal samples	&438\\
 			GSE14333	&tumor colorectal samples	&290\\
 			GSE17536	&tumor colorectal samples	&177\\
 			GSE31595	&tumor colorectal samples	&37	\\
@@ -156,20 +154,28 @@ The objective of this project was to find a way to make prognosis and stratify p
 		\end{table}
 
 		\subsubsection{Dataset normalization}
-
-			\paragraph{fRMA}
-
-			\paragraph{Bootstrap}
+		Having decided to use different dataset for this analysis, a normalization step has been introduced to remove batch effects.
+		To do so we performed on the raw micro-array data different type on normalization.
+		Firstly we tried with Robust Multiarray Analysis \emph{RMA} and then with Frozen Robust Multiarray analysis \emph{fRMA}.
+		The logaritmic value of all the gene expression levels has been computed and used downstream the analysis.
+		We divided the normalized data in two sets to be used downstream.
+		The first was composed of datasets  GSE17536 and GSE17637 and will be used to fit the Cox proportional-hazards model.
+		The second was composed of datasets GSE31595, GSE33113, GSE38832, GSE39084 and GSE39582.
+		This second set has been normalized in two ways: we first normalized all the samples together to compute a single data matrix used downstream to plot the Kaplan-Meier curves and then we implemented a bootstrap procedure.
+		In this procedure we sampled from each dataset $600$ individuals $10$ times so that in each matrix we obtained balanced data with respect to the cancer stage.
 
 	\subsection{Differentially expressed genes}
-	After having removed the batch effect and having obtained all the necessary datasets we used them two set of differentially expressed genes, from here \emph{DEGs}.
-	The first step contains DEGs found in different stages of cancer and the second the vitamin-D gene signature.
+	After having removed the batch effect and having obtained all the necessary datasets we used them to find two sets of differentially expressed genes or \emph{DEGs}.
+	The first set contains DEGs found in different stages of cancer and the second the vitamin-D gene signature.
 
 		\subsubsection{DEG between stage of cancer}
-		For each of the $10$ subset of the used samples a LIMMA analysis was performed.
+		To find DEgs between the stage of cancer we used $10$ data matrices of $600$ samples.
+		This data matrices have been computed so that the samples were balanced between high and low stage.
+		We identify stage low of cancer as stages $0$, $1$ and $2$ and stage high as stages $3$ and $4$.
+		For each of the $10$ subsets we used LIMMA to find a ranking of the DEGs.
 		The resulting gene lists have been sorted in increasing order by p-value.
 		We aggregated the resulting list using Borda count, so to obtain a ranking for each of the $temp$ genes.
-		This ranking will be used to see if the genes we found downstream are responsible for differentiating between cancer stages.
+		This ranking will be used to compare prediction power of the vitamin-D signature with respect to the top DEGs between stages. 
 
 		\subsubsection{Vitamin D gene signature}
 		In order to obtain the list of differentially expressed genes for the vitamin D signature, the state-of-the-art R package “Deseq2” was used on the vitamin D dataset, which contains counts of RNA-seq expression data from rectal biopsies of CRC patients pre-and post- vitamin D supplementation. Transcript IDs were converted to Gene Symbols through “BioMart”. For some of the transcripts, a Gene Symbol was not found. The statistically relevant genes were then selected using the adjusted p-value automatically computed by the Deseq2 package. DEGs were then manually expanded using the protein-protein interaction network database STRING.

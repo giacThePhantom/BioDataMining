@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021/Arch Linux) (preloaded format=pdflatex 2021.12.1)  10 DEC 2021 15:01
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021/Arch Linux) (preloaded format=pdflatex 2021.11.29)  10 DEC 2021 16:59
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -353,7 +353,7 @@ Package babel Info: \l@australian = using hyphenrules for ukenglish
 Package babel Info: \l@newzealand = using hyphenrules for ukenglish
 (babel)             (\language21) on input line 108.
 ))
-(/usr/share/texmf/tex/latex/pgfgantt/pgfgantt.sty
+(/usr/share/texmf-dist/tex/latex/pgfgantt/pgfgantt.sty
 Package: pgfgantt 2018/01/10 v5.0 Draw Gantt diagrams with TikZ
 
 (/usr/share/texmf-dist/tex/latex/pgf/frontendlayer/tikz.sty
@@ -1130,49 +1130,49 @@ Package microtype Info: Loading generic protrusion settings for font family
 
 
 ] [2]
-<figures/RPS27A.png, id=177, 481.8pt x 481.8pt>
+<figures/RPS27A.png, id=175, 481.8pt x 481.8pt>
 File: figures/RPS27A.png Graphic file (type png)
 <use figures/RPS27A.png>
-Package pdftex.def Info: figures/RPS27A.png  used on input line 235.
+Package pdftex.def Info: figures/RPS27A.png  used on input line 241.
 (pdftex.def)             Requested size: 169.69147pt x 169.69116pt.
-<figures/TMCO3.png, id=178, 481.8pt x 481.8pt>
+<figures/TMCO3.png, id=176, 481.8pt x 481.8pt>
 File: figures/TMCO3.png Graphic file (type png)
 <use figures/TMCO3.png>
-Package pdftex.def Info: figures/TMCO3.png  used on input line 236.
+Package pdftex.def Info: figures/TMCO3.png  used on input line 242.
 (pdftex.def)             Requested size: 169.69147pt x 169.69116pt.
-<figures/CHUK.png, id=179, 481.8pt x 481.8pt>
+<figures/CHUK.png, id=177, 481.8pt x 481.8pt>
 File: figures/CHUK.png Graphic file (type png)
 <use figures/CHUK.png>
-Package pdftex.def Info: figures/CHUK.png  used on input line 237.
+Package pdftex.def Info: figures/CHUK.png  used on input line 243.
 (pdftex.def)             Requested size: 169.69147pt x 169.69116pt.
-<figures/KLHL20.png, id=180, 481.8pt x 481.8pt>
+<figures/KLHL20.png, id=178, 481.8pt x 481.8pt>
 File: figures/KLHL20.png Graphic file (type png)
 <use figures/KLHL20.png>
-Package pdftex.def Info: figures/KLHL20.png  used on input line 238.
+Package pdftex.def Info: figures/KLHL20.png  used on input line 244.
 (pdftex.def)             Requested size: 169.69147pt x 169.69116pt.
-<figures/SLC22A8.png, id=181, 481.8pt x 481.8pt>
+<figures/SLC22A8.png, id=179, 481.8pt x 481.8pt>
 File: figures/SLC22A8.png Graphic file (type png)
 <use figures/SLC22A8.png>
-Package pdftex.def Info: figures/SLC22A8.png  used on input line 242.
+Package pdftex.def Info: figures/SLC22A8.png  used on input line 248.
 (pdftex.def)             Requested size: 169.69147pt x 169.69116pt.
-<figures/CDK17.png, id=182, 481.8pt x 481.8pt>
+<figures/CDK17.png, id=180, 481.8pt x 481.8pt>
 File: figures/CDK17.png Graphic file (type png)
 <use figures/CDK17.png>
-Package pdftex.def Info: figures/CDK17.png  used on input line 243.
+Package pdftex.def Info: figures/CDK17.png  used on input line 249.
 (pdftex.def)             Requested size: 169.69147pt x 169.69116pt.
-<figures/DHRS12.png, id=183, 481.8pt x 481.8pt>
+<figures/DHRS12.png, id=181, 481.8pt x 481.8pt>
 File: figures/DHRS12.png Graphic file (type png)
 <use figures/DHRS12.png>
-Package pdftex.def Info: figures/DHRS12.png  used on input line 244.
+Package pdftex.def Info: figures/DHRS12.png  used on input line 250.
 (pdftex.def)             Requested size: 169.69147pt x 169.69116pt.
-<figures/AMPD3.png, id=184, 481.8pt x 481.8pt>
+<figures/AMPD3.png, id=182, 481.8pt x 481.8pt>
 File: figures/AMPD3.png Graphic file (type png)
 <use figures/AMPD3.png>
-Package pdftex.def Info: figures/AMPD3.png  used on input line 245.
+Package pdftex.def Info: figures/AMPD3.png  used on input line 251.
 (pdftex.def)             Requested size: 169.69147pt x 169.69116pt.
 
 
-LaTeX Warning: Float too large for page by 41.83205pt on input line 250.
+LaTeX Warning: Float too large for page by 41.83205pt on input line 256.
 
 (./build/report.bbl
 
@@ -1187,14 +1187,14 @@ res/CHUK.png (PNG copy)> <./figures/KLHL20.png (PNG copy)> <./figures/SLC22A8.p
 ng (PNG copy)> <./figures/CDK17.png (PNG copy)> <./figures/DHRS12.png (PNG copy
 )> <./figures/AMPD3.png (PNG copy)>] (./build/report.aux)
 Package rerunfilecheck Info: File `report.out' has not changed.
-(rerunfilecheck)             Checksum: 2C564C92B3B18093DBD39C80AFEAC0F9;4106.
+(rerunfilecheck)             Checksum: 93F712B4911FB08DCC08D480B83A65D0;4106.
  ) 
 Here is how much of TeX's memory you used:
- 27456 strings out of 478994
- 501043 string characters out of 5864751
- 946119 words of memory out of 5000000
- 44106 multiletter control sequences out of 15000+600000
- 463300 words of font info for 274 fonts, out of 8000000 for 9000
+ 27461 strings out of 478994
+ 501084 string characters out of 5864750
+ 947628 words of memory out of 5000000
+ 44104 multiletter control sequences out of 15000+600000
+ 463821 words of font info for 280 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  102i,16n,102p,1961b,406s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texmf-dist/fon
@@ -1204,10 +1204,10 @@ c/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/urw/helvetic/uhvb8a
 mf-dist/fonts/type1/urw/helvetic/uhvro8a.pfb></usr/share/texmf-dist/fonts/type1
 /urw/symbol/usyr.pfb></usr/share/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></
 usr/share/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on ./build/report.pdf (5 pages, 345761 bytes).
+Output written on ./build/report.pdf (5 pages, 347348 bytes).
 PDF statistics:
- 246 PDF objects out of 1000 (max. 8388607)
- 197 compressed objects within 2 object streams
- 38 named destinations out of 1000 (max. 500000)
+ 241 PDF objects out of 1000 (max. 8388607)
+ 192 compressed objects within 2 object streams
+ 36 named destinations out of 1000 (max. 500000)
  94453 words of extra memory for PDF output out of 106986 (max. 10000000)
 
