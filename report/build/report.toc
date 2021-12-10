@@ -13,11 +13,10 @@
 \contentsline {section}{\numberline {3}Results}{2}{section.3}%
 \contentsline {subsection}{\numberline {3.1}Data preprocessing}{2}{subsection.3.1}%
 \contentsline {subsubsection}{\numberline {3.1.1}Sample splitting and filtering}{2}{subsubsection.3.1.1}%
-\contentsline {subsubsection}{\numberline {3.1.2}Dataset normalization}{2}{subsubsection.3.1.2}%
-\contentsline {subsection}{\numberline {3.2}Differentially expressed genes}{2}{subsection.3.2}%
-\contentsline {subsubsection}{\numberline {3.2.1}DEG between stage of cancer}{2}{subsubsection.3.2.1}%
-\contentsline {subsubsection}{\numberline {3.2.2}Vitamin D gene signature}{2}{subsubsection.3.2.2}%
-\contentsline {subsubsection}{\numberline {3.2.3}Pathway enrichment}{3}{subsubsection.3.2.3}%
+\contentsline {subsubsection}{\numberline {3.1.2}Dataset normalization}{3}{subsubsection.3.1.2}%
+\contentsline {subsection}{\numberline {3.2}Differentially expressed genes}{3}{subsection.3.2}%
+\contentsline {subsubsection}{\numberline {3.2.1}DEG between stage of cancer}{3}{subsubsection.3.2.1}%
+\contentsline {subsubsection}{\numberline {3.2.2}Vitamin D gene signature}{3}{subsubsection.3.2.2}%
 \contentsline {subsection}{\numberline {3.3}Survival analysis}{3}{subsection.3.3}%
 \contentsline {subsubsection}{\numberline {3.3.1}Cox proportional-hazards model}{3}{subsubsection.3.3.1}%
 \contentsline {subsubsection}{\numberline {3.3.2}Kaplan-Meier curves}{3}{subsubsection.3.3.2}%

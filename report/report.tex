@@ -135,25 +135,12 @@ The objective of this project was to find a way to make prognosis and stratify p
 
 		\subsubsection{Sample splitting and filtering}
 		All these starting samples will be filtered so that they have all the data necessary for our analysis.
-		Furthermore we will split them in different sets, so that ever
-		In order to filter the samples having all the data necessary for the downstream analyses, they were split in 6 sets according to their available clinical data. Metadata to be considered was, for instance, survival time and tumor stage. After this operation, 2676 samples were retained out of the starting 3072 ($87.11\%$), divided as in table \ref{tab:samples_split}.
-
-		\begin{table}[H]
-			\centering
-			\begin{tabular}{cc}
-				\hline
-				Set usage & $n^\circ$ of samples\\
-				COX fitting & $388$\\
-				KM curve & $157$\\
-				Vitamine D low & $49$\\
-				Vitamine D high & $49$\\
-				Stage low & $1120$\\
-				Stage high & $908$\\
-				\hline
-			\end{tabular}
-			\caption{Split samples}
-			\label{tab:samples_split}
-		\end{table}
+		Furthermore we will split them in different sets, so that every step in our pipeline will have enough data to be statistically significant.
+		So we define $4$ different sets.
+		The first one will be used to find differentially expressed genes between different stages of cancer.
+		The second one will be used to find the vitamin D gene signature.
+		The third one will be used to fit cox proportional-hazard model.
+		The fourth one will be used to plot the Kaplan-Meier curves.
 
 		\subsubsection{Dataset normalization}
 		Having decided to use different dataset for this analysis, a normalization step has been introduced to remove batch effects.
@@ -177,7 +164,7 @@ The objective of this project was to find a way to make prognosis and stratify p
 		For each of the $10$ subsets we used LIMMA to find a ranking of the DEGs.
 		The resulting gene lists have been sorted in increasing order by p-value.
 		We aggregated the resulting list using Borda count, so to obtain a ranking for each of the $temp$ genes.
-		This ranking will be used to compare prediction power of the vitamin-D signature with respect to the top DEGs between stages. 
+		This ranking will be used to compare prediction power of the vitamin-D signature with respect to the top DEGs between stages.
 
 		\subsubsection{Vitamin D gene signature}
 		In order to obtain the list of differentially expressed genes for the vitamin D signature, the state-of-the-art R package “Deseq2” was used on the vitamin D dataset, which contains counts of RNA-seq expression data from rectal biopsies of CRC patients pre-and post- vitamin D supplementation. Transcript IDs were converted to Gene Symbols through “BioMart”. For some of the transcripts, a Gene Symbol was not found. The statistically relevant genes were then selected using the adjusted p-value automatically computed by the Deseq2 package. DEGs were then manually expanded using the protein-protein interaction network database STRING.
@@ -207,26 +194,42 @@ Enrichment analysis was performed on the original list using the web interface E
 	\subsection{Data preprocessing}
 
 		\subsubsection{Sample splitting and filtering}
+		The sets used to find the vitamin-D gene signature and the DEGs between stages of cancer needed only the expression level of each gene, while the other ones needed information about the time of survival and the status of the sample.
+		We retained data that had all the information we needed, so we filtered out $temp$ samples from the starting $temp$.
+		Table \ref{tab:samples_split} contains information on how we divided all the remaining samples of each dataset in our sets.
+
+		\begin{table}[H]
+			\centering
+			\begin{tabular}{cc}
+				\hline
+				Set & $n^\circ$ of samples\\
+				COX fitting & $232$\\
+				KM curve & $1000$\\
+				Vitamine D gene signature & $90$\\
+				Stage DEGs & $1000$\\
+				\hline
+			\end{tabular}
+			\caption{Split samples}
+			\label{tab:samples_split}
+		\end{table}
 
 		\subsubsection{Dataset normalization}
 
 	\subsection{Differentially expressed genes}
 
 		\subsubsection{DEG between stage of cancer}
+		After having computed the p-value by limma and having aggregated those results using borda count we obtained a ranking list of the $12644$ genes used as input for cox.
+		This ranking will be used to find the most differentially expressed genes between stage high and stage low of colorectal cancer and compare how they perform with respect to the one found in the vitamin D gene signature in predicting a patient risk.
 
 		\subsubsection{Vitamin D gene signature}
 		A serum level of vitamin D was chosen as a threshold for stratifying the two groups of patients (high vs low vitamin D level). This is because for a small subset of patients in the post-supplementation group, the serum levels were relatively low, whereas for another subset of patients in the pre-supplementation group, levels were already high. The chosen cutoff eventually led to better results than the classification based on the available label.
 		Principal component analysis on the full expression data matrix did not yield segregated clustering of the two groups.
 		 However, in order to perform enrichment analysis, the top 100 differentially expressed transcripts for which a Gene Symbol could be found were given as input to EnrichR.
 
-
-
-		\subsubsection{Pathway enrichment}
-
 	\subsection{Survival analysis}
 
 		\subsubsection{Cox proportional-hazards model}
-		Cox proportional-hazards model identified from the initial $temp$ genes $943$ genes.
+		Cox proportional-hazards model identified from the initial $temp$ genes $943$ genes, with an average $HR$ of $1.49\cdot 10^{18}$, a minimum of $2.7\cdot 10^{-17}$ and a maximum of $1.4\cdot 10^{21}$.
 
 		\subsubsection{Kaplan-Meier curves}
 		Of the $943$ genes found significative by the cox proportional-hazards model $291$ has been found significative on the dataset used to build the Kaplan-Meier curves.
