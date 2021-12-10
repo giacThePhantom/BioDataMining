@@ -134,6 +134,8 @@ The objective of this project was to find a way to make prognosis and stratify p
 	\end{table*}
 
 		\subsubsection{Sample splitting and filtering}
+		All these starting samples will be filtered so that they have all the data necessary for our analysis.
+		Furthermore we will split them in different sets, so that ever
 		In order to filter the samples having all the data necessary for the downstream analyses, they were split in 6 sets according to their available clinical data. Metadata to be considered was, for instance, survival time and tumor stage. After this operation, 2676 samples were retained out of the starting 3072 ($87.11\%$), divided as in table \ref{tab:samples_split}.
 
 		\begin{table}[H]
@@ -188,21 +190,17 @@ Enrichment analysis was performed on the original list using the web interface E
 	The first uses a cox proportional-hazards model and the second involves building the Kaplan-Meier curves for the significative gene found by cox on a different dataset.
 
 		\subsubsection{Cox proportional-hazards model}
-		Cox-proportional-hazards model is used to determine for each of the $temp$ gene if they are significant in changing the overall survival and the corresponding hazard ratio $HR$.
+		Cox-proportional-hazards model is used to determine for each of the $12644$ gene if they are significant in changing the overall survival and the corresponding hazard ratio $HR$.
 		The hazard ratio determines how a gene is associated with the length of survival.
 		For each gene the optimal cutpoint for the level of expression will be computed using the \emph{cutp} function.
-		This model has been fitted using dataset TEMP and were considered significative genes with $pvalue \le 0.05$.
+		Only the genes with $pvalue \le 0.05$ were considered for computing the Kaplan-Meier curves.
 
 		\subsubsection{Kaplan-Meier curves}
-		For each one of the significative genes found by cox a Kaplan-Meier curve was computed using data from dataset TEMP.
-		One of the two curves of the plot plotted samples with expression level less than the cutpoint, while the other expression level greater than it.
+		For each one of the significative genes found by cox a Kaplan-Meier curve was computed.
+		For each gene we divided the samples in a ``low'' set if their expression level was less than the cutpoint found by the cutp function and in a ``high'' set if their expression level was more than the cutpoint.
 		The gene were still considered downstream if the log-rank p-value was still $\le0.05$.
-		The list of genes that survived this process was intersected with the enriched vitamin D signature and the DEG ranking.
-
-
-
-
-
+		For each of this genes a Kaplan-Meier curve was computed for the sample in the low set and one for the ones in the high set.
+		Furthermore this genes have been intersected with the enriched vitamin D signature and the DEG ranking.
 
 \section{Results}
 
@@ -274,6 +272,7 @@ Enrichment analysis was performed on the original list using the web interface E
 			\caption{HR for significative genes}
 			\label{tab:hr}
 		\end{table}
+
 
 \section{Discussion}
 After having compiled the Kaplan-Meier curves the four genes derived from the consensus stage-based DEGs and the four gene found from the expanded vitamin D gene signature found statistically significant, we compiled a literature-based characterization for each of those (tables \ref{tab:vit_char} and \ref{tab:deg_char}.
