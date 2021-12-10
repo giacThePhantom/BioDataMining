@@ -8,6 +8,14 @@ Warning--to sort, need author or key in rma
 Warning--to sort, need author or key in frma
 Warning--to sort, need author or key in limma
 Warning--to sort, need author or key in borda
+Warning--to sort, need author or key in GEO
+Warning--to sort, need author or key in TCGA
+Warning--to sort, need author or key in deseq2
+Warning--to sort, need author or key in string
+Warning--to sort, need author or key in enrichr
+Warning--to sort, need author or key in cox
+Warning--to sort, need author or key in cutp
+Warning--to sort, need author or key in survfit
 `editor' is a missing field, not a string, for entry 
 while executing---line 320 of file /home/giacomo/.config/nvim/plugged/vimtex/autoload/vimtex/parser/vimcomplete.bst
 `date' is a missing field, not a string, for entry 
@@ -16,57 +24,89 @@ while executing---line 320 of file /home/giacomo/.config/nvim/plugged/vimtex/aut
 while executing---line 320 of file /home/giacomo/.config/nvim/plugged/vimtex/autoload/vimtex/parser/vimcomplete.bst
 `date' is a missing field, not a string, for entry borda
 while executing---line 320 of file /home/giacomo/.config/nvim/plugged/vimtex/autoload/vimtex/parser/vimcomplete.bst
+`editor' is a missing field, not a string, for entry cox
+while executing---line 320 of file /home/giacomo/.config/nvim/plugged/vimtex/autoload/vimtex/parser/vimcomplete.bst
+`date' is a missing field, not a string, for entry cox
+while executing---line 320 of file /home/giacomo/.config/nvim/plugged/vimtex/autoload/vimtex/parser/vimcomplete.bst
+`editor' is a missing field, not a string, for entry deseq2
+while executing---line 320 of file /home/giacomo/.config/nvim/plugged/vimtex/autoload/vimtex/parser/vimcomplete.bst
+`date' is a missing field, not a string, for entry deseq2
+while executing---line 320 of file /home/giacomo/.config/nvim/plugged/vimtex/autoload/vimtex/parser/vimcomplete.bst
+`editor' is a missing field, not a string, for entry enrichr
+while executing---line 320 of file /home/giacomo/.config/nvim/plugged/vimtex/autoload/vimtex/parser/vimcomplete.bst
+`date' is a missing field, not a string, for entry enrichr
+while executing---line 320 of file /home/giacomo/.config/nvim/plugged/vimtex/autoload/vimtex/parser/vimcomplete.bst
 `editor' is a missing field, not a string, for entry frma
 while executing---line 320 of file /home/giacomo/.config/nvim/plugged/vimtex/autoload/vimtex/parser/vimcomplete.bst
 `date' is a missing field, not a string, for entry frma
+while executing---line 320 of file /home/giacomo/.config/nvim/plugged/vimtex/autoload/vimtex/parser/vimcomplete.bst
+`editor' is a missing field, not a string, for entry TCGA
+while executing---line 320 of file /home/giacomo/.config/nvim/plugged/vimtex/autoload/vimtex/parser/vimcomplete.bst
+`date' is a missing field, not a string, for entry TCGA
+while executing---line 320 of file /home/giacomo/.config/nvim/plugged/vimtex/autoload/vimtex/parser/vimcomplete.bst
+`editor' is a missing field, not a string, for entry GEO
+while executing---line 320 of file /home/giacomo/.config/nvim/plugged/vimtex/autoload/vimtex/parser/vimcomplete.bst
+`date' is a missing field, not a string, for entry GEO
+while executing---line 320 of file /home/giacomo/.config/nvim/plugged/vimtex/autoload/vimtex/parser/vimcomplete.bst
+`editor' is a missing field, not a string, for entry survfit
+while executing---line 320 of file /home/giacomo/.config/nvim/plugged/vimtex/autoload/vimtex/parser/vimcomplete.bst
+`date' is a missing field, not a string, for entry survfit
 while executing---line 320 of file /home/giacomo/.config/nvim/plugged/vimtex/autoload/vimtex/parser/vimcomplete.bst
 `editor' is a missing field, not a string, for entry limma
 while executing---line 320 of file /home/giacomo/.config/nvim/plugged/vimtex/autoload/vimtex/parser/vimcomplete.bst
 `date' is a missing field, not a string, for entry limma
 while executing---line 320 of file /home/giacomo/.config/nvim/plugged/vimtex/autoload/vimtex/parser/vimcomplete.bst
+`editor' is a missing field, not a string, for entry cutp
+while executing---line 320 of file /home/giacomo/.config/nvim/plugged/vimtex/autoload/vimtex/parser/vimcomplete.bst
+`date' is a missing field, not a string, for entry cutp
+while executing---line 320 of file /home/giacomo/.config/nvim/plugged/vimtex/autoload/vimtex/parser/vimcomplete.bst
 `editor' is a missing field, not a string, for entry rma
 while executing---line 320 of file /home/giacomo/.config/nvim/plugged/vimtex/autoload/vimtex/parser/vimcomplete.bst
 `date' is a missing field, not a string, for entry rma
 while executing---line 320 of file /home/giacomo/.config/nvim/plugged/vimtex/autoload/vimtex/parser/vimcomplete.bst
-You've used 5 entries,
+`editor' is a missing field, not a string, for entry string
+while executing---line 320 of file /home/giacomo/.config/nvim/plugged/vimtex/autoload/vimtex/parser/vimcomplete.bst
+`date' is a missing field, not a string, for entry string
+while executing---line 320 of file /home/giacomo/.config/nvim/plugged/vimtex/autoload/vimtex/parser/vimcomplete.bst
+You've used 13 entries,
             650 wiz_defined-function locations,
-            267 strings with 1955 characters,
-and the built_in function-call counts, 475 in all, are:
-= -- 35
+            290 strings with 2401 characters,
+and the built_in function-call counts, 1235 in all, are:
+= -- 91
 > -- 0
 < -- 0
 + -- 0
 - -- 0
-* -- 50
-:= -- 65
+* -- 130
+:= -- 169
 add.period$ -- 0
-call.type$ -- 5
-change.case$ -- 14
+call.type$ -- 13
+change.case$ -- 38
 chr.to.int$ -- 0
-cite$ -- 10
-duplicate$ -- 30
-empty$ -- 50
+cite$ -- 26
+duplicate$ -- 78
+empty$ -- 130
 format.name$ -- 0
-if$ -- 85
+if$ -- 221
 int.to.chr$ -- 0
 int.to.str$ -- 0
 missing$ -- 0
-newline$ -- 10
+newline$ -- 26
 num.names$ -- 0
-pop$ -- 6
+pop$ -- 14
 preamble$ -- 0
-purify$ -- 10
+purify$ -- 26
 quote$ -- 0
-skip$ -- 20
+skip$ -- 52
 stack$ -- 0
-substring$ -- 25
-swap$ -- 5
+substring$ -- 65
+swap$ -- 13
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 20
-warning$ -- 5
+type$ -- 52
+warning$ -- 13
 while$ -- 0
 width$ -- 0
-write$ -- 30
-(There were 10 error messages)
+write$ -- 78
+(There were 26 error messages)

@@ -23,8 +23,8 @@ Limma.
 
 \bibitem{borda}
 Borda count.
-\newblock
-  https://www.rdocumentation.org/packages/votesys/versions/0.1.1/topics/borda\_method.
+\newblock https://www.rdocumentation.org/packages/votesys/
+  versions/0.1.1/topics/borda\_method.
 \newblock last access 10/12/2021.
 
 \end{thebibliography}

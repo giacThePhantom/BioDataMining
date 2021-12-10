@@ -99,7 +99,6 @@
 %	ARTICLE CONTENTS
 %----------------------------------------------------------------------------------------
 
-%%%%%%%%%%%%%%%%%%% PART I: Intro
 \section{Introduction}
 	Colorectal cancer (CRC) is the third most common malignant tumor worldwide and is the second one in cancer-related deaths \cite{Ferlay2018-pg}. In spite of improvements in the management and treatments of patients with CRC in the last two decades, no satisfactory therapy exists when the surgery is not curative. The poor prognosis and the increasing incidence of CRC have provided strong motivation to construct a predictive model in CRC patients, which will benefit personalized treatment in clinical management \cite{Bu2021-xn}. There are lot of epidemiological and preclinical studies that indicate a beneficial effect of vitamin D on CRC incidence and mortality \cite{Pereira2012-pf} \cite{Giovannucci2013-ss}. Vitamin D is a fat-soluble vitamin and many genes are related to its metabolism and action \cite{Fedirko2019-ai}. It can be obtained from diet or the endogenous synthesis in the epidermis under sunlight exposure \cite{Saraff2016-dr}. It has been demonstrated that vitamin D benefits clinical outcome and improves the long-term survival of CRC patients \cite{Xu2021-vb}. Moreover, circulating vitamin D may be a CRC biomarker and its deficiency is related to the high incidence of CRC \cite{Meeker2016-tr}. A better survival outcome in CRC is associated with higher prediagnostic or postdiagnostic serum 25-hydroxyvitamin D concentrations \cite{Zgaga2014-dd}. The most active vitamin D metabolite (1$\alpha$,25-dihydroxyvitamin $D_3$) inhibits the proliferation and promotes the differentiation of cultured colon carcinoma cells by mechanisms that include cell cycle arrest at G0/G1 phase, blockade of the Wnt/$\beta$-catenin pathway and induction of E-cadherin and other epithelial proteins \cite{Pereira2012-pf} \cite{Feldman2014-mh} \cite{Palmer2001-bh}. Lots of genes related to vitamin D metabolism and action play an essential role in tumors. For example, CYP24A1 an important vitamin D-related gene, is up-regulated in CRC patient and nominated as a promising biomarker \cite{Sadeghi2020-ci}. Vitamin D and its related genes are correlated with the homeostasis of the intestinal epithelium and regulate immune cells \cite{Martinez-Romero2018-gp}.
 
@@ -333,8 +332,8 @@
 		This ranking will be used to compare prediction power of the vitamin-D signature with respect to the top DEGs between stages.
 
 		\subsubsection{Vitamin D gene signature}
-		In order to obtain the list of differentially expressed genes for the vitamin D signature, the state-of-the-art R package “Deseq2” was used on the vitamin D dataset, which contains counts of RNA-seq expression data from rectal biopsies of CRC patients pre-and post- vitamin D supplementation. Transcript IDs were converted to Gene Symbols through “BioMart”. For some of the transcripts, a Gene Symbol was not found. The statistically relevant genes were then selected using the adjusted p-value automatically computed by the Deseq2 package. DEGs were then manually expanded using the protein-protein interaction network database STRING.
-Enrichment analysis was performed on the original list using the web interface EnrichR.
+		In order to obtain the list of differentially expressed genes for the vitamin D signature, the state-of-the-art R package “Deseq2” \cite{deseq} was used on the vitamin D dataset, which contains counts of RNA-seq expression data from rectal biopsies of CRC patients pre-and post- vitamin D supplementation. Transcript IDs were converted to Gene Symbols through “BioMart”. For some of the transcripts, a Gene Symbol was not found. The statistically relevant genes were then selected using the adjusted p-value automatically computed by the Deseq2 package. DEGs were then manually expanded using the protein-protein interaction network database STRING \cite{string}.
+Enrichment analysis was performed on the original list using the web interface EnrichR \cite{enrichr}.
 
 
 	\subsection{Survival analysis}
@@ -343,13 +342,13 @@ Enrichment analysis was performed on the original list using the web interface E
 	The first uses a cox proportional-hazards model and the second involves building the Kaplan-Meier curves for the significative gene found by cox on a different dataset.
 
 		\subsubsection{Cox proportional-hazards model}
-		Cox-proportional-hazards model is used to determine for each of the $12644$ gene if they are significant in changing the overall survival and the corresponding hazard ratio $HR$.
+		Cox-proportional-hazards model \cite{cox} is used to determine for each of the $12644$ gene if they are significant in changing the overall survival and the corresponding hazard ratio $HR$.
 		The hazard ratio determines how a gene is associated with the length of survival.
-		For each gene the optimal cutpoint for the level of expression will be computed using the \emph{cutp} function.
+		For each gene the optimal cutpoint \cite{cutp} for the level of expression will be computed using the \emph{cutp} function.
 		Only the genes with $pvalue \le 0.05$ were considered for computing the Kaplan-Meier curves.
 
 		\subsubsection{Kaplan-Meier curves}
-		For each one of the significative genes found by cox a Kaplan-Meier curve was computed.
+		For each one of the significative genes found by cox a Kaplan-Meier curve was computed \cite{survfit}.
 		For each gene we divided the samples in a ``low'' set if their expression level was less than the cutpoint found by the cutp function and in a ``high'' set if their expression level was more than the cutpoint.
 		The gene were still considered downstream if the log-rank p-value was still $\le0.05$.
 		For each of this genes a Kaplan-Meier curve was computed for the sample in the low set and one for the ones in the high set.
