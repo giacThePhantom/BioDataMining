@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 \begin{thebibliography}{1}
 
 \bibitem{rma}
@@ -20,5 +21,105 @@ Borda count.
 \newblock
   https://www.rdocumentation.org/packages/votesys/versions/0.1.1/topics/borda\_method.
 \newblock last access 10/12/2021.
+=======
+\begin{thebibliography}{10}
+
+\bibitem{Ferlay2018-pg}
+J~Ferlay, M~Colombet, I~Soerjomataram, T~Dyba, G~Randi, M~Bettio, A~Gavin,
+  O~Visser, and F~Bray.
+\newblock Cancer incidence and mortality patterns in europe: Estimates for 40
+  countries and 25 major cancers in 2018.
+\newblock {\em Eur. J. Cancer}, 103:356--387, November 2018.
+
+\bibitem{Bu2021-xn}
+Luping Bu, Fengxing Huang, Mengting Li, Yanan Peng, Haizhou Wang, Meng Zhang,
+  Liqun Peng, Lan Liu, and Qiu Zhao.
+\newblock Identification of vitamin d-related gene signature to predict
+  colorectal cancer prognosis.
+\newblock {\em PeerJ}, 9(e11430):e11430, May 2021.
+
+\bibitem{Pereira2012-pf}
+F{\'a}bio Pereira, Mar{\'\i}a~Jes{\'u}s Larriba, and Alberto Mu{\~n}oz.
+\newblock Vitamin {D} and colon cancer.
+\newblock {\em Endocr. Relat. Cancer}, 19(3):R51--71, June 2012.
+
+\bibitem{Giovannucci2013-ss}
+Edward Giovannucci.
+\newblock Epidemiology of vitamin {D} and colorectal cancer.
+\newblock {\em Anticancer Agents Med. Chem.}, 13(1):11--19, January 2013.
+
+\bibitem{Fedirko2019-ai}
+Veronika Fedirko, Hannah~B Mandle, Wanzhe Zhu, David~J Hughes, Afshan Siddiq,
+  Pietro Ferrari, Isabelle Romieu, Elio Riboli, Bas Bueno-de Mesquita,
+  Fr{\"a}nzel J~B van Duijnhoven, Peter~D Siersema, Anne Tj{\o}nneland, Anja
+  Olsen, Vittorio Perduca, Franck Carbonnel, Marie-Christine Boutron-Ruault,
+  Tilman K{\"u}hn, Theron Johnson, Aleksandrova Krasimira, Antonia
+  Trichopoulou, Periklis Makrythanasis, Dimitris Thanos, Salvatore Panico,
+  Vittorio Krogh, Carlotta Sacerdote, Guri Skeie, Elisabete Weiderpass, Sandra
+  Colorado-Yohar, N{\'u}ria Sala, Aurelio Barricarte, Maria-Jose Sanchez,
+  Ram{\'o}n Quir{\'o}s, Pilar Amiano, Bj{\"o}rn Gylling, Sophia Harlid, Aurora
+  Perez-Cornago, Alicia~K Heath, Konstantinos~K Tsilidis, Dagfinn Aune, Heinz
+  Freisling, Neil Murphy, Marc~J Gunter, and Mazda Jenab.
+\newblock Vitamin d-related genes, blood vitamin {D} levels and colorectal
+  cancer risk in western european populations.
+\newblock {\em Nutrients}, 11(8):1954, August 2019.
+
+\bibitem{Saraff2016-dr}
+Vrinda Saraff and Nick Shaw.
+\newblock Sunshine and vitamin {D}.
+\newblock {\em Arch. Dis. Child.}, 101(2):190--192, February 2016.
+
+\bibitem{Xu2021-vb}
+Shu Xu, Yao He, Lihui Lin, Peng Chen, Minhu Chen, and Shenghong Zhang.
+\newblock The emerging role of ferroptosis in intestinal disease.
+\newblock {\em Cell Death Dis.}, 12(4):289, March 2021.
+
+\bibitem{Meeker2016-tr}
+Stacey Meeker, Audrey Seamons, Lillian Maggio-Price, and Jisun Paik.
+\newblock Protective links between vitamin d, inflammatory bowel disease and
+  colon cancer.
+\newblock {\em World J. Gastroenterol.}, 22(3):933--948, January 2016.
+
+\bibitem{Zgaga2014-dd}
+Lina Zgaga, Evropi Theodoratou, Susan~M Farrington, Farhat V~N Din, Li~Yin Ooi,
+  Dominik Glodzik, Susan Johnston, Albert Tenesa, Harry Campbell, and Malcolm~G
+  Dunlop.
+\newblock Plasma vitamin {D} concentration influences survival outcome after a
+  diagnosis of colorectal cancer.
+\newblock {\em J. Clin. Oncol.}, 32(23):2430--2439, August 2014.
+
+\bibitem{Feldman2014-mh}
+David Feldman, Aruna~V Krishnan, Srilatha Swami, Edward Giovannucci, and
+  Brian~J Feldman.
+\newblock The role of vitamin {D} in reducing cancer risk and progression.
+\newblock {\em Nat. Rev. Cancer}, 14(5):342--357, May 2014.
+
+\bibitem{Palmer2001-bh}
+H~G P{\'a}lmer, J~M Gonz{\'a}lez-Sancho, J~Espada, M~T Berciano, I~Puig,
+  J~Baulida, M~Quintanilla, A~Cano, A~G de~Herreros, M~Lafarga, and
+  A~Mu{\~n}oz.
+\newblock Vitamin d(3) promotes the differentiation of colon carcinoma cells by
+  the induction of e-cadherin and the inhibition of beta-catenin signaling.
+\newblock {\em J. Cell Biol.}, 154(2):369--387, July 2001.
+
+\bibitem{Sadeghi2020-ci}
+Hossein Sadeghi and Mohammad Heiat.
+\newblock A novel circular {RNA} hsa\_circ\_0060927 may serve as a potential
+  diagnostic biomarker for human colorectal cancer.
+\newblock {\em Mol. Biol. Rep.}, 47(9):6649--6655, September 2020.
+
+\bibitem{Martinez-Romero2018-gp}
+Jorge Martinez-Romero, Santiago Bueno-Fortes, Manuel Mart{\'\i}n-Merino, Ana
+  Ramirez~de Molina, and Javier De~Las~Rivas.
+\newblock Survival marker genes of colorectal cancer derived from consistent
+  transcriptomic profiling.
+\newblock {\em BMC Genomics}, 19(Suppl 8):857, December 2018.
+
+\bibitem{GEO}
+Home - {GEO} - {NCBI}.
+
+\bibitem{TCGA}
+{GDC}.
+>>>>>>> 40babde207bca503d4ec4453f4d8f78914dbf0a6
 
 \end{thebibliography}

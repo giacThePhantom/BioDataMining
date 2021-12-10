@@ -10,17 +10,26 @@
 \contentsline {subsection}{\numberline {2.3}Survival analysis}{2}{subsection.2.3}%
 \contentsline {subsubsection}{\numberline {2.3.1}Cox proportional-hazards model}{2}{subsubsection.2.3.1}%
 \contentsline {subsubsection}{\numberline {2.3.2}Kaplan-Meier curves}{2}{subsubsection.2.3.2}%
-\contentsline {section}{\numberline {3}Results}{2}{section.3}%
+\contentsline {section}{\numberline {3}Results and Discussion}{2}{section.3}%
 \contentsline {subsection}{\numberline {3.1}Data preprocessing}{2}{subsection.3.1}%
 \contentsline {subsubsection}{\numberline {3.1.1}Sample splitting and filtering}{2}{subsubsection.3.1.1}%
 \contentsline {subsubsection}{\numberline {3.1.2}Dataset normalization}{3}{subsubsection.3.1.2}%
 \contentsline {subsection}{\numberline {3.2}Differentially expressed genes}{3}{subsection.3.2}%
 \contentsline {subsubsection}{\numberline {3.2.1}DEG between stage of cancer}{3}{subsubsection.3.2.1}%
 \contentsline {subsubsection}{\numberline {3.2.2}Vitamin D gene signature}{3}{subsubsection.3.2.2}%
+<<<<<<< HEAD
 \contentsline {subsubsection}{\numberline {3.2.3}Pathway enrichment}{3}{subsubsection.3.2.3}%
 \contentsline {subsection}{\numberline {3.3}Survival analysis}{4}{subsection.3.3}%
 \contentsline {subsubsection}{\numberline {3.3.1}Cox proportional-hazards model}{4}{subsubsection.3.3.1}%
 \contentsline {subsubsection}{\numberline {3.3.2}Kaplan-Meier curves}{4}{subsubsection.3.3.2}%
 \contentsline {section}{\numberline {4}Discussion}{4}{section.4}%
 \contentsline {section}{References}{4}{section*.12}%
+=======
+\contentsline {subsection}{\numberline {3.3}Survival analysis}{3}{subsection.3.3}%
+\contentsline {subsubsection}{\numberline {3.3.1}Cox proportional-hazards model}{3}{subsubsection.3.3.1}%
+\contentsline {subsubsection}{\numberline {3.3.2}Kaplan-Meier curves}{3}{subsubsection.3.3.2}%
+\contentsline {section}{\numberline {4}Discussion}{3}{section.4}%
+\contentsline {section}{\numberline {5}Conclusions}{3}{section.5}%
+\contentsline {section}{References}{4}{section*.7}%
+>>>>>>> 40babde207bca503d4ec4453f4d8f78914dbf0a6
 \contentsfinish 
