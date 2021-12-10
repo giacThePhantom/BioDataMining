@@ -1,3 +1,24 @@
-\begin{thebibliography}{}
+\begin{thebibliography}{1}
+
+\bibitem{rma}
+Robust multiarray average.
+\newblock https://rdrr.io/bioc/affy/man/rma.html.
+\newblock last access 10/12/2021.
+
+\bibitem{frma}
+Frozen robust multiarray average.
+\newblock https://rdrr.io/bioc/frma/man/frma.html.
+\newblock last access 10/12/2021.
+
+\bibitem{limma}
+Limma.
+\newblock https://rdrr.io/bioc/limma/.
+\newblock last access 10/12/2021.
+
+\bibitem{borda}
+Borda count.
+\newblock
+  https://www.rdocumentation.org/packages/votesys/versions/0.1.1/topics/borda\_method.
+\newblock last access 10/12/2021.
 
 \end{thebibliography}

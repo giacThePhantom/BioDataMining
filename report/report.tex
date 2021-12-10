@@ -145,12 +145,12 @@ The objective of this project was to find a way to make prognosis and stratify p
 		\subsubsection{Dataset normalization}
 		Having decided to use different dataset for this analysis, a normalization step has been introduced to remove batch effects.
 		To do so we performed on the raw micro-array data different type on normalization.
-		Firstly we tried with Robust Multiarray Analysis \emph{RMA} and then with Frozen Robust Multiarray analysis \emph{fRMA}.
+		Firstly we tried with Robust Multiarray Average \emph{RMA} \cite{rma} and then with Frozen Robust Multiarray Average \emph{fRMA} \cite{frma}.
 		The logaritmic value of all the gene expression levels has been computed and used downstream the analysis.
+		Finally we collapsed all probes mapped to the same gene to one computing their average.
 		We divided the normalized data in two sets to be used downstream.
-		The first was composed of datasets  GSE17536 and GSE17637 and will be used to fit the Cox proportional-hazards model.
-		The second was composed of datasets GSE31595, GSE33113, GSE38832, GSE39084 and GSE39582.
-		This second set has been normalized in two ways: we first normalized all the samples together to compute a single data matrix used downstream to plot the Kaplan-Meier curves and then we implemented a bootstrap procedure.
+		The first will be used to fit the Cox proportional-hazards model.
+		The second set has been normalized in two ways: we first normalized all the samples together to compute a single data matrix used downstream to plot the Kaplan-Meier curves and then we implemented a bootstrap procedure.
 		In this procedure we sampled from each dataset $600$ individuals $10$ times so that in each matrix we obtained balanced data with respect to the cancer stage.
 
 	\subsection{Differentially expressed genes}
@@ -161,9 +161,9 @@ The objective of this project was to find a way to make prognosis and stratify p
 		To find DEgs between the stage of cancer we used $10$ data matrices of $600$ samples.
 		This data matrices have been computed so that the samples were balanced between high and low stage.
 		We identify stage low of cancer as stages $0$, $1$ and $2$ and stage high as stages $3$ and $4$.
-		For each of the $10$ subsets we used LIMMA to find a ranking of the DEGs.
+		For each of the $10$ subsets we used LIMMA \cite{limma} to find a ranking of the DEGs.
 		The resulting gene lists have been sorted in increasing order by p-value.
-		We aggregated the resulting list using Borda count, so to obtain a ranking for each of the $temp$ genes.
+		We aggregated the resulting list using Borda count \cite{borda}, so to obtain a ranking for each of the $temp$ genes.
 		This ranking will be used to compare prediction power of the vitamin-D signature with respect to the top DEGs between stages.
 
 		\subsubsection{Vitamin D gene signature}
@@ -214,6 +214,19 @@ Enrichment analysis was performed on the original list using the web interface E
 		\end{table}
 
 		\subsubsection{Dataset normalization}
+		After filtering the best normalization result were obtained using the fRMA algorithm, as can be seen in figures \ref{fig:pre_norm} and in \ref{fig:post_norm}
+
+		\begin{figure}[ht]
+			\includegraphics[width=0.45\textwidth]{figures/pre_norm.png}
+			\caption{PCA on dataset before normalization, each color represent a dataset}
+			\label{fig:pre_norm}
+		\end{figure}
+
+		\begin{figure}[ht]
+			\includegraphics[width=0.45\textwidth]{figures/post_norm.png}
+			\caption{PCA on dataset after normalization, each color represent a dataset}
+			\label{fig:post_norm}
+		\end{figure}
 
 	\subsection{Differentially expressed genes}
 
@@ -306,7 +319,7 @@ The content of tumor-infiltrating lymphocytes of different malignancies, includi
 
 
 \section{Discussion}
-After having compiled the Kaplan-Meier curves the four genes derived from the consensus stage-based DEGs and the four gene found from the expanded vitamin D gene signature found statistically significant, we compiled a literature-based characterization for each of those (tables \ref{tab:vit_char} and \ref{tab:deg_char}.
+After having compiled the Kaplan-Meier curves the four genes derived from the consensus stage-based DEGs and the four gene found from the expanded vitamin D gene signature found statistically significant, we compiled a literature-based characterization for each of those (tables \ref{tab:vit_char} and \ref{tab:deg_char}).
 \begin{table}[ht]
 	\centering
 	\small
@@ -340,7 +353,8 @@ After having compiled the Kaplan-Meier curves the four genes derived from the co
 	\caption{4 top genes in stage DEGs}
 	\label{tab:deg_char}
 \end{table}
-
+The HR value is higher for the vitamin D counterpart of the analyzed DEGs, which implies that different concentrations of this vitamin influences gene expression such that a larger impact on prognosis of CRC patients is present (compared to the different expression of genes according to the stage of the disease).
+Only for the most relevant vitamin D related DEG (SLC22A8), 3 drugs were found to target it according to the literature, namely ATALUREN, ELX-02, MT-3724. Similarly, for the two most relevant stage related DEGs (SLC22A8, CDK17), several drugs were found in the literature: PROBENECID (for SLC22A8); AZD-5438, PHA-793887, RONICICLIB, AT-7519 (for CDK17). Further analysis on these DEGs is of interest, to verify their role in CRC evolution and prognosis, and potentially improve the treatment of CRC patients in the future.
 
 
 
