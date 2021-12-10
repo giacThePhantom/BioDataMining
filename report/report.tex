@@ -222,9 +222,37 @@ Enrichment analysis was performed on the original list using the web interface E
 		This ranking will be used to find the most differentially expressed genes between stage high and stage low of colorectal cancer and compare how they perform with respect to the one found in the vitamin D gene signature in predicting a patient risk.
 
 		\subsubsection{Vitamin D gene signature}
-		A serum level of vitamin D was chosen as a threshold for stratifying the two groups of patients (high vs low vitamin D level). This is because for a small subset of patients in the post-supplementation group, the serum levels were relatively low, whereas for another subset of patients in the pre-supplementation group, levels were already high. The chosen cutoff eventually led to better results than the classification based on the available label.
-		Principal component analysis on the full expression data matrix did not yield segregated clustering of the two groups.
-		 However, in order to perform enrichment analysis, the top 100 differentially expressed transcripts for which a Gene Symbol could be found were given as input to EnrichR.
+		A serum level of vitamin D was chosen as a threshold for stratifying the two groups of patients (high vs low vitamin D level). This is because for a small subset of patients in the post-supplementation group, the serum levels were relatively low, whereas for another subset of patients in the pre-supplementation group, levels were already high. The chosen cutoff (figure \ref{fig:serum_level}) eventually led to better results than the classification based on the available label.
+
+		\begin{figure}[ht]
+			\includegraphics[width=0.45\textwidth]{figures/serum_level.png}
+			\caption{Distribution of serum vitamin D}
+			\label{fig:serum_level}
+		\end{figure}
+
+		Principal component analysis on the full expression data matrix did not yield segregated clustering of the two groups (figure \ref{fig:pca_vit_d}.
+
+		\begin{figure}[ht]
+			\includegraphics[width=0.45\textwidth]{figures/vit_d_pca.png}
+			\caption{PCA on vitamin D dataset}
+			\label{fig:pca_vit_d}
+		\end{figure}
+
+		Using a threshold for the adjusted p-value of $0.05$, $33$ differentially expressed genes were selected from the raw output of the Deseq2 package.
+
+		\subsubsection{Pathway enrichment}
+		The top 100 differentially expressed transcripts for which a Gene Symbol could be found were given as input to EnrichR.
+		Some of the most interesting results of the enrichment analysis on the top 100 genes of the vitamin-D gene signature in colorectal cancer are represented by the statistically significant (q-value $<$ 0.05 ) enrichment of the PTEN signalling pathway (indipendently highlighted by 2 different databases: ‘BioPlanet 2019’ and ‘BioCarta 2016’), and pathways associated with various integrins and cell motility in cancer (‘Elselvier Pathway Collection’ database), such as the alpha-4-beta-7 integrin signalling.
+PTEN (figure \ref{fig:pten}) is a negative regulator of the Akt$\backslash$PkB pathway, which promotes cell proliferation and survival, and is often altered in cancer cells [a].
+Alpha-4-beta-7 (coded by the ITGB7 gene) is an integrin involved in the recruiting of lymphocytes in the lymphoid tissue of the gut [b].
+The content of tumor-infiltrating lymphocytes of different malignancies, including CRC, is strongly linked to better long term and short term survival [c].
+
+
+		\begin{figure}[ht]
+			\includegraphics[width=0.45\textwidth]{figures/pten.png}
+			\caption{Pathway enrichment results}
+			\label{fig:pten}
+		\end{figure}
 
 	\subsection{Survival analysis}
 

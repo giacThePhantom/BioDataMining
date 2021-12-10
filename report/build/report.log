@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021/Arch Linux) (preloaded format=pdflatex 2021.12.1)  10 DEC 2021 18:28
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021/Arch Linux) (preloaded format=pdflatex 2021.12.1)  10 DEC 2021 18:55
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1130,49 +1130,65 @@ Package microtype Info: Loading generic protrusion settings for font family
 
 
 ] [2]
-<figures/RPS27A.png, id=168, 481.8pt x 481.8pt>
+<figures/serum_level.png, id=173, 1284.8pt x 858.20625pt>
+File: figures/serum_level.png Graphic file (type png)
+<use figures/serum_level.png>
+Package pdftex.def Info: figures/serum_level.png  used on input line 228.
+(pdftex.def)             Requested size: 225.21626pt x 150.43715pt.
+<figures/vit_d_pca.png, id=175, 1284.8pt x 835.12pt>
+File: figures/vit_d_pca.png Graphic file (type png)
+<use figures/vit_d_pca.png>
+Package pdftex.def Info: figures/vit_d_pca.png  used on input line 236.
+(pdftex.def)             Requested size: 225.21626pt x 146.3903pt.
+<figures/pten.png, id=177, 1284.8pt x 542.025pt>
+File: figures/pten.png Graphic file (type png)
+<use figures/pten.png>
+Package pdftex.def Info: figures/pten.png  used on input line 252.
+(pdftex.def)             Requested size: 225.21626pt x 95.01292pt.
+ [3 <./figures/serum_level.png>]
+<figures/RPS27A.png, id=191, 481.8pt x 481.8pt>
 File: figures/RPS27A.png Graphic file (type png)
 <use figures/RPS27A.png>
-Package pdftex.def Info: figures/RPS27A.png  used on input line 242.
+Package pdftex.def Info: figures/RPS27A.png  used on input line 270.
 (pdftex.def)             Requested size: 169.69147pt x 169.69116pt.
-<figures/TMCO3.png, id=169, 481.8pt x 481.8pt>
+<figures/TMCO3.png, id=192, 481.8pt x 481.8pt>
 File: figures/TMCO3.png Graphic file (type png)
 <use figures/TMCO3.png>
-Package pdftex.def Info: figures/TMCO3.png  used on input line 243.
+Package pdftex.def Info: figures/TMCO3.png  used on input line 271.
 (pdftex.def)             Requested size: 169.69147pt x 169.69116pt.
-<figures/CHUK.png, id=170, 481.8pt x 481.8pt>
+<figures/CHUK.png, id=193, 481.8pt x 481.8pt>
 File: figures/CHUK.png Graphic file (type png)
 <use figures/CHUK.png>
-Package pdftex.def Info: figures/CHUK.png  used on input line 244.
+Package pdftex.def Info: figures/CHUK.png  used on input line 272.
 (pdftex.def)             Requested size: 169.69147pt x 169.69116pt.
-<figures/KLHL20.png, id=171, 481.8pt x 481.8pt>
+<figures/KLHL20.png, id=194, 481.8pt x 481.8pt>
 File: figures/KLHL20.png Graphic file (type png)
 <use figures/KLHL20.png>
-Package pdftex.def Info: figures/KLHL20.png  used on input line 245.
+Package pdftex.def Info: figures/KLHL20.png  used on input line 273.
 (pdftex.def)             Requested size: 169.69147pt x 169.69116pt.
-<figures/SLC22A8.png, id=172, 481.8pt x 481.8pt>
+<figures/SLC22A8.png, id=195, 481.8pt x 481.8pt>
 File: figures/SLC22A8.png Graphic file (type png)
 <use figures/SLC22A8.png>
-Package pdftex.def Info: figures/SLC22A8.png  used on input line 249.
+Package pdftex.def Info: figures/SLC22A8.png  used on input line 277.
 (pdftex.def)             Requested size: 169.69147pt x 169.69116pt.
-<figures/CDK17.png, id=173, 481.8pt x 481.8pt>
+<figures/CDK17.png, id=196, 481.8pt x 481.8pt>
 File: figures/CDK17.png Graphic file (type png)
 <use figures/CDK17.png>
-Package pdftex.def Info: figures/CDK17.png  used on input line 250.
+Package pdftex.def Info: figures/CDK17.png  used on input line 278.
 (pdftex.def)             Requested size: 169.69147pt x 169.69116pt.
-<figures/DHRS12.png, id=174, 481.8pt x 481.8pt>
+<figures/DHRS12.png, id=197, 481.8pt x 481.8pt>
 File: figures/DHRS12.png Graphic file (type png)
 <use figures/DHRS12.png>
-Package pdftex.def Info: figures/DHRS12.png  used on input line 251.
+Package pdftex.def Info: figures/DHRS12.png  used on input line 279.
 (pdftex.def)             Requested size: 169.69147pt x 169.69116pt.
-<figures/AMPD3.png, id=175, 481.8pt x 481.8pt>
+<figures/AMPD3.png, id=198, 481.8pt x 481.8pt>
 File: figures/AMPD3.png Graphic file (type png)
 <use figures/AMPD3.png>
-Package pdftex.def Info: figures/AMPD3.png  used on input line 252.
+Package pdftex.def Info: figures/AMPD3.png  used on input line 280.
 (pdftex.def)             Requested size: 169.69147pt x 169.69116pt.
 
 
-LaTeX Warning: Float too large for page by 41.83205pt on input line 257.
+LaTeX Warning: Float too large for page by 41.83205pt on input line 285.
 
 (./build/report.bbl
 
@@ -1180,21 +1196,20 @@ LaTeX Warning: Empty `thebibliography' environment on input line 3.
 
 ) 
 AED: lastpage setting LastPage
-[3] [4
-
-] [5 <./figures/RPS27A.png (PNG copy)> <./figures/TMCO3.png (PNG copy)> <./figu
-res/CHUK.png (PNG copy)> <./figures/KLHL20.png (PNG copy)> <./figures/SLC22A8.p
-ng (PNG copy)> <./figures/CDK17.png (PNG copy)> <./figures/DHRS12.png (PNG copy
-)> <./figures/AMPD3.png (PNG copy)>] (./build/report.aux)
+[4 <./figures/vit_d_pca.png> <./figures/pten.png>] [5 <./figures/RPS27A.png (PN
+G copy)> <./figures/TMCO3.png (PNG copy)> <./figures/CHUK.png (PNG copy)> <./fi
+gures/KLHL20.png (PNG copy)> <./figures/SLC22A8.png (PNG copy)> <./figures/CDK1
+7.png (PNG copy)> <./figures/DHRS12.png (PNG copy)> <./figures/AMPD3.png (PNG c
+opy)>] (./build/report.aux)
 Package rerunfilecheck Info: File `report.out' has not changed.
-(rerunfilecheck)             Checksum: 8283E00A419CB7F658B459F46928A9D3;3945.
+(rerunfilecheck)             Checksum: E9DD18A29D65BD79598BB10F4CF6EE83;4107.
  ) 
 Here is how much of TeX's memory you used:
- 27469 strings out of 478994
- 501119 string characters out of 5864751
- 949568 words of memory out of 5000000
- 44103 multiletter control sequences out of 15000+600000
- 464253 words of font info for 286 fonts, out of 8000000 for 9000
+ 27494 strings out of 478994
+ 501635 string characters out of 5864751
+ 944742 words of memory out of 5000000
+ 44122 multiletter control sequences out of 15000+600000
+ 464260 words of font info for 286 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  102i,16n,102p,1961b,406s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texmf-dist/fon
@@ -1204,10 +1219,10 @@ c/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/urw/helvetic/uhvb8a
 mf-dist/fonts/type1/urw/helvetic/uhvro8a.pfb></usr/share/texmf-dist/fonts/type1
 /urw/symbol/usyr.pfb></usr/share/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></
 usr/share/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on ./build/report.pdf (5 pages, 347038 bytes).
+Output written on ./build/report.pdf (5 pages, 496501 bytes).
 PDF statistics:
- 235 PDF objects out of 1000 (max. 8388607)
- 187 compressed objects within 2 object streams
- 35 named destinations out of 1000 (max. 500000)
- 94445 words of extra memory for PDF output out of 106986 (max. 10000000)
+ 254 PDF objects out of 1000 (max. 8388607)
+ 201 compressed objects within 3 object streams
+ 39 named destinations out of 1000 (max. 500000)
+ 94468 words of extra memory for PDF output out of 106986 (max. 10000000)
 
