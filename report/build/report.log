@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021/Arch Linux) (preloaded format=pdflatex 2021.12.1)  10 DEC 2021 22:39
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021/Arch Linux) (preloaded format=pdflatex 2021.12.1)  10 DEC 2021 22:49
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1188,16 +1188,16 @@ LaTeX Warning: Citation `TCGA' on page 1 undefined on input line 112.
 Underfull \vbox (badness 1424) has occurred while \output is active []
 
  [2]
-<figures/pre_norm.png, id=168, 1284.8pt x 914.41624pt>
+<figures/pre_norm.png, id=168, 1284.8pt x 904.37875pt>
 File: figures/pre_norm.png Graphic file (type png)
 <use figures/pre_norm.png>
 Package pdftex.def Info: figures/pre_norm.png  used on input line 222.
-(pdftex.def)             Requested size: 225.21626pt x 160.29034pt.
-<figures/post_norm.png, id=169, 1284.8pt x 904.37875pt>
+(pdftex.def)             Requested size: 225.21626pt x 158.53084pt.
+<figures/post_norm.png, id=169, 1284.8pt x 914.41624pt>
 File: figures/post_norm.png Graphic file (type png)
 <use figures/post_norm.png>
 Package pdftex.def Info: figures/post_norm.png  used on input line 228.
-(pdftex.def)             Requested size: 225.21626pt x 158.53084pt.
+(pdftex.def)             Requested size: 225.21626pt x 160.29034pt.
 <figures/serum_level.png, id=171, 1284.8pt x 858.20625pt>
 File: figures/serum_level.png Graphic file (type png)
 <use figures/serum_level.png>
@@ -1260,6 +1260,11 @@ Package pdftex.def Info: figures/AMPD3.png  used on input line 295.
 LaTeX Warning: Float too large for page by 41.83205pt on input line 300.
 
 [4 <./figures/serum_level.png> <./figures/vit_d_pca.png> <./figures/pten.png>]
+Overfull \hbox (14.11299pt too wide) in paragraph at lines 360--361
+[]\OT1/ptm/m/n/10 (-20) Only for the most rel-e-vant vi-ta-min D re-lated DEG (
+SLC22A8),
+ []
+
 No file report.bbl.
 
 AED: lastpage setting LastPage
@@ -1276,11 +1281,11 @@ Package rerunfilecheck Info: File `report.out' has not changed.
 (rerunfilecheck)             Checksum: 34E61924242620B51E19D2CF739DC527;4011.
  ) 
 Here is how much of TeX's memory you used:
- 27515 strings out of 478994
- 501968 string characters out of 5864751
+ 27521 strings out of 478994
+ 502019 string characters out of 5864751
  946030 words of memory out of 5000000
  44132 multiletter control sequences out of 15000+600000
- 465612 words of font info for 291 fonts, out of 8000000 for 9000
+ 465819 words of font info for 295 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  102i,16n,102p,2210b,406s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texmf-dist/fon
@@ -1291,7 +1296,7 @@ mf-dist/fonts/type1/urw/helvetic/uhvro8a.pfb></usr/share/texmf-dist/fonts/type1
 /urw/symbol/usyr.pfb></usr/share/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></
 usr/share/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texmf-dist/fo
 nts/type1/urw/times/utmri8a.pfb>
-Output written on ./build/report.pdf (6 pages, 626372 bytes).
+Output written on ./build/report.pdf (6 pages, 626712 bytes).
 PDF statistics:
  265 PDF objects out of 1000 (max. 8388607)
  209 compressed objects within 3 object streams
