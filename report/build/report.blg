@@ -1,48 +1,95 @@
-This is BibTeX, Version 0.99d (TeX Live 2021/Arch Linux)
+This is BibTeX, Version 0.99d (TeX Live 2020/W32TeX)
 Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
-The top-level auxiliary file: ./build/report.aux
+The top-level auxiliary file: report.aux
 The style file: unsrt.bst
-I found no \citation commands---while reading file ./build/report.aux
 Database file #1: references.bib
-You've used 0 entries,
+Repeated entry---line 838 of file references.bib
+ : @article{Ferlay2018-pg
+ :                       ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 886 of file references.bib
+ : @article{Bu2021-xn
+ :                   ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 935 of file references.bib
+ : @article{Pereira2012-pf
+ :                        ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 968 of file references.bib
+ : @article{Giovannucci2013-ss
+ :                            ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 1005 of file references.bib
+ : @article{Fedirko2019-ai
+ :                        ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 1065 of file references.bib
+ : @article{Saraff2016-dr
+ :                       ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 1088 of file references.bib
+ : @article{Xu2021-vb
+ :                   ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 1118 of file references.bib
+ : @article{Meeker2016-tr
+ :                       ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 1163 of file references.bib
+ : @article{Zgaga2014-dd
+ :                      ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 1212 of file references.bib
+ : @article{Feldman2014-mh
+ :                        ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 1239 of file references.bib
+ : @article{Palmer2001-bh
+ :                       ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 1279 of file references.bib
+ : @article{Sadeghi2020-ci
+ :                        ,
+I'm skipping whatever remains of this entry
+You've used 15 entries,
             1791 wiz_defined-function locations,
-            445 strings with 3536 characters,
-and the built_in function-call counts, 18 in all, are:
-= -- 0
-> -- 0
+            562 strings with 7624 characters,
+and the built_in function-call counts, 4277 in all, are:
+= -- 294
+> -- 357
 < -- 0
-+ -- 0
-- -- 0
-* -- 2
-:= -- 7
-add.period$ -- 0
-call.type$ -- 0
-change.case$ -- 0
++ -- 125
+- -- 110
+* -- 435
+:= -- 741
+add.period$ -- 41
+call.type$ -- 15
+change.case$ -- 15
 chr.to.int$ -- 0
-cite$ -- 0
-duplicate$ -- 0
-empty$ -- 1
-format.name$ -- 0
-if$ -- 1
+cite$ -- 15
+duplicate$ -- 127
+empty$ -- 337
+format.name$ -- 110
+if$ -- 860
 int.to.chr$ -- 0
-int.to.str$ -- 0
-missing$ -- 0
-newline$ -- 3
-num.names$ -- 0
-pop$ -- 0
+int.to.str$ -- 15
+missing$ -- 13
+newline$ -- 74
+num.names$ -- 13
+pop$ -- 25
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 1
+skip$ -- 56
 stack$ -- 0
-substring$ -- 0
-swap$ -- 0
+substring$ -- 276
+swap$ -- 15
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 0
-while$ -- 0
-width$ -- 0
-write$ -- 2
-(There was 1 error message)
+while$ -- 35
+width$ -- 17
+write$ -- 155
+(There were 12 error messages)

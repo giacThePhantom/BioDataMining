@@ -99,219 +99,225 @@
 %	ARTICLE CONTENTS
 %----------------------------------------------------------------------------------------
 
+%%%%%%%%%%%%%%%%%%% PART I: Intro
 \section{Introduction}
-Colorectal cancer (CRC) is the third most common malignant tumor worldwide and is the second one in cancer-related deaths [1]. In spite of improvements in the management and treatments of patients with CRC in the last two decades, no satisfactory therapy exists when the surgery is not curative. The poor prognosis and the increasing incidence of CRC have provided strong motivation to construct a predictive model in CRC patients, which will benefit personalized treatment in clinical management [2]. There are lot of epidemiological and preclinical studies that indicate a beneficial effect of vitamin D on CRC incidence and mortality [3] [4]. Vitamin D is a fat soluble vitamin and many genes are related to its metabolism and action [5]. It can be obtained from diet or the endogenous synthesis in the epidermis under sunlight exposure [6]. It has been demonstrated that vitamin D benefits clinical outcome and improves the long-term survival of CRC patients [7]. Moreover, circulating vitamin D may be a CRC biomarker and its deficiency is related to the high incidence of CRC [8]. A better survival outcome in CRC is associated with higher prediagnostic or postdiagnostic serum 25-hydroxyvitamin D concentrations [9]. The most active vitamin D metabolite (1$\alpha$,25-dihydroxyvitamin D3) inhibits the proliferation and promotes the differentiation of cultured colon carcinoma cells by mechanisms that include cell cycle arrest at G0/G1 phase, blockade of the Wnt/$\beta$-catenin pathway and induction of Ecadherin and other epithelial proteins [3] [10] [11]. Lots of genes related to vitamin D metabolism and action play an essential role in tumors. For example, CYP24A1 an important vitamin D-related gene, is up-regulated in CRC patient and nominated as a promising biomarker [12]. Vitamin D and its related genes are correlated with the homeostasis of the intestinal epithelium and regulate immune cells [13].
+	Colorectal cancer (CRC) is the third most common malignant tumor worldwide and is the second one in cancer-related deaths \cite{Ferlay2018-pg}. In spite of improvements in the management and treatments of patients with CRC in the last two decades, no satisfactory therapy exists when the surgery is not curative. The poor prognosis and the increasing incidence of CRC have provided strong motivation to construct a predictive model in CRC patients, which will benefit personalized treatment in clinical management \cite{Bu2021-xn}. There are lot of epidemiological and preclinical studies that indicate a beneficial effect of vitamin D on CRC incidence and mortality \cite{Pereira2012-pf} \cite{Giovannucci2013-ss}. Vitamin D is a fat-soluble vitamin and many genes are related to its metabolism and action \cite{Fedirko2019-ai}. It can be obtained from diet or the endogenous synthesis in the epidermis under sunlight exposure \cite{Saraff2016-dr}. It has been demonstrated that vitamin D benefits clinical outcome and improves the long-term survival of CRC patients \cite{Xu2021-vb}. Moreover, circulating vitamin D may be a CRC biomarker and its deficiency is related to the high incidence of CRC \cite{Meeker2016-tr}. A better survival outcome in CRC is associated with higher prediagnostic or postdiagnostic serum 25-hydroxyvitamin D concentrations \cite{Zgaga2014-dd}. The most active vitamin D metabolite (1$\alpha$,25-dihydroxyvitamin $D_3$) inhibits the proliferation and promotes the differentiation of cultured colon carcinoma cells by mechanisms that include cell cycle arrest at G0/G1 phase, blockade of the Wnt/$\beta$-catenin pathway and induction of E-cadherin and other epithelial proteins \cite{Pereira2012-pf} \cite{Feldman2014-mh} \cite{Palmer2001-bh}. Lots of genes related to vitamin D metabolism and action play an essential role in tumors. For example, CYP24A1 an important vitamin D-related gene, is up-regulated in CRC patient and nominated as a promising biomarker \cite{Sadeghi2020-ci}. Vitamin D and its related genes are correlated with the homeostasis of the intestinal epithelium and regulate immune cells \cite{Martinez-Romero2018-gp}.
 
-The objective of this project was to find a way to make prognosis and stratify patients suffering from colorectal cancer by means of their transcriptomic profiles. In particular we focused on the gene signature of vitamin D as a prognostic marker, by leveraging the always increasing gene expression data publicly available. The final goal was to identify colorectal cancer survival markers related with vitamin D effects, as well as any pathways involved.
+	The objective of this project was to find a way to make prognosis and stratify patients suffering from colorectal cancer by means of their transcriptomic profiles. In particular we focused on the gene signature of vitamin D as a prognostic marker, by leveraging the always increasing gene expression data publicly available. The final goal was to identify colorectal cancer survival markers related with vitamin D effects, as well as any pathways involved.
 
 
+%%%%%%%%%%%%%%%%%%% PART II: Methodology
 \section{Material and methods}
-
 	\subsection{Data preprocessing}
-	To achieve a better statistical significance, a high number of samples was originally collected from different available public datasets on gene expression in CRC. These were downloaded from the databases Gene Expression Omnibus (GEO) [cite] and The Cancer Genome Atlas (TCGA) [cite]. In total, 21 datasets from GEO and 1 from TCGA were obtained, and their metadata manually curated and standardized (table 1). It is worth noting that only the dataset GSE157982 had the gene signature of Vitamin D in CRC, necessary for its further analysis.
+			To achieve a better statistical significance, a high number of samples was originally collected from different available public datasets on gene expression in CRC. These were downloaded from the databases Gene Expression Omnibus (GEO) \cite{GEO} and The Cancer Genome Atlas (TCGA) \cite{TCGA}. In total, 21 datasets from GEO and 1 from TCGA were obtained, and their metadata manually curated and standardized (table 1). It is worth noting that only the dataset GSE157982 had the gene signature of Vitamin D in CRC, necessary for its further analysis.
 
-	\begin{table*}[ht]
-		\centering
-		\begin{tabular}{cccc}
-			\hline
-			Dataset name & Sample description & Number of samples\\
-			\hline
-			GSE157982	&baseline and vit. D-treated CRC rectal samples	&98\\
-			GSE38832	&tumor colorectal samples	&122\\
-			GSE14333	&tumor colorectal samples	&290\\
-			GSE17536	&tumor colorectal samples	&177\\
-			GSE31595	&tumor colorectal samples	&37	\\
-			GSE33113	&tumor colorectal samples	&96	\\
-			GSE38832	&tumor colorectal samples	&122\\
-			GSE39084	&tumor colorectal samples	&70	\\
-			GSE39582	&tumor colorectal samples	&585\\
-			GSE103479	&tumor colorectal samples	&156\\
-			GSE17537	&tumor colorectal samples	&55	\\
-			\hline
-		\end{tabular}
-		\caption{Starting datasets}
-		\label{tab:datasets}
-	\end{table*}
+			\begin{table*}[ht]
+				\centering
+				\begin{tabular}{cccc}
+					\hline
+					Dataset name & Sample description & Number of samples\\
+					\hline
+					GSE157982	&baseline and vit. D-treated CRC rectal samples	&98\\
+					GSE38832	&tumor colorectal samples	&122\\
+					GSE14333	&tumor colorectal samples	&290\\
+					GSE17536	&tumor colorectal samples	&177\\
+					GSE31595	&tumor colorectal samples	&37	\\
+					GSE33113	&tumor colorectal samples	&96	\\
+					GSE38832	&tumor colorectal samples	&122\\
+					GSE39084	&tumor colorectal samples	&70	\\
+					GSE39582	&tumor colorectal samples	&585\\
+					GSE103479	&tumor colorectal samples	&156\\
+					GSE17537	&tumor colorectal samples	&55	\\
+					\hline
+				\end{tabular}
+				\caption{Starting datasets}
+				\label{tab:datasets}
+			\end{table*}
 
 		\subsubsection{Sample splitting and filtering}
-		All these starting samples will be filtered so that they have all the data necessary for our analysis.
-		Furthermore we will split them in different sets, so that every step in our pipeline will have enough data to be statistically significant.
-		So we define $4$ different sets.
-		The first one will be used to find differentially expressed genes between different stages of cancer.
-		The second one will be used to find the vitamin D gene signature.
-		The third one will be used to fit cox proportional-hazard model.
-		The fourth one will be used to plot the Kaplan-Meier curves.
+			All these starting samples will be filtered so that they have all the data necessary for our analysis.
+			Furthermore we will split them in different sets, so that every step in our pipeline will have enough data to be statistically significant.
+			So we define $4$ different sets.
+			The first one will be used to find differentially expressed genes between different stages of cancer.
+			The second one will be used to find the vitamin D gene signature.
+			The third one will be used to fit cox proportional-hazard model.
+			The fourth one will be used to plot the Kaplan-Meier curves.
 
 		\subsubsection{Dataset normalization}
-		Having decided to use different dataset for this analysis, a normalization step has been introduced to remove batch effects.
-		To do so we performed on the raw micro-array data different type on normalization.
-		Firstly we tried with Robust Multiarray Analysis \emph{RMA} and then with Frozen Robust Multiarray analysis \emph{fRMA}.
-		The logaritmic value of all the gene expression levels has been computed and used downstream the analysis.
-		We divided the normalized data in two sets to be used downstream.
-		The first was composed of datasets  GSE17536 and GSE17637 and will be used to fit the Cox proportional-hazards model.
-		The second was composed of datasets GSE31595, GSE33113, GSE38832, GSE39084 and GSE39582.
-		This second set has been normalized in two ways: we first normalized all the samples together to compute a single data matrix used downstream to plot the Kaplan-Meier curves and then we implemented a bootstrap procedure.
-		In this procedure we sampled from each dataset $600$ individuals $10$ times so that in each matrix we obtained balanced data with respect to the cancer stage.
+			Having decided to use different dataset for this analysis, a normalization step has been introduced to remove batch effects.
+			To do so we performed on the raw micro-array data different type on normalization.
+			Firstly we tried with Robust Multiarray Analysis \emph{RMA} and then with Frozen Robust Multiarray analysis \emph{fRMA}.
+			The logaritmic value of all the gene expression levels has been computed and used downstream the analysis.
+			We divided the normalized data in two sets to be used downstream.
+			The first was composed of datasets  GSE17536 and GSE17637 and will be used to fit the Cox proportional-hazards model.
+			The second was composed of datasets GSE31595, GSE33113, GSE38832, GSE39084 and GSE39582.
+			This second set has been normalized in two ways: we first normalized all the samples together to compute a single data matrix used downstream to plot the Kaplan-Meier curves and then we implemented a bootstrap procedure.
+			In this procedure we sampled from each dataset $600$ individuals $10$ times so that in each matrix we obtained balanced data with respect to the cancer stage.
 
 	\subsection{Differentially expressed genes}
-	After having removed the batch effect and having obtained all the necessary datasets we used them to find two sets of differentially expressed genes or \emph{DEGs}.
-	The first set contains DEGs found in different stages of cancer and the second the vitamin-D gene signature.
+		After having removed the batch effect and having obtained all the necessary datasets we used them to find two sets of differentially expressed genes or \emph{DEGs}.
+		The first set contains DEGs found in different stages of cancer and the second the vitamin-D gene signature.
 
 		\subsubsection{DEG between stage of cancer}
-		To find DEgs between the stage of cancer we used $10$ data matrices of $600$ samples.
-		This data matrices have been computed so that the samples were balanced between high and low stage.
-		We identify stage low of cancer as stages $0$, $1$ and $2$ and stage high as stages $3$ and $4$.
-		For each of the $10$ subsets we used LIMMA to find a ranking of the DEGs.
-		The resulting gene lists have been sorted in increasing order by p-value.
-		We aggregated the resulting list using Borda count, so to obtain a ranking for each of the $temp$ genes.
-		This ranking will be used to compare prediction power of the vitamin-D signature with respect to the top DEGs between stages.
+			To find DEgs between the stage of cancer we used $10$ data matrices of $600$ samples.
+			This data matrices have been computed so that the samples were balanced between high and low stage.
+			We identify stage low of cancer as stages $0$, $1$ and $2$ and stage high as stages $3$ and $4$.
+			For each of the $10$ subsets we used LIMMA to find a ranking of the DEGs.
+			The resulting gene lists have been sorted in increasing order by p-value.
+			We aggregated the resulting list using Borda count, so to obtain a ranking for each of the $temp$ genes.
+			This ranking will be used to compare prediction power of the vitamin-D signature with respect to the top DEGs between stages.
 
 		\subsubsection{Vitamin D gene signature}
-		In order to obtain the list of differentially expressed genes for the vitamin D signature, the state-of-the-art R package “Deseq2” was used on the vitamin D dataset, which contains counts of RNA-seq expression data from rectal biopsies of CRC patients pre-and post- vitamin D supplementation. Transcript IDs were converted to Gene Symbols through “BioMart”. For some of the transcripts, a Gene Symbol was not found. The statistically relevant genes were then selected using the adjusted p-value automatically computed by the Deseq2 package. DEGs were then manually expanded using the protein-protein interaction network database STRING.
-Enrichment analysis was performed on the original list using the web interface EnrichR.
+			In order to obtain the list of differentially expressed genes for the vitamin D signature, the state-of-the-art R package “Deseq2” was used on the vitamin D dataset, which contains counts of RNA-seq expression data from rectal biopsies of CRC patients pre-and post- vitamin D supplementation. Transcript IDs were converted to Gene Symbols through “BioMart”. For some of the transcripts, a Gene Symbol was not found. The statistically relevant genes were then selected using the adjusted p-value automatically computed by the Deseq2 package. DEGs were then manually expanded using the protein-protein interaction network database STRING.
+			Enrichment analysis was performed on the original list using the web interface EnrichR.
 
 
 	\subsection{Survival analysis}
-	The survival analysis has been used to determine if both sets of DEGs we found upstream are responsible for a change in the probability of survival.
-	This analysis has been performed in two steps.
-	The first uses a cox proportional-hazards model and the second involves building the Kaplan-Meier curves for the significative gene found by cox on a different dataset.
+		The survival analysis has been used to determine if both sets of DEGs we found upstream are responsible for a change in the probability of survival.
+		This analysis has been performed in two steps.
+		The first uses a cox proportional-hazards model and the second involves building the Kaplan-Meier curves for the significative gene found by cox on a different dataset.
 
 		\subsubsection{Cox proportional-hazards model}
-		Cox-proportional-hazards model is used to determine for each of the $12644$ gene if they are significant in changing the overall survival and the corresponding hazard ratio $HR$.
-		The hazard ratio determines how a gene is associated with the length of survival.
-		For each gene the optimal cutpoint for the level of expression will be computed using the \emph{cutp} function.
-		Only the genes with $pvalue \le 0.05$ were considered for computing the Kaplan-Meier curves.
+			Cox-proportional-hazards model is used to determine for each of the $12644$ gene if they are significant in changing the overall survival and the corresponding hazard ratio $HR$.
+			The hazard ratio determines how a gene is associated with the length of survival.
+			For each gene the optimal cutpoint for the level of expression will be computed using the \emph{cutp} function.
+			Only the genes with $pvalue \le 0.05$ were considered for computing the Kaplan-Meier curves.
 
 		\subsubsection{Kaplan-Meier curves}
-		For each one of the significative genes found by cox a Kaplan-Meier curve was computed.
-		For each gene we divided the samples in a ``low'' set if their expression level was less than the cutpoint found by the cutp function and in a ``high'' set if their expression level was more than the cutpoint.
-		The gene were still considered downstream if the log-rank p-value was still $\le0.05$.
-		For each of this genes a Kaplan-Meier curve was computed for the sample in the low set and one for the ones in the high set.
-		Furthermore this genes have been intersected with the enriched vitamin D signature and the DEG ranking.
+			For each one of the significative genes found by cox a Kaplan-Meier curve was computed.
+			For each gene we divided the samples in a ``low'' set if their expression level was less than the cutpoint found by the cutp function and in a ``high'' set if their expression level was more than the cutpoint.
+			The gene were still considered downstream if the log-rank p-value was still $\le0.05$.
+			For each of this genes a Kaplan-Meier curve was computed for the sample in the low set and one for the ones in the high set.
+			Furthermore this genes have been intersected with the enriched vitamin D signature and the DEG ranking.
 
-\section{Results}
 
+%%%%%%%%%%%%%%%%%%% PART III: Results
+\section{Results and Discussion}
 	\subsection{Data preprocessing}
-
 		\subsubsection{Sample splitting and filtering}
-		The sets used to find the vitamin-D gene signature and the DEGs between stages of cancer needed only the expression level of each gene, while the other ones needed information about the time of survival and the status of the sample.
-		We retained data that had all the information we needed, so we filtered out $temp$ samples from the starting $temp$.
-		Table \ref{tab:samples_split} contains information on how we divided all the remaining samples of each dataset in our sets.
+			The sets used to find the vitamin-D gene signature and the DEGs between stages of cancer needed only the expression level of each gene, while the other ones needed information about the time of survival and the status of the sample.
+			We retained data that had all the information we needed, so we filtered out $temp$ samples from the starting $temp$.
+			Table \ref{tab:samples_split} contains information on how we divided all the remaining samples of each dataset in our sets.
 
-		\begin{table}[H]
-			\centering
-			\begin{tabular}{cc}
-				\hline
-				Set & $n^\circ$ of samples\\
-				COX fitting & $232$\\
-				KM curve & $1000$\\
-				Vitamine D gene signature & $90$\\
-				Stage DEGs & $1000$\\
-				\hline
-			\end{tabular}
-			\caption{Split samples}
-			\label{tab:samples_split}
-		\end{table}
+			\begin{table}[H]
+				\centering
+				\begin{tabular}{cc}
+					\hline
+					Set & $n^\circ$ of samples\\
+					COX fitting & $232$\\
+					KM curve & $1000$\\
+					Vitamine D gene signature & $90$\\
+					Stage DEGs & $1000$\\
+					\hline
+				\end{tabular}
+				\caption{Split samples}
+				\label{tab:samples_split}
+			\end{table}
 
 		\subsubsection{Dataset normalization}
 
 	\subsection{Differentially expressed genes}
-
 		\subsubsection{DEG between stage of cancer}
-		After having computed the p-value by limma and having aggregated those results using borda count we obtained a ranking list of the $12644$ genes used as input for cox.
-		This ranking will be used to find the most differentially expressed genes between stage high and stage low of colorectal cancer and compare how they perform with respect to the one found in the vitamin D gene signature in predicting a patient risk.
+			After having computed the p-value by limma and having aggregated those results using borda count we obtained a ranking list of the $12644$ genes used as input for cox.
+			This ranking will be used to find the most differentially expressed genes between stage high and stage low of colorectal cancer and compare how they perform with respect to the one found in the vitamin D gene signature in predicting a patient risk.
 
 		\subsubsection{Vitamin D gene signature}
-		A serum level of vitamin D was chosen as a threshold for stratifying the two groups of patients (high vs low vitamin D level). This is because for a small subset of patients in the post-supplementation group, the serum levels were relatively low, whereas for another subset of patients in the pre-supplementation group, levels were already high. The chosen cutoff eventually led to better results than the classification based on the available label.
-		Principal component analysis on the full expression data matrix did not yield segregated clustering of the two groups.
-		 However, in order to perform enrichment analysis, the top 100 differentially expressed transcripts for which a Gene Symbol could be found were given as input to EnrichR.
+			A serum level of vitamin D was chosen as a threshold for stratifying the two groups of patients (high vs low vitamin D level). This is because for a small subset of patients in the post-supplementation group, the serum levels were relatively low, whereas for another subset of patients in the pre-supplementation group, levels were already high. The chosen cutoff eventually led to better results than the classification based on the available label.
+			Principal component analysis on the full expression data matrix did not yield segregated clustering of the two groups.
+			However, in order to perform enrichment analysis, the top 100 differentially expressed transcripts for which a Gene Symbol could be found were given as input to EnrichR.
 
 	\subsection{Survival analysis}
-
 		\subsubsection{Cox proportional-hazards model}
-		Cox proportional-hazards model identified from the initial $temp$ genes $943$ genes, with an average $HR$ of $1.49\cdot 10^{18}$, a minimum of $2.7\cdot 10^{-17}$ and a maximum of $1.4\cdot 10^{21}$.
+			Cox proportional-hazards model identified from the initial $temp$ genes $943$ genes, with an average $HR$ of $1.49\cdot 10^{18}$, a minimum of $2.7\cdot 10^{-17}$ and a maximum of $1.4\cdot 10^{21}$.
 
 		\subsubsection{Kaplan-Meier curves}
-		Of the $943$ genes found significative by the cox proportional-hazards model $291$ has been found significative on the dataset used to build the Kaplan-Meier curves.
-		Of these $291$ $4$ are found in the enriched vitamin D signature (left side of figure \ref{fig:surv_curve}).
-		To compare how this vitamin D related gene have an impact on the probability of survival we compared them with the top $4$ DEGs identified between stages of cancer and found significative in this step (right side offigures \ref{fig:surv_curve}).
+			Of the $943$ genes found significative by the cox proportional-hazards model $291$ has been found significative on the dataset used to build the Kaplan-Meier curves.
+			Of these $291$ $4$ are found in the enriched vitamin D signature (left side of figure \ref{fig:surv_curve}).
+			To compare how this vitamin D related gene have an impact on the probability of survival we compared them with the top $4$ DEGs identified between stages of cancer and found significative in this step (right side offigures \ref{fig:surv_curve}).
 
-		 \begin{figure*}[ht]\centering
-			 \begin{multicols}{2}
+			 \begin{figure*}[ht]\centering
+				 \begin{multicols}{2}
 
-	 			\includegraphics[width=0.7\linewidth]{figures/RPS27A.png}
-			 	\includegraphics[width=0.7\linewidth]{figures/TMCO3.png}
-	 			\includegraphics[width=0.7\linewidth]{figures/CHUK.png}
-	 			\includegraphics[width=0.7\linewidth]{figures/KLHL20.png}
+		 			\includegraphics[width=0.7\linewidth]{figures/RPS27A.png}
+				 	\includegraphics[width=0.7\linewidth]{figures/TMCO3.png}
+		 			\includegraphics[width=0.7\linewidth]{figures/CHUK.png}
+		 			\includegraphics[width=0.7\linewidth]{figures/KLHL20.png}
 
-				\columnbreak
+					\columnbreak
 
-		 		\includegraphics[width=0.7\linewidth]{figures/SLC22A8.png}
-		 		\includegraphics[width=0.7\linewidth]{figures/CDK17.png}
-		 		\includegraphics[width=0.7\linewidth]{figures/DHRS12.png}
-		 		\includegraphics[width=0.7\linewidth]{figures/AMPD3.png}
+			 		\includegraphics[width=0.7\linewidth]{figures/SLC22A8.png}
+			 		\includegraphics[width=0.7\linewidth]{figures/CDK17.png}
+			 		\includegraphics[width=0.7\linewidth]{figures/DHRS12.png}
+			 		\includegraphics[width=0.7\linewidth]{figures/AMPD3.png}
 
-			\end{multicols}
-			\caption{Survival curves, on the left vitamin D related genes, on the right the top stage DEGs}
-			\label{fig:surv_curve}
-		 \end{figure*}
+				\end{multicols}
+				\caption{Survival curves, on the left vitamin D related genes, on the right the top stage DEGs}
+				\label{fig:surv_curve}
+			 \end{figure*}
 
-		For each of these gene the respective $HR$ can be found in table \ref{tab:hr}
+			For each of these gene the respective $HR$ can be found in table \ref{tab:hr}
 
-		\begin{table}[ht]
-			\begin{tabular}{|cc|cc|}
-				\hline
-				Vitamin D gene & HR & Stage DEG & HR\\
-				\hline
-				RPS27A & $1.4\cdot 10^8$ & SLC22A8 & $3.3\cdot 10^6$\\
-				\hline
-				TMCO3 & $7.9\cdot 10^5$ & CDK17 & $5.2\cdot 10^3$\\
-				\hline
-				CHUK & $88$ & DHRS12 & $2.9\cdot 10^3$\\
-				\hline
-				KLHL20 & $1.6\cdot 10^{-6}$ & AMPD3 & $2.6\cdot 10^{-7}$\\
-				\hline
-			\end{tabular}
-			\caption{HR for significative genes}
-			\label{tab:hr}
-		\end{table}
+			\begin{table}[ht]
+				\begin{tabular}{|cc|cc|}
+					\hline
+					Vitamin D gene & HR & Stage DEG & HR\\
+					\hline
+					RPS27A & $1.4\cdot 10^8$ & SLC22A8 & $3.3\cdot 10^6$\\
+					\hline
+					TMCO3 & $7.9\cdot 10^5$ & CDK17 & $5.2\cdot 10^3$\\
+					\hline
+					CHUK & $88$ & DHRS12 & $2.9\cdot 10^3$\\
+					\hline
+					KLHL20 & $1.6\cdot 10^{-6}$ & AMPD3 & $2.6\cdot 10^{-7}$\\
+					\hline
+				\end{tabular}
+				\caption{HR for significative genes}
+				\label{tab:hr}
+			\end{table}
 
 
 \section{Discussion}
-After having compiled the Kaplan-Meier curves the four genes derived from the consensus stage-based DEGs and the four gene found from the expanded vitamin D gene signature found statistically significant, we compiled a literature-based characterization for each of those (tables \ref{tab:vit_char} and \ref{tab:deg_char}.
-\begin{table}[ht]
-	\centering
-	\small
-	\begin{tabular}{cc}
-		\hline
-		Gene & Relevant function\\
-		\hline
-		RPS27A & \makecell{One of the genes encoding for ubiquitin.\\Misregulated in various cancers,\\including colorectal [n].\\Its upregulation in CRC\\may promote cancer cell proliferation\\and inhibition of apoptosis [o].}\\
-		TMCO3 & \makecell{Probable Na(+) / H(+) antiporter.\\Linked to unfavorable outcomes in cancer [p].\\A patent exists for prognosis\\and treatment methods of\\CRC based on this gene [q].}\\
-		CHUK & \makecell{Ser/Thr protein kinase involved in the\\(indirect) activation of NF-kB [f].\\Regulates cyclin D1. [g]\\Decreased activity is linked to cancer [h].}\\
-		KLHL20 & \makecell{[i] Mediates ubiquitination of DAPK1\\thereby downregulating\\interferon-mediated apoptosis. [l]\\Mediates ubiquitination of PML thereby promoting\\resistance to hypoxia and cancer\\progression through HIF1a signalling. [m].}\\
-		\hline
-	\end{tabular}
-	\caption{Statistically significant genes in the expanded vitamin-D gene signature}
-	\label{tab:vit_char}
-\end{table}
+	After having compiled the Kaplan-Meier curves the four genes derived from the consensus stage-based DEGs and the four gene found from the expanded vitamin D gene signature found statistically significant, we compiled a literature-based characterization for each of those (tables \ref{tab:vit_char} and \ref{tab:deg_char}.
+	\begin{table}[ht]
+		\centering
+		\small
+		\begin{tabular}{cc}
+			\hline
+			Gene & Relevant function\\
+			\hline
+			RPS27A & \makecell{One of the genes encoding for ubiquitin.\\Misregulated in various cancers,\\including colorectal [n].\\Its upregulation in CRC\\may promote cancer cell proliferation\\and inhibition of apoptosis [o].}\\
+			TMCO3 & \makecell{Probable Na(+) / H(+) antiporter.\\Linked to unfavorable outcomes in cancer [p].\\A patent exists for prognosis\\and treatment methods of\\CRC based on this gene [q].}\\
+			CHUK & \makecell{Ser/Thr protein kinase involved in the\\(indirect) activation of NF-kB [f].\\Regulates cyclin D1. [g]\\Decreased activity is linked to cancer [h].}\\
+			KLHL20 & \makecell{[i] Mediates ubiquitination of DAPK1\\thereby downregulating\\interferon-mediated apoptosis. [l]\\Mediates ubiquitination of PML thereby promoting\\resistance to hypoxia and cancer\\progression through HIF1a signalling. [m].}\\
+			\hline
+		\end{tabular}
+		\caption{Statistically significant genes in the expanded vitamin-D gene signature}
+		\label{tab:vit_char}
+	\end{table}
 
-\begin{table}[ht]
-	\small
-	\centering
-	\begin{tabular}{cc}
-		\hline
-		Gene & Relevant function\\
-		\hline
-		SLC22A8 & \makecell{Integral membrane protein involved in\\the sodium-dependent excretion of\\potentially toxic organic anions.\\Expression specific to kidney and brain [e].}\\
-		CDK17 & \makecell{Cyclin-dependent protein \\serine/threonine kinase. Involved in the regulation \\of transcription involved in G1/S\\transition of mitotic cell cycle\\(source: GO biological process).\\Expressed in many tissues (no specificity) [b].\\It is the target of\\4 CDK inhibitors.}\\
-		DHRS12 & \makecell{Oxidoreductase. Linked to poor prognosis\\in ovarian cancer [c] and\\suppression of proliferation\\and metastasis in osteosarcoma [d].}\\
-		AMPD3 & \makecell{AMP deaminase in erythrocytes. In mice,\\mutations on this gene reduce levels\\of naive CD4+ and naive CD8+ cells\\in peripheral blood but not in lymphoid tissue.\\This is most likely due to a signalling\\mechanism triggered by the mutated\\phenotype of the red blood cells. [a].}\\
-		\hline
-	\end{tabular}
-	\caption{4 top genes in stage DEGs}
-	\label{tab:deg_char}
-\end{table}
+	\begin{table}[ht]
+		\small
+		\centering
+		\begin{tabular}{cc}
+			\hline
+			Gene & Relevant function\\
+			\hline
+			SLC22A8 & \makecell{Integral membrane protein involved in\\the sodium-dependent excretion of\\potentially toxic organic anions.\\Expression specific to kidney and brain [e].}\\
+			CDK17 & \makecell{Cyclin-dependent protein \\serine/threonine kinase. Involved in the regulation \\of transcription involved in G1/S\\transition of mitotic cell cycle\\(source: GO biological process).\\Expressed in many tissues (no specificity) [b].\\It is the target of\\4 CDK inhibitors.}\\
+			DHRS12 & \makecell{Oxidoreductase. Linked to poor prognosis\\in ovarian cancer [c] and\\suppression of proliferation\\and metastasis in osteosarcoma [d].}\\
+			AMPD3 & \makecell{AMP deaminase in erythrocytes. In mice,\\mutations on this gene reduce levels\\of naive CD4+ and naive CD8+ cells\\in peripheral blood but not in lymphoid tissue.\\This is most likely due to a signalling\\mechanism triggered by the mutated\\phenotype of the red blood cells. [a].}\\
+			\hline
+		\end{tabular}
+		\caption{4 top genes in stage DEGs}
+		\label{tab:deg_char}
+	\end{table}
+
+%%%%%%%%%%%%%%%%%%% PART IV: Conclusions
+\section{Conclusions}
+	Cox proportional-hazards model allowed to identify 4 DEGs related to the enrichment of vitamin D in CRC, namely RPS27A, TMCO3, CHUK, KLHL20 (in descending order of relevance, according to their HR). The HR values of these 4 genes were compared to the HR of the top 4 DEGs related to CRC’s stage; also in descending order: SLC22A8, CDK17, DHRS12, AMPD3. The HR value is higher for the vitamin D counterpart of the analyzed DEGs, which implies that different concentrations of this vitamin influences gene expression such that a larger impact on prognosis of CRC patients is present (compared to the different expression of genes according to the stage of the disease).
+
+	Only for the most relevant vitamin D related DEG (SLC22A8), 3 drugs were found to target it according to the literature, namely ATALUREN, ELX-02, MT-3724. Similarly, for the two most relevant stage related DEGs (SLC22A8, CDK17), several drugs were found in the literature: PROBENECID (for SLC22A8); AZD-5438, PHA-793887, RONICICLIB, AT-7519 (for CDK17). Further analysis on these DEGs is of interest, to verify their role in CRC evolution and prognosis, and potentially improve the treatment of CRC patients in the future.
+
 
 
 
