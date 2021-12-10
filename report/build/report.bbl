@@ -1,9 +1,121 @@
-\begin{thebibliography}{1}
+\begin{thebibliography}{10}
 
 \bibitem{GEO}
 Home - {GEO} - {NCBI}.
 
 \bibitem{TCGA}
 {GDC}.
+
+\bibitem{chalhoub2009pten}
+Nader Chalhoub and Suzanne~J Baker.
+\newblock Pten and the pi3-kinase pathway in cancer.
+\newblock {\em Annual Review of Pathology: Mechanisms of Disease}, 4:127--150,
+  2009.
+
+\bibitem{Alpha}
+Uniprotkb - p26010 (itb7\_human).
+\newblock https://www.uniprot.org/uniprot/P26010.
+\newblock last access 10/12/2021.
+
+\bibitem{fuchs2020assessment}
+Talia~L Fuchs, Loretta Sioson, Amy Sheen, Kambin Jafari-Nejad, Christopher~J
+  Renaud, Juliana Andrici, Mahsa Ahadi, Angela Chou, and Anthony~J Gill.
+\newblock Assessment of tumor-infiltrating lymphocytes using international tils
+  working group (itwg) system is a strong predictor of overall survival in
+  colorectal carcinoma: a study of 1034 patients.
+\newblock {\em The American journal of surgical pathology}, 44(4):536--544,
+  2020.
+
+\bibitem{n}
+The human protein atlas: Rsp27a.
+\newblock https://www.proteinatlas.org/ENSG00000143947-RPS27A/pathology.
+\newblock last access 10/12/2021.
+
+\bibitem{o}
+Houcai Wang, Bingqian Xie, Yuanyuan Kong, Yi~Tao, Guang Yang, Minjie Gao,
+  Hongwei Xu, Fenghuang Zhan, Jumei Shi, Yiwen Zhang, et~al.
+\newblock Overexpression of rps27a contributes to enhanced chemoresistance of
+  cml cells to imatinib by the transactivated stat3.
+\newblock {\em Oncotarget}, 7(14):18638, 2016.
+
+\bibitem{p}
+The human protein atlas: Tmco3.
+\newblock https://www.proteinatlas.org/ENSG00000150403-TMCO3/pathology.
+\newblock last access 10/12/2021.
+
+\bibitem{q}
+Methods and compositions involving transmembrane and coiled-coil domains 3
+  (tm-co3) in cancer.
+\newblock https://patents.justia.com/patent/20180298386.
+\newblock last access 10/12/2021.
+
+\bibitem{f}
+Chuk component of inhibitor of nuclear factor kappa b kinase complex [homo
+  sapiens (human)].
+\newblock
+  https://www.ncbi.nlm.nih.gov/gene?Db=gene\&Cmd=ShowDetailView\&TermToSearch=1147.
+\newblock last access 10/12/2021.
+
+\bibitem{g}
+Youn-Tae Kwak, Rui Li, Carlos~R Becerra, Debu Tripathy, Eugene~P Frenkel, and
+  Udit~N Verma.
+\newblock I$\kappa$b kinase $\alpha$ regulates subcellular distribution and
+  turnover of cyclin d1 by phosphorylation.
+\newblock {\em Journal of Biological Chemistry}, 280(40):33945--33952, 2005.
+
+\bibitem{h}
+Holger Kreft and Walter Jetz.
+\newblock Global patterns and determinants of vascular plant diversity.
+\newblock {\em Proceedings of the National Academy of Sciences},
+  104(14):5925--5930, 2007.
+
+\bibitem{i}
+Uniprotkb - q9y2m5 (klh20\_human).
+\newblock https://www.uniprot.org/uniprot/Q9Y2M5.
+\newblock last access 10/12/2021.
+
+\bibitem{l}
+Yu-Ru Lee, Wei-Chien Yuan, Hsuan-Chung Ho, Chun-Hau Chen, Hsiu-Ming Shih, and
+  Ruey-Hwa Chen.
+\newblock The cullin 3 substrate adaptor klhl20 mediates dapk ubiquitination to
+  control interferon responses.
+\newblock {\em The EMBO journal}, 29(10):1748--1761, 2010.
+
+\bibitem{m}
+Wei-Chien Yuan, Yu-Ru Lee, Shiu-Feng Huang, Yu-Min Lin, Tzu-Yin Chen,
+  Hsiang-Ching Chung, Chin-Hsien Tsai, Hsin-Yi Chen, Cheng-Ta Chiang, Chun-Kai
+  Lai, et~al.
+\newblock A cullin3-klhl20 ubiquitin ligase-dependent pathway targets pml to
+  potentiate hif-1 signaling and prostate cancer progression.
+\newblock {\em Cancer cell}, 20(2):214--228, 2011.
+
+\bibitem{e}
+Slc22a8 solute carrier family 22 member 8 [homo sapiens (human)].
+\newblock https://www.ncbi.nlm.nih.gov/gene/9376.
+\newblock last access 10/12/2021.
+
+\bibitem{b}
+Cdk17 cyclin dependent kinase 17 [homo sapiens (human)].
+\newblock https://www.ncbi.nlm.nih.gov/gene/5128\#gene-expression.
+\newblock last access 10/12/2021.
+
+\bibitem{c}
+Yan Zhang, Jiang Wu, Hong Jing, Gui Huang, Jinlong Dong, and Zhanjun Cui.
+\newblock Increased dhrs12 expression independently predicts poor survival in
+  patients with high-grade serous ovarian cancer.
+\newblock {\em Future Oncology}, 14(25):2579--2588, 2018.
+
+\bibitem{d}
+Zhixian Xu, Wubing He, Tie Ke, Yongfa Zhang, and Guifeng Zhang.
+\newblock Dhrs12 inhibits the proliferation and metastasis of osteosarcoma via
+  wnt3a/$\beta$-catenin pathway.
+\newblock {\em Future Oncology}, 16(11):665--674, 2020.
+
+\bibitem{a}
+Xiaoming Zhan, Xue Zhong, Jin~Huk Choi, Lijing Su, Jianhui Wang, Evan
+  Nair-Gill, Priscilla Anderton, Xiaohong Li, Miao Tang, Jamie Russell, et~al.
+\newblock Adenosine monophosphate deaminase 3 null mutation causes reduction of
+  naive t cells in mouse peripheral blood.
+\newblock {\em Blood advances}, 4(15):3594--3605, 2020.
 
 \end{thebibliography}

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021/Arch Linux) (preloaded format=pdflatex 2021.12.1)  10 DEC 2021 23:22
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021/Arch Linux) (preloaded format=pdflatex 2021.12.1)  10 DEC 2021 23:26
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1196,47 +1196,47 @@ File: figures/vit_d_pca.png Graphic file (type png)
 Package pdftex.def Info: figures/vit_d_pca.png  used on input line 259.
 (pdftex.def)             Requested size: 225.21626pt x 146.3903pt.
  [3 <./figures/pre_norm.png>]
-<figures/pten.png, id=198, 1284.8pt x 542.025pt>
+<figures/pten.png, id=201, 1284.8pt x 542.025pt>
 File: figures/pten.png Graphic file (type png)
 <use figures/pten.png>
 Package pdftex.def Info: figures/pten.png  used on input line 275.
 (pdftex.def)             Requested size: 225.21626pt x 95.01292pt.
-<figures/RPS27A.png, id=201, 481.8pt x 481.8pt>
+<figures/RPS27A.png, id=204, 481.8pt x 481.8pt>
 File: figures/RPS27A.png Graphic file (type png)
 <use figures/RPS27A.png>
 Package pdftex.def Info: figures/RPS27A.png  used on input line 293.
 (pdftex.def)             Requested size: 169.69147pt x 169.69116pt.
-<figures/TMCO3.png, id=202, 481.8pt x 481.8pt>
+<figures/TMCO3.png, id=205, 481.8pt x 481.8pt>
 File: figures/TMCO3.png Graphic file (type png)
 <use figures/TMCO3.png>
 Package pdftex.def Info: figures/TMCO3.png  used on input line 294.
 (pdftex.def)             Requested size: 169.69147pt x 169.69116pt.
-<figures/CHUK.png, id=203, 481.8pt x 481.8pt>
+<figures/CHUK.png, id=206, 481.8pt x 481.8pt>
 File: figures/CHUK.png Graphic file (type png)
 <use figures/CHUK.png>
 Package pdftex.def Info: figures/CHUK.png  used on input line 295.
 (pdftex.def)             Requested size: 169.69147pt x 169.69116pt.
-<figures/KLHL20.png, id=204, 481.8pt x 481.8pt>
+<figures/KLHL20.png, id=207, 481.8pt x 481.8pt>
 File: figures/KLHL20.png Graphic file (type png)
 <use figures/KLHL20.png>
 Package pdftex.def Info: figures/KLHL20.png  used on input line 296.
 (pdftex.def)             Requested size: 169.69147pt x 169.69116pt.
-<figures/SLC22A8.png, id=205, 481.8pt x 481.8pt>
+<figures/SLC22A8.png, id=208, 481.8pt x 481.8pt>
 File: figures/SLC22A8.png Graphic file (type png)
 <use figures/SLC22A8.png>
 Package pdftex.def Info: figures/SLC22A8.png  used on input line 300.
 (pdftex.def)             Requested size: 169.69147pt x 169.69116pt.
-<figures/CDK17.png, id=206, 481.8pt x 481.8pt>
+<figures/CDK17.png, id=209, 481.8pt x 481.8pt>
 File: figures/CDK17.png Graphic file (type png)
 <use figures/CDK17.png>
 Package pdftex.def Info: figures/CDK17.png  used on input line 301.
 (pdftex.def)             Requested size: 169.69147pt x 169.69116pt.
-<figures/DHRS12.png, id=207, 481.8pt x 481.8pt>
+<figures/DHRS12.png, id=210, 481.8pt x 481.8pt>
 File: figures/DHRS12.png Graphic file (type png)
 <use figures/DHRS12.png>
 Package pdftex.def Info: figures/DHRS12.png  used on input line 302.
 (pdftex.def)             Requested size: 169.69147pt x 169.69116pt.
-<figures/AMPD3.png, id=208, 481.8pt x 481.8pt>
+<figures/AMPD3.png, id=211, 481.8pt x 481.8pt>
 File: figures/AMPD3.png Graphic file (type png)
 <use figures/AMPD3.png>
 Package pdftex.def Info: figures/AMPD3.png  used on input line 303.
@@ -1252,9 +1252,78 @@ Overfull \hbox (14.11299pt too wide) in paragraph at lines 368--371
 SLC22A8),
  []
 
-(./build/report.bbl) 
+(./build/report.bbl
+Underfull \vbox (badness 1226) has occurred while \output is active []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 16--19
+[]\OT1/ptm/m/n/10 (+20) Uniprotkb - p26010 (itb7[]human).
+ []
+
+
+Underfull \hbox (badness 7759) in paragraph at lines 16--19
+\OT1/ptm/m/n/10 (+20) https://www.uniprot.org/uniprot/P26010.  last ac-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 30--33
+[]\OT1/ptm/m/n/10 (+20) The hu-man pro-tein at-las: Rsp27a.
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 30--33
+\OT1/ptm/m/n/10 (+20) https://www.proteinatlas.org/ENSG00000143947-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 42--45
+[]\OT1/ptm/m/n/10 (+20) The hu-man pro-tein at-las: Tmco3.
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 42--45
+\OT1/ptm/m/n/10 (+20) https://www.proteinatlas.org/ENSG00000150403-
+ []
+
+[5]
+Underfull \hbox (badness 10000) in paragraph at lines 47--51
+[]\OT1/ptm/m/n/10 (+20) Methods and com-po-si-tions in-volv-ing trans-mem-
+ []
+
+
+Underfull \hbox (badness 3396) in paragraph at lines 47--51
+\OT1/ptm/m/n/10 (+20) https://patents.justia.com/patent/20180298386.  last
+ []
+
+
+Underfull \hbox (badness 6658) in paragraph at lines 53--58
+[]\OT1/ptm/m/n/10 (+20) Chuk com-po-nent of in-hibitor of nu-clear fac-tor
+ []
+
+
+Underfull \hbox (badness 1817) in paragraph at lines 53--58
+\OT1/ptm/m/n/10 (+20) kappa b ki-nase com-plex [homo sapi-ens (hu-man)].
+ []
+
+
+Overfull \hbox (143.1473pt too wide) in paragraph at lines 53--58
+\OT1/ptm/m/n/10 (-20) https://www.ncbi.nlm.nih.gov/gene?Db=gene&Cmd=ShowDetailV
+iew&TermToSearch=1147.
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 73--76
+[]\OT1/ptm/m/n/10 (+20) Uniprotkb - q9y2m5 (klh20[]human).
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 73--76
+\OT1/ptm/m/n/10 (+20) https://www.uniprot.org/uniprot/Q9Y2M5.  last
+ []
+
+) 
 AED: lastpage setting LastPage
-[5] [6 <./figures/RPS27A.png (PNG copy)> <./figures/TMCO3.png (PNG copy)> <./fi
+[6] [7 <./figures/RPS27A.png (PNG copy)> <./figures/TMCO3.png (PNG copy)> <./fi
 gures/CHUK.png (PNG copy)> <./figures/KLHL20.png (PNG copy)> <./figures/SLC22A8
 .png (PNG copy)> <./figures/CDK17.png (PNG copy)> <./figures/DHRS12.png (PNG co
 py)> <./figures/AMPD3.png (PNG copy)>] (./build/report.aux)
@@ -1265,13 +1334,13 @@ Package rerunfilecheck Info: File `report.out' has not changed.
 (rerunfilecheck)             Checksum: FFEE05FC539CA7153E9A94A520EED02C;4107.
  ) 
 Here is how much of TeX's memory you used:
- 27547 strings out of 478994
- 502276 string characters out of 5864751
- 945747 words of memory out of 5000000
- 44136 multiletter control sequences out of 15000+600000
- 467549 words of font info for 307 fonts, out of 8000000 for 9000
+ 27616 strings out of 478994
+ 502831 string characters out of 5864751
+ 949209 words of memory out of 5000000
+ 44159 multiletter control sequences out of 15000+600000
+ 469030 words of font info for 325 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 102i,16n,102p,2210b,406s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 102i,17n,102p,2210b,499s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texmf-dist/fon
 ts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf-dist/fonts/type1/publi
 c/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/urw/helvetic/uhvb8a
@@ -1280,10 +1349,10 @@ mf-dist/fonts/type1/urw/helvetic/uhvro8a.pfb></usr/share/texmf-dist/fonts/type1
 /urw/symbol/usyr.pfb></usr/share/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></
 usr/share/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texmf-dist/fo
 nts/type1/urw/times/utmri8a.pfb>
-Output written on ./build/report.pdf (6 pages, 630345 bytes).
+Output written on ./build/report.pdf (7 pages, 642128 bytes).
 PDF statistics:
- 275 PDF objects out of 1000 (max. 8388607)
- 218 compressed objects within 3 object streams
- 44 named destinations out of 1000 (max. 500000)
+ 321 PDF objects out of 1000 (max. 8388607)
+ 263 compressed objects within 3 object streams
+ 63 named destinations out of 1000 (max. 500000)
  98574 words of extra memory for PDF output out of 106986 (max. 10000000)
 
