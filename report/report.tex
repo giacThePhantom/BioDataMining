@@ -113,10 +113,9 @@ This regression analysis, once validated will allow us to obtain a list of genes
 	The objective of this project was to find a way to make prognosis and stratify patients suffering from colorectal cancer by means of their transcriptomic profiles. In particular we focused on the gene signature of vitamin D as a prognostic marker, by leveraging the always increasing gene expression data publicly available. The final goal was to identify colorectal cancer survival markers related with vitamin D effects, as well as any pathways involved.
 
 
-%%%%%%%%%%%%%%%%%%% PART II: Methodology
 \section{Material and methods}
 	\subsection{Data preprocessing}
-		To achieve a better statistical significance, a high number of samples was originally collected from different available public datasets on gene expression in CRC. These were downloaded from the databases Gene Expression Omnibus (GEO) \cite{GEO} and The Cancer Genome Atlas (TCGA) \cite{TCGA}. In total, 21 datasets from GEO and 1 from TCGA were obtained, and their metadata manually curated and standardized (table \ref{tab:datasets}). It is worth noting that only the dataset GSE157982 had the gene signature of Vitamin D in CRC, necessary for its further analysis.
+		To achieve a better statistical significance, a high number of samples was originally collected from different available public datasets on gene expression in CRC. These were downloaded from the databases Gene Expression Omnibus (GEO) \cite{GEO} . In total, 21 datasets from GEO were obtained, and their metadata manually curated and standardized (table \ref{tab:datasets}). It is worth noting that only the dataset GSE157982 had the gene signature of Vitamin D in CRC, necessary for its further analysis.
 
 		\begin{table*}[ht]
 		    \centering
@@ -125,7 +124,6 @@ This regression analysis, once validated will allow us to obtain a list of genes
 		        Dataset name & Number of samples & Dataset name & Number of samples\\
 		        \hline
 		        GSE39582 & 585 & GSE33113 & 96 \\
-		        TGCA-COAD & 438 & GSE9348 & 82 \\
 		        GSE14333 & 290 & GSE13067 & 74 \\
 		        GSE17536 & 177 & GSE39084 & 70 \\
 		        GSE26682 & 176 & GSE23878 & 59 \\
@@ -153,11 +151,11 @@ This regression analysis, once validated will allow us to obtain a list of genes
 		\subsubsection{Dataset normalization}
 			Having decided to use different dataset for this analysis, a normalization step has been introduced to remove batch effects.
 			To do so we performed on the raw micro-array data different type on normalization.
-			Firstly we tried with Robust Multiarray Analysis \emph{RMA} and then with Frozen Robust Multiarray analysis \emph{fRMA}.
+			Firstly we tried with Robust Multiarray Analysis \emph{RMA} \cite{rma} and then with Frozen Robust Multiarray analysis \emph{fRMA} \cite{frma}.
+			Probes that mapped to the same gene have been collapsed to one computing the average for the gene expression value.
 			The logaritmic value of all the gene expression levels has been computed and used downstream in the analysis.
 			We divided the normalized data in two sets to be used downstream.
-			The first was composed of datasets  GSE17536 and GSE17637 and will be used to fit the Cox proportional-hazards model.
-			The second was composed of datasets GSE31595, GSE33113, GSE38832, GSE39084 and GSE39582.
+			The first was composed of datasets will be used to fit the Cox proportional-hazards model.
 			This second set has been normalized in two ways: we first normalized all the samples together to compute a single data matrix used downstream to plot the Kaplan-Meier curves and then we implemented a bootstrap procedure.
 			In this procedure we sampled from each dataset $600$ individuals $10$ times so that in each matrix we obtained balanced data with respect to the cancer stage.
 
@@ -169,14 +167,14 @@ This regression analysis, once validated will allow us to obtain a list of genes
 			To find DEgs between the stage of cancer we used $10$ data matrices of $600$ samples.
 			This data matrices have been computed so that the samples were balanced between high and low stage.
 			We identify stage low of cancer as stages $0$, $1$ and $2$ and stage high as stages $3$ and $4$.
-			For each of the $10$ subsets we used LIMMA to find a ranking of the DEGs.
+			For each of the $10$ subsets we used LIMMA \cite{limma} to find a ranking of the DEGs.
 			The resulting gene lists have been sorted in increasing order by p-value.
-			We aggregated the resulting list using Borda count, so to obtain a ranking for each of the $12644$ genes.
+			We aggregated the resulting list using Borda count \cite{borda}, so to obtain a ranking for each of the $12644$ genes.
 			This ranking will be used to compare prediction power of the vitamin-D signature with respect to the top DEGs between stages.
 
 		\subsubsection{Vitamin D gene signature}
-			In order to obtain the list of differentially expressed genes for the vitamin D signature, the state-of-the-art R package “Deseq2” was used on the vitamin D dataset, which contains counts of RNA-seq expression data from rectal biopsies of CRC patients pre-and post- vitamin D supplementation. Transcript IDs were converted to Gene Symbols through “BioMart”. For some of the transcripts, a Gene Symbol was not found. The statistically relevant genes were then selected using the adjusted p-value automatically computed by the Deseq2 package. DEGs were then manually expanded using the protein-protein interaction network database STRING.
-			Enrichment analysis was performed on the original list using the web interface EnrichR.
+			In order to obtain the list of differentially expressed genes for the vitamin D signature, the state-of-the-art R package “Deseq2” \cite{deseq2} was used on the vitamin D dataset, which contains counts of RNA-seq expression data from rectal biopsies of CRC patients pre-and post- vitamin D supplementation. Transcript IDs were converted to Gene Symbols through “BioMart”. For some of the transcripts, a Gene Symbol was not found. The statistically relevant genes were then selected using the adjusted p-value automatically computed by the Deseq2 package. DEGs were then manually expanded using the protein-protein interaction network database STRING \cite{string}.
+			Enrichment analysis was performed on the original list using the web interface EnrichR \cite{enrichr}.
 
 
 	\subsection{Survival analysis}
@@ -185,13 +183,13 @@ This regression analysis, once validated will allow us to obtain a list of genes
 		The first uses a cox proportional-hazards model and the second involves building the Kaplan-Meier curves for the significative gene found by cox on a different dataset.
 
 		\subsubsection{Cox proportional-hazards model}
-			Cox-proportional-hazards model is used to determine for each of the $12644$ gene if they are significant in changing the overall survival and the corresponding hazard ratio $HR$.
+			Cox-proportional-hazards model \cite{cox} is used to determine for each of the $12644$ gene if they are significant in changing the overall survival and the corresponding hazard ratio $HR$.
 			The hazard ratio determines how a gene is associated with the length of survival.
-			For each gene the optimal cutpoint for the level of expression will be computed using the \emph{cutp} function.
+			For each gene the optimal cutpoint for the level of expression will be computed using the \emph{cutp} \cite{cutp} function.
 			Only the genes with $pvalue \le 0.05$ were considered for computing the Kaplan-Meier curves.
 
 		\subsubsection{Kaplan-Meier curves}
-			For each one of the significative genes found by cox a Kaplan-Meier curve was computed.
+			For each one of the significative genes found by cox a Kaplan-Meier curve \cite{survfit} was computed.
 			For each gene we divided the samples in a ``low'' set if their expression level was less than the cutpoint found by the cutp function and in a ``high'' set if their expression level was more than the cutpoint.
 			The gene were still considered downstream if the log-rank p-value was still $\le0.05$.
 			For each of this genes a Kaplan-Meier curve was computed for the sample in the low set and one for the ones in the high set.
@@ -364,8 +362,10 @@ After having compiled the Kaplan-Meier curves the four genes derived from the co
 	\label{tab:deg_char}
 \end{table}
 Four DEGs were found to be related to the enrichment of vitamin D in CRC, namely RPS27A, TMCO3, CHUK, KLHL20 (in descending order of relevance, according to their HR). The HR values of these 4 genes were compared to the HR of the top 4 DEGs related to CRC’s stage; also in descending order: SLC22A8, CDK17, DHRS12, AMPD3. The HR value is higher for the vitamin D counterpart of the analyzed DEGs, which implies that different concentrations of this vitamin influences gene expression such that a larger impact on prognosis of CRC patients is present (compared to the different expression of genes according to the stage of the disease).
-
 	Only for the most relevant vitamin D related DEG (SLC22A8), 3 drugs were found to target it according to the literature, namely ATALUREN, ELX-02, MT-3724. Similarly, for the two most relevant stage related DEGs (SLC22A8, CDK17), several drugs were found in the literature: PROBENECID (for SLC22A8); AZD-5438, PHA-793887, RONICICLIB, AT-7519 (for CDK17). \\
+Enrichment analysis of the vitamin D signature highlights many enriched pathways of potential interest, especially related to the immune response, cellular motility and integrin signalling in cancer. Yet, it does not provide information of whether such pathways are altered in a clinically positive or negative direction, and whether the beneficial effects, if any, are mostly present after vitamin-D supplementation.
+For example, PTEN signalling appears enriched. A stronger PTEN signalling should have an anti-tumor effect, whereas a PTEN inhibition would have the opposite effect. We don’t know whether the direction of enrichment is positive or negative, and whether the positive change is seen in the treated group.
+It should be taken into account that patients supplemented with vitamin-D bear colorectal cancer, and 12 weeks might be a sufficient time span for the disease to bring changes in gene expression with an equal or greater strenght than the vitamin-D supplementation itself.\\
 	Further analysis on these DEGs is of interest, to verify their role in CRC evolution and prognosis, and potentially improve the treatment of CRC patients in the future.
 	This work can be further expanded considering a multiple regression analysis that considers the combined effect of the vitamin-D related genes.
 

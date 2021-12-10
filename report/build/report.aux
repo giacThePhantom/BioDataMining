@@ -35,7 +35,15 @@
 \babel@aux{english}{}
 \@writefile{toc}{\contentsline {section}{\numberline {1}Introduction}{1}{section.1}\protected@file@percent }
 \citation{GEO}
-\citation{TCGA}
+\citation{rma}
+\citation{frma}
+\citation{limma}
+\citation{borda}
+\citation{deseq2}
+\citation{string}
+\citation{enrichr}
+\citation{cox}
+\citation{cutp}
 \@writefile{toc}{\contentsline {section}{\numberline {2}Material and methods}{2}{section.2}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsection}{\numberline {2.1}Data preprocessing}{2}{subsection.2.1}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {2.1.1}Sample splitting and filtering}{2}{subsubsection.2.1.1}\protected@file@percent }
@@ -45,6 +53,10 @@
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {2.2.2}Vitamin D gene signature}{2}{subsubsection.2.2.2}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsection}{\numberline {2.3}Survival analysis}{2}{subsection.2.3}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {2.3.1}Cox proportional-hazards model}{2}{subsubsection.2.3.1}\protected@file@percent }
+\citation{survfit}
+\citation{chalhoub2009pten}
+\citation{Alpha}
+\citation{fuchs2020assessment}
 \@writefile{lot}{\contentsline {table}{\numberline {1}{\ignorespaces Distribution of the samples in the starting datasets. In total, 3072 samples from 22 datasets were obtained.\relax }}{3}{table.caption.1}\protected@file@percent }
 \providecommand*\caption@xref[2]{\@setref\relax\@undefined{#1}}
 \newlabel{tab:datasets}{{1}{3}{Distribution of the samples in the starting datasets. In total, 3072 samples from 22 datasets were obtained.\relax }{table.caption.1}{}}
@@ -60,9 +72,6 @@
 \@writefile{toc}{\contentsline {subsection}{\numberline {3.2}Differentially expressed genes}{3}{subsection.3.2}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {3.2.1}DEG between stage of cancer}{3}{subsubsection.3.2.1}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {3.2.2}Vitamin D gene signature}{3}{subsubsection.3.2.2}\protected@file@percent }
-\citation{chalhoub2009pten}
-\citation{Alpha}
-\citation{fuchs2020assessment}
 \citation{n}
 \citation{o}
 \citation{p}
@@ -95,35 +104,57 @@
 \citation{a}
 \bibstyle{unsrt}
 \bibdata{references}
-\bibcite{GEO}{1}
-\bibcite{TCGA}{2}
-\bibcite{chalhoub2009pten}{3}
-\bibcite{Alpha}{4}
-\bibcite{fuchs2020assessment}{5}
-\bibcite{n}{6}
-\bibcite{o}{7}
-\bibcite{p}{8}
+\bibcite{Ferlay2018-pg}{1}
+\bibcite{Bu2021-xn}{2}
+\bibcite{Pereira2012-pf}{3}
+\bibcite{Giovannucci2013-ss}{4}
 \@writefile{lot}{\contentsline {table}{\numberline {4}{\ignorespaces Statistically significant genes in the expanded vitamin-D gene signature\relax }}{5}{table.caption.10}\protected@file@percent }
 \newlabel{tab:vit_char}{{4}{5}{Statistically significant genes in the expanded vitamin-D gene signature\relax }{table.caption.10}{}}
-\@writefile{toc}{\contentsline {section}{References}{5}{section*.12}\protected@file@percent }
 \@writefile{lot}{\contentsline {table}{\numberline {5}{\ignorespaces 4 top genes in stage DEGs\relax }}{5}{table.caption.11}\protected@file@percent }
 \newlabel{tab:deg_char}{{5}{5}{4 top genes in stage DEGs\relax }{table.caption.11}{}}
-\bibcite{q}{9}
-\bibcite{f}{10}
-\bibcite{g}{11}
-\bibcite{h}{12}
-\bibcite{i}{13}
-\bibcite{l}{14}
-\bibcite{m}{15}
-\bibcite{e}{16}
-\bibcite{b}{17}
-\bibcite{c}{18}
-\bibcite{d}{19}
-\bibcite{a}{20}
-\@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces Survival curves, on the left vitamin D related genes, on the right the top stage DEGs\relax }}{7}{figure.caption.8}\protected@file@percent }
-\newlabel{fig:surv_curve}{{6}{7}{Survival curves, on the left vitamin D related genes, on the right the top stage DEGs\relax }{figure.caption.8}{}}
-\newlabel{LastPage}{{}{7}{}{page.7}{}}
-\xdef\lastpage@lastpage{7}
-\xdef\lastpage@lastpageHy{7}
+\@writefile{toc}{\contentsline {section}{References}{5}{section*.12}\protected@file@percent }
+\bibcite{Fedirko2019-ai}{5}
+\bibcite{Saraff2016-dr}{6}
+\bibcite{Xu2021-vb}{7}
+\bibcite{Meeker2016-tr}{8}
+\bibcite{Zgaga2014-dd}{9}
+\bibcite{Feldman2014-mh}{10}
+\bibcite{Palmer2001-bh}{11}
+\bibcite{Sadeghi2020-ci}{12}
+\bibcite{Martinez-Romero2018-gp}{13}
+\bibcite{GEO}{14}
+\bibcite{rma}{15}
+\bibcite{frma}{16}
+\bibcite{limma}{17}
+\bibcite{borda}{18}
+\bibcite{deseq2}{19}
+\bibcite{string}{20}
+\bibcite{enrichr}{21}
+\bibcite{cox}{22}
+\bibcite{cutp}{23}
+\bibcite{survfit}{24}
+\bibcite{chalhoub2009pten}{25}
+\bibcite{Alpha}{26}
+\bibcite{fuchs2020assessment}{27}
+\bibcite{n}{28}
+\bibcite{o}{29}
+\bibcite{p}{30}
+\bibcite{q}{31}
+\bibcite{f}{32}
+\bibcite{g}{33}
+\bibcite{h}{34}
+\bibcite{i}{35}
+\bibcite{l}{36}
+\bibcite{m}{37}
+\bibcite{e}{38}
+\bibcite{b}{39}
+\bibcite{c}{40}
+\bibcite{d}{41}
+\bibcite{a}{42}
+\@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces Survival curves, on the left vitamin D related genes, on the right the top stage DEGs\relax }}{8}{figure.caption.8}\protected@file@percent }
+\newlabel{fig:surv_curve}{{6}{8}{Survival curves, on the left vitamin D related genes, on the right the top stage DEGs\relax }{figure.caption.8}{}}
+\newlabel{LastPage}{{}{8}{}{page.8}{}}
+\xdef\lastpage@lastpage{8}
+\xdef\lastpage@lastpageHy{8}
 \ttl@finishall
-\gdef \@abspage@last{7}
+\gdef \@abspage@last{8}

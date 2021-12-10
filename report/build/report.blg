@@ -3,58 +3,137 @@ Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: ./build/report.aux
 The style file: unsrt.bst
 Database file #1: references.bib
-Warning--I didn't find a database entry for "Ferlay2018-pg"
-Warning--I didn't find a database entry for "Bu2021-xn"
-Warning--I didn't find a database entry for "Pereira2012-pf"
-Warning--I didn't find a database entry for "Giovannucci2013-ss"
-Warning--I didn't find a database entry for "Fedirko2019-ai"
-Warning--I didn't find a database entry for "Saraff2016-dr"
-Warning--I didn't find a database entry for "Xu2021-vb"
-Warning--I didn't find a database entry for "Meeker2016-tr"
-Warning--I didn't find a database entry for "Zgaga2014-dd"
-Warning--I didn't find a database entry for "Feldman2014-mh"
-Warning--I didn't find a database entry for "Palmer2001-bh"
-Warning--I didn't find a database entry for "Sadeghi2020-ci"
-Warning--I didn't find a database entry for "Martinez-Romero2018-gp"
-You've used 20 entries,
+Repeated entry---line 838 of file references.bib
+ : @article{Ferlay2018-pg
+ :                       ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 886 of file references.bib
+ : @article{Bu2021-xn
+ :                   ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 935 of file references.bib
+ : @article{Pereira2012-pf
+ :                        ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 968 of file references.bib
+ : @article{Giovannucci2013-ss
+ :                            ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 1005 of file references.bib
+ : @article{Fedirko2019-ai
+ :                        ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 1065 of file references.bib
+ : @article{Saraff2016-dr
+ :                       ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 1088 of file references.bib
+ : @article{Xu2021-vb
+ :                   ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 1118 of file references.bib
+ : @article{Meeker2016-tr
+ :                       ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 1163 of file references.bib
+ : @article{Zgaga2014-dd
+ :                      ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 1212 of file references.bib
+ : @article{Feldman2014-mh
+ :                        ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 1239 of file references.bib
+ : @article{Palmer2001-bh
+ :                       ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 1279 of file references.bib
+ : @article{Sadeghi2020-ci
+ :                        ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 1675 of file references.bib
+ : @misc{rma
+ :          ,
+I'm skipping whatever remains of this entry
+I was expecting a `{' or a `('---line 1678 of file references.bib
+ : @@ 
+ :    -24,7 +18,7 @@ @misc{limma
+I'm skipping whatever remains of this entry
+I was expecting a `{' or a `('---line 1678 of file references.bib
+ : @@ -24,7 +18,7 @@ 
+ :                   @misc{limma
+I'm skipping whatever remains of this entry
+Repeated entry---line 1678 of file references.bib
+ : @@ -24,7 +18,7 @@ @misc{limma
+ :                              
+I'm skipping whatever remains of this entry
+Repeated entry---line 1680 of file references.bib
+ : @misc{borda
+ :            ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 1686 of file references.bib
+ : @misc{deseq2
+ :             ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 1692 of file references.bib
+ : @misc{string
+ :             ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 1698 of file references.bib
+ : @misc{enrichr
+ :              ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 1704 of file references.bib
+ : @misc{cox
+ :          ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 1710 of file references.bib
+ : @misc{cutp
+ :           ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 1716 of file references.bib
+ : @misc{survfit
+ :              ,
+I'm skipping whatever remains of this entry
+You've used 42 entries,
             1791 wiz_defined-function locations,
-            580 strings with 7653 characters,
-and the built_in function-call counts, 4178 in all, are:
-= -- 336
-> -- 237
+            685 strings with 12015 characters,
+and the built_in function-call counts, 9256 in all, are:
+= -- 715
+> -- 601
 < -- 0
-+ -- 89
-- -- 69
-* -- 301
-:= -- 637
-add.period$ -- 56
-call.type$ -- 20
-change.case$ -- 20
++ -- 221
+- -- 179
+* -- 734
+:= -- 1459
+add.period$ -- 124
+call.type$ -- 42
+change.case$ -- 42
 chr.to.int$ -- 0
-cite$ -- 20
-duplicate$ -- 140
-empty$ -- 430
-format.name$ -- 69
-if$ -- 916
+cite$ -- 42
+duplicate$ -- 302
+empty$ -- 892
+format.name$ -- 179
+if$ -- 1993
 int.to.chr$ -- 0
-int.to.str$ -- 20
-missing$ -- 10
-newline$ -- 99
-num.names$ -- 10
-pop$ -- 86
+int.to.str$ -- 42
+missing$ -- 23
+newline$ -- 211
+num.names$ -- 23
+pop$ -- 173
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 71
+skip$ -- 134
 stack$ -- 0
-substring$ -- 276
-swap$ -- 20
+substring$ -- 552
+swap$ -- 42
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 0
-while$ -- 29
-width$ -- 22
-write$ -- 194
-(There were 13 warnings)
+while$ -- 64
+width$ -- 44
+write$ -- 422
+(There were 23 error messages)
