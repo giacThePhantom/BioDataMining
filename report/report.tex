@@ -85,7 +85,14 @@
 %	ABSTRACT
 %----------------------------------------------------------------------------------------
 
-\Abstract{}
+\Abstract{Colorectal cancer (CRC) is one of the most common malignant carcinomas worldwide with poor prognosis, imposing an increasingly heavy burden on patients. Different studies have shown that vitamin D and vitamin D-related genes play a key role in CRC.
+In this study we aim to identify and validate vitamin D-related prognostic signature in colorectal cancer.
+In the first part of our work we will focus on the normalization and the pre-processing of our datasets: a colorectal cancer gene expression dataset and a vitamin D level gene expression dataset. Regarding the first dataset we will split the data in “stage I and II gene expression data” and “stage III and IV” gene expression data; while for the second dataset we will split the data in “low vitamin D level gene expression data” and “high vitamin D gene expression data”.
+Then by the means of a statistical analysis we will obtain a dataset of differentially expressed genes (DEGs) in different stages of CRC and a dataset for the vitamin D gene signature.
+Using the cox proportional-hazard model we will compute the hazard ratio associated with each of our gene of interest and compare the effect of the genes related to the vitamin-D with respect to the ones differentially expressed on the cancer stages.
+For each gene related on the vitamin-D found significant and its stage-related counterpart a Kaplan-Meier curve will be computed, to compare the change of overall survival according to its expression level.
+This regression analysis, once validated will allow us to obtain a list of genes that can be used for stratification and prognosis of patients suffering from colorectal cancer.
+}
 %----------------------------------------------------------------------------------------
 
 \begin{document}
@@ -147,7 +154,7 @@
 			Having decided to use different dataset for this analysis, a normalization step has been introduced to remove batch effects.
 			To do so we performed on the raw micro-array data different type on normalization.
 			Firstly we tried with Robust Multiarray Analysis \emph{RMA} and then with Frozen Robust Multiarray analysis \emph{fRMA}.
-			The logaritmic value of all the gene expression levels has been computed and used downstream the analysis.
+			The logaritmic value of all the gene expression levels has been computed and used downstream in the analysis.
 			We divided the normalized data in two sets to be used downstream.
 			The first was composed of datasets  GSE17536 and GSE17637 and will be used to fit the Cox proportional-hazards model.
 			The second was composed of datasets GSE31595, GSE33113, GSE38832, GSE39084 and GSE39582.
@@ -205,6 +212,7 @@
 			\begin{tabular}{cc}
 				\hline
 				Set & $n^\circ$ of samples\\
+				\hline
 				COX fitting & $232$\\
 				KM curve & $1000$\\
 				Vitamine D gene signature & $90$\\
@@ -272,7 +280,7 @@ The content of tumor-infiltrating lymphocytes of different malignancies, includi
 	\subsection{Survival analysis}
 
 		\subsubsection{Cox proportional-hazards model}
-		Cox proportional-hazards model identified from the initial $temp$ genes $943$ genes, with an average $HR$ of $1.49\cdot 10^{18}$, a minimum of $2.7\cdot 10^{-17}$ and a maximum of $1.4\cdot 10^{21}$.
+		Cox proportional-hazards model identified from the initial $12644$ genes $943$ genes, with an average $HR$ of $1.49\cdot 10^{18}$, a minimum of $2.7\cdot 10^{-17}$ and a maximum of $1.4\cdot 10^{21}$.
 
 		\subsubsection{Kaplan-Meier curves}
 		Of the $943$ genes found significative by the cox proportional-hazards model $291$ has been found significative on the dataset used to build the Kaplan-Meier curves.
@@ -357,7 +365,9 @@ After having compiled the Kaplan-Meier curves the four genes derived from the co
 \end{table}
 Four DEGs were found to be related to the enrichment of vitamin D in CRC, namely RPS27A, TMCO3, CHUK, KLHL20 (in descending order of relevance, according to their HR). The HR values of these 4 genes were compared to the HR of the top 4 DEGs related to CRC’s stage; also in descending order: SLC22A8, CDK17, DHRS12, AMPD3. The HR value is higher for the vitamin D counterpart of the analyzed DEGs, which implies that different concentrations of this vitamin influences gene expression such that a larger impact on prognosis of CRC patients is present (compared to the different expression of genes according to the stage of the disease).
 
-	Only for the most relevant vitamin D related DEG (SLC22A8), 3 drugs were found to target it according to the literature, namely ATALUREN, ELX-02, MT-3724. Similarly, for the two most relevant stage related DEGs (SLC22A8, CDK17), several drugs were found in the literature: PROBENECID (for SLC22A8); AZD-5438, PHA-793887, RONICICLIB, AT-7519 (for CDK17). Further analysis on these DEGs is of interest, to verify their role in CRC evolution and prognosis, and potentially improve the treatment of CRC patients in the future.
+	Only for the most relevant vitamin D related DEG (SLC22A8), 3 drugs were found to target it according to the literature, namely ATALUREN, ELX-02, MT-3724. Similarly, for the two most relevant stage related DEGs (SLC22A8, CDK17), several drugs were found in the literature: PROBENECID (for SLC22A8); AZD-5438, PHA-793887, RONICICLIB, AT-7519 (for CDK17). \\
+	Further analysis on these DEGs is of interest, to verify their role in CRC evolution and prognosis, and potentially improve the treatment of CRC patients in the future.
+	This work can be further expanded considering a multiple regression analysis that considers the combined effect of the vitamin-D related genes.
 
 
 
